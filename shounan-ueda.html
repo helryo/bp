@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容クリニック向けインスタグラム運用OJT提案資料</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .page-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #f87171;
+        }
+        .box-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #fed7e2 0%, #fecdd3 100%);
+        }
+        .emphasis {
+            border-left: 4px solid #f87171;
+            padding-left: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f9fafb;
+        }
+        .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fed7e2;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="page-container">
+        <!-- ヘッダー -->
+        <header class="section">
+            <div class="gradient-bg rounded-lg p-8 mb-8 box-shadow">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">美容クリニック向け<br>インスタグラム運用OJT提案資料</h1>
+                <p class="text-xl text-gray-700">予算：30万円</p>
+                <div class="mt-4 text-gray-600">
+                    <p>提案日：2023年6月15日</p>
+                    <p>株式会社〇〇〇〇</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 目次 -->
+        <div class="section bg-white rounded-lg p-6 box-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">目次</h2>
+            <ul class="space-y-2">
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">01</span>現状分析と課題</li>
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">02</span>プロジェクト目標</li>
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">03</span>提案内容（OJTプログラム詳細）</li>
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">04</span>実施スケジュール</li>
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">05</span>予算内訳</li>
+                <li class="flex items-center"><span class="icon-circle text-pink-500 text-sm">06</span>期待される効果</li>
+            </ul>
+        </div>
+
+        <!-- 現状分析と課題 -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-chart-line text-pink-500"></i>
+                </span>
+                現状分析と課題
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">美容クリニックのSNS活用の現状</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-gray-700 mb-2">業界全体の傾向</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>美容医療業界ではインスタグラムが集客に不可欠</li>
+                            <li>ビフォーアフター写真やリアルな施術風景が求められている</li>
+                            <li>競合他社の投稿頻度は平均週3〜4回</li>
+                            <li>ハッシュタグ戦略が重要な集客要素</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-gray-700 mb-2">貴院の現状</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>投稿頻度が月1〜2回と少ない</li>
+                            <li>担当者がSNSマーケティングの知識不足</li>
+                            <li>投稿内容がマンネリ化している</li>
+                            <li>フォロワー数の伸び悩み</li>
+                            <li>エンゲージメント率が低い</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="emphasis bg-pink-50 p-4 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">主な課題</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li class="font-medium">院内スタッフのインスタグラム運用スキル不足</li>
+                        <li class="font-medium">魅力的なコンテンツ企画力の欠如</li>
+                        <li class="font-medium">投稿の一貫性とブランディング意識の弱さ</li>
+                        <li class="font-medium">フォロワーとの効果的なエンゲージメント不足</li>
+                        <li class="font-medium">インスタグラムから予約・問い合わせへの導線が弱い</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- プロジェクト目標 -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-bullseye text-pink-500"></i>
+                </span>
+                プロジェクト目標
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-pink-50 p-5 rounded-lg text-center">
+                        <div class="text-pink-500 text-4xl font-bold mb-2">+50%</div>
+                        <p class="text-gray-700 font-semibold">フォロワー数の増加</p>
+                        <p class="text-sm text-gray-600 mt-2">6ヶ月以内に現状から50%増加</p>
+                    </div>
+                    <div class="bg-pink-50 p-5 rounded-lg text-center">
+                        <div class="text-pink-500 text-4xl font-bold mb-2">週3回</div>
+                        <p class="text-gray-700 font-semibold">定期投稿体制の確立</p>
+                        <p class="text-sm text-gray-600 mt-2">安定した投稿スケジュールの実現</p>
+                    </div>
+                    <div class="bg-pink-50 p-5 rounded-lg text-center">
+                        <div class="text-pink-500 text-4xl font-bold mb-2">20%</div>
+                        <p class="text-gray-700 font-semibold">エンゲージメント率向上</p>
+                        <p class="text-sm text-gray-600 mt-2">いいね・コメント・保存の増加</p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">OJT達成目標</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span>クリニックスタッフが自立してインスタグラム運用を行えるようになる</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span>効果的なハッシュタグ戦略を立てられるようになる</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span>魅力的な写真撮影・編集スキルを習得する</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span>コンテンツカレンダーを活用した計画的な運用ができる</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                            <span>インサイト分析を行い、戦略の改善ができる</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提案内容（OJTプログラム詳細） -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-lightbulb text-pink-500"></i>
+                </span>
+                提案内容（OJTプログラム詳細）
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">3ヶ月集中OJTプログラム</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-pink-50 p-5 rounded-lg">
+                        <h4 class="font-bold text-gray-700 text-lg mb-3">フェーズ1: 基礎トレーニング（1ヶ月目）</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>インスタグラム運用の基礎知識</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>効果的な写真撮影・編集テクニック</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>キャプション作成のコツ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>ハッシュタグ戦略立案</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-pink-50 p-5 rounded-lg">
+                        <h4 class="font-bold text-gray-700 text-lg mb-3">フェーズ2: 実践トレーニング（2ヶ月目）</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>コンテンツカレンダー作成と運用</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>リール動画の企画・制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>ストーリーズを活用した顧客エンゲージメント</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                                <span>インサイト分析と改善策</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-pink-50 p-5 rounded-lg mb-8">
+                    <h4 class="font-bold text-gray-700 text-lg mb-3">フェーズ3: 自走化支援（3ヶ月目）</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                            <span>スタッフ主導での投稿計画立案</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                            <span>コンテンツ制作のワークフロー確立</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                            <span>効果測定と戦略修正のサイクル構築</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-pink-500 mt-1 mr-2"></i>
+                            <span>トラブルシューティング対応</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">指導方法</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center mb-2">
+                            <i class="fas fa-users text-3xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">対面ワークショップ</h4>
+                        <p class="text-sm text-gray-600">月2回、クリニックにて実践的なワークショップを開催</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center mb-2">
+                            <i class="fas fa-video text-3xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">オンラインコーチング</h4>
+                        <p class="text-sm text-gray-600">週1回のオンライン相談で投稿内容をレビュー</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center mb-2">
+                            <i class="fas fa-book text-3xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">マニュアル提供</h4>
+                        <p class="text-sm text-gray-600">詳細なステップごとのマニュアルを作成・提供</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実施スケジュール -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-calendar-alt text-pink-500"></i>
+                </span>
+                実施スケジュール
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th width="20%">期間</th>
+                                <th width="30%">指導内容</th>
+                                <th width="50%">達成目標</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bg-pink-50 font-medium">1ヶ月目<br>（基礎フェーズ）</td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>初回キックオフミーティング</li>
+                                        <li>基礎知識ワークショップ（2回）</li>
+                                        <li>写真撮影・編集実習</li>
+                                        <li>週次オンラインコーチング</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>インスタグラム基本操作の習得</li>
+                                        <li>基本的な写真撮影・編集スキル獲得</li>
+                                        <li>効果的なハッシュタグリスト作成</li>
+                                        <li>週1回の投稿開始</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-pink-50 font-medium">2ヶ月目<br>（実践フェーズ）</td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>中間振り返りミーティング</li>
+                                        <li>実践ワークショップ（2回）</li>
+                                        <li>リール動画制作実習</li>
+                                        <li>週次オンラインコーチング</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>コンテンツカレンダー作成・運用開始</li>
+                                        <li>週2回の投稿体制確立</li>
+                                        <li>リール動画2本制作</li>
+                                        <li>インサイト分析の基本習得</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-pink-50 font-medium">3ヶ月目<br>（自走化フェーズ）</td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>自走化ワークショップ（2回）</li>
+                                        <li>トラブルシューティング研修</li>
+                                        <li>週次オンラインコーチング</li>
+                                        <li>最終成果報告会</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc pl-4 text-sm">
+                                        <li>週3回の投稿体制確立</li>
+                                        <li>スタッフ主導のコンテンツ制作</li>
+                                        <li>分析に基づく投稿改善サイクル確立</li>
+                                        <li>今後の運用計画策定</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">サポート内容</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-700 mb-2">定期サポート</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>月2回の対面ワークショップ（1回2時間）</li>
+                                <li>週1回のオンラインコーチング（1回1時間）</li>
+                                <li>月次レポート提供</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-700 mb-2">随時サポート</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>メールによる質問対応（平日24時間以内）</li>
+                                <li>緊急対応（SNSトラブル発生時）</li>
+                                <li>追加コンサルティング（別途料金）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予算内訳 -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-yen-sign text-pink-500"></i>
+                </span>
+                予算内訳
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th width="40%">項目</th>
+                                <th width="15%">単価</th>
+                                <th width="15%">数量</th>
+                                <th width="15%">金額</th>
+                                <th width="15%">備考</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>対面ワークショップ</td>
+                                <td>30,000円</td>
+                                <td>6回</td>
+                                <td>180,000円</td>
+                                <td>月2回×3ヶ月</td>
+                            </tr>
+                            <tr>
+                                <td>オンラインコーチング</td>
+                                <td>10,000円</td>
+                                <td>12回</td>
+                                <td>120,000円</td>
+                                <td>週1回×12週</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right font-bold">合計（税抜）</td>
+                                <td>300,000円</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="emphasis bg-pink-50 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2 text-gray-700">含まれるもの</h3>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>インスタグラム運用マニュアル（PDF）</li>
+                        <li>コンテンツカレンダーテンプレート</li>
+                        <li>写真編集テンプレート</li>
+                        <li>ハッシュタグリスト</li>
+                        <li>成功事例集</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 期待される効果 -->
+        <section class="section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                <span class="icon-circle flex items-center justify-center">
+                    <i class="fas fa-chart-line text-pink-500"></i>
+                </span>
+                期待される効果
+            </h2>
+            <div class="bg-white rounded-lg p-6 box-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="p-5 rounded-lg border border-pink-200">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-users text-4xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center text-lg mb-2">集客効果</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>6ヶ月でフォロワー数50%増加</li>
+                            <li>インスタグラム経由の問い合わせ30%増加</li>
+                            <li>新規顧客獲得数の向上</li>
+                        </ul>
+                    </div>
+                    <div class="p-5 rounded-lg border border-pink-200">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-comment-dots text-4xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center text-lg mb-2">エンゲージメント向上</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>投稿あたりのいいね数20%増加</li>
+                            <li>コメント数の増加</li>
+                            <li>ストーリーズの視聴完了率向上</li>
+                        </ul>
+                    </div>
+                    <div class="p-5 rounded-lg border border-pink-200">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-building text-4xl text-pink-500"></i>
+                        </div>
+                        <h4 class="font-bold text-center text-lg mb-2">ブランディング効果</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>クリニックの認知度向上</li>
+                            <li>地域No.1美容クリニックとしての地位確立</li>
+                            <li>医師・スタッフの人間味あるアピール</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-700">長期的メリット</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">内製化によるコスト削減</h4>
+                            <p class="text-sm">スタッフが自走することで外部委託費用を削減し、長期的なコスト効率が向上します。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">人材育成効果</h4>
+                            <p class="text-sm">デジタルマーケティングスキルを持つ人材が育成され、組織全体の価値向上につながります。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">迅速な情報発信</h4>
+                            <p class="text-sm">外部委託せずに院内でコンテンツ制作ができるため、タイムリーな情報発信が可能になります。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">口コミ拡散効果</h4>
+                            <p class="text-sm">質の高い投稿によりシェアされやすくなり、オーガニックな口コミ拡散が期待できます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-lg bg-pink-50 p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700 text-center">ROI（投資対効果）</h3>
+                    <p class="text-center mb-4">本プロジェクトでの投資（30万円）に対して、以下の効果が期待できます：</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-bold text-center mb-2">新規患者獲得効果</h4>
+                            <p class="text-sm">インスタグラム経由の新規患者が月5名増加した場合、平均客単価5万円として年間300万円の売上増加が見込めます。</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-bold text-center mb-2">広告費削減効果</h4>
+                            <p class="text-sm">オーガニック集客が増えることで、年間で約100万円の広告費削減効果が期待できます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="bg-white rounded-lg p-6 box-shadow">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">株式会社〇〇〇〇</h3>
+                    <p class="text-sm text-gray-600">〒100-0001 東京都千代田区〇〇〇 1-2-3</p>
+                    <p class="text-sm text-gray-600">TEL: 03-1234-5678</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-sm text-gray-600">担当: 山田 太郎</p>
+                    <p class="text-sm text-gray-600">Email: yamada@example.com</p>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-500">© 2023 株式会社〇〇〇〇 All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
