@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北海道オホーツク海産の極上ホタテ | 丸ウロコ三和水産株式会社</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 55, 94, 0.7), rgba(0, 55, 94, 0.7)), url('https://sanwa-suisan.com/images/main.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-wave {
+            position: relative;
+            padding-bottom: 100px;
+        }
+        .section-wave::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18.17 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0H0z" fill="%23f3f4f6"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .ribbon {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            text-align: right;
+        }
+        .ribbon span {
+            font-size: 0.8rem;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            line-height: 25px;
+            transform: rotate(45deg);
+            width: 120px;
+            display: block;
+            background: #ff3030;
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 20px;
+            right: -30px;
+        }
+        .ribbon span::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #8f0808;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #8f0808;
+        }
+        .ribbon span::after {
+            content: '';
+            position: absolute;
+            right: 0%;
+            top: 100%;
+            z-index: -1;
+            border-right: 3px solid #8f0808;
+            border-left: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #8f0808;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://sanwa-suisan.com/images/logo.png" alt="丸ウロコ三和水産株式会社" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-6 text-gray-700">
+                <a href="#about" class="hover:text-blue-700 transition">私たちについて</a>
+                <a href="#strength" class="hover:text-blue-700 transition">こだわり</a>
+                <a href="#products" class="hover:text-blue-700 transition">商品ラインナップ</a>
+                <a href="#quality" class="hover:text-blue-700 transition">品質への取り組み</a>
+                <a href="#contact" class="hover:text-blue-700 transition">お問い合わせ</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero-bg py-28 text-white">
+        <div class="container mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">北海道オホーツク海産<br>極上の天然ホタテ</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">道東オホーツク海の清らかな海で育まれた<br>鮮度抜群の大粒ホタテをご家庭へ直送</p>
+            <a href="#products" class="cta-button bg-blue-700 hover:bg-blue-800 text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
+                商品を見る <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 特徴紹介セクション -->
+    <section class="py-20 bg-white section-wave" id="about">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">道東オホーツク海の新鮮な<span class="text-blue-700">ホタテ</span>を<br>安全・安心にお届けします</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10 mt-12">
+                <div class="bg-blue-50 rounded-xl p-8 shadow-lg">
+                    <div class="text-blue-700 text-5xl mb-4">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">北海道オホーツク海産の<br>厳選素材</h3>
+                    <p class="text-gray-700">北海道紋別市の前浜や、オホーツク海沿岸一帯で獲れる良質で新鮮なホタテを生産者から直接買い付けています。北海道の広大な海域から、最高の品質のホタテだけを選りすぐりました。</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-xl p-8 shadow-lg">
+                    <div class="text-blue-700 text-5xl mb-4">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">鮮度を閉じ込める<br>急速冷凍技術</h3>
+                    <p class="text-gray-700">水揚げされたホタテは、最新のトンネルフリーザーで急速冷凍。ホタテ本来の甘みと旨味を閉じ込め、解凍後も生のような食感と風味をお楽しみいただけます。</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-xl p-8 shadow-lg">
+                    <div class="text-blue-700 text-5xl mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">安全・安心の<br>品質管理体制</h3>
+                    <p class="text-gray-700">大日本水産会HACCPの認証を取得し、厳格な衛生管理のもとで加工。定期的な製品検査、水質検査を実施し、安心してお召し上がりいただける品質を保証します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- こだわりセクション -->
+    <section class="py-20 bg-gray-100" id="strength">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">三和水産の<span class="text-blue-700">こだわり</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <img src="https://sanwa-suisan.com/images/trace3.jpg" alt="新鮮なホタテ" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">独自の仕入れルート</h3>
+                    <p class="text-gray-700 mb-6">弊社は、北海道紋別市に拠点がありながら、地元の前浜だけでなく、オホーツク海のほぼ全ての港から新鮮なホタテを仕入できるルートを持っています。北海道の面積は広く、北から南にかけて漁の時期が異なるため、新鮮なホタテを長い期間仕入れることができ、ご要望に合わせて大・中・小さまざまな企画のホタテをご用意することが可能です。</p>
+                    <div class="flex items-center text-blue-700">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>オホーツク海沿岸全域からの仕入れルート確保</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">高品質な製造工程</h3>
+                    <p class="text-gray-700 mb-6">工場に届けられたホタテは、清潔な環境で丁寧に加工・洗浄を行います。当社の工場で使用している水は、水質検査を行った上で残留塩素濃度等を検査し、安全性が確認されたもののみを使用。また、水産物を管理するための海水においても、一般的な海水よりも細菌や病原体の量が少ない深海から組み上げた深層海洋水を滅菌した上で使っています。</p>
+                    <div class="flex items-center text-blue-700">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>ベテラン職人による素早い加工処理</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://sanwa-suisan.com/images/trace5.jpg" alt="加工工程" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://sanwa-suisan.com/images/trace6.png" alt="急速冷凍" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">鮮度を維持する急速冷凍技術</h3>
+                    <p class="text-gray-700 mb-6">洗浄と加工を終えたホタテは機械でサイズごとに選別後、トンネルフリーザーと呼ばれる急速冷凍装置ですぐに冷凍します。トンネルフリーザーは短時間で大量のホタテを一度に冷凍することができるため、鮮度を維持することができます。均一な冷凍が可能なため冷凍にムラがなく、品質や栄養価、解凍した際のおいしさも保ったまま保存が可能になります。</p>
+                    <div class="flex items-center text-blue-700">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>解凍後も生のようなみずみずしさを実現</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品ラインナップセクション -->
+    <section class="py-20 bg-white" id="products">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">ホタテ商品ラインナップ</h2>
+            <p class="text-gray-600 text-center mb-16 max-w-3xl mx-auto">北海道オホーツク海産の厳選されたホタテをご家庭でお楽しみいただけるよう、さまざまな商品をご用意しております。サイズや量に合わせてお選びください。</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- 商品1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg relative">
+                    <div class="ribbon">
+                        <span>人気No.1</span>
+                    </div>
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1219152915_6763bd3b00a46.jpg" alt="大粒！冷凍帆立貝柱500ｇ" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">大粒！冷凍帆立貝柱500ｇ</h3>
+                        <p class="text-gray-600 mb-4">オホーツク海産のとれたて天然大粒帆立を急速冷凍し、鮮度と旨みを閉じ込めました。解凍後も生のような味わいをお楽しみいただけます。使いやすいチャック付き包装で風味がそこなわれることなく保存可能です。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥3,100</span>
+                            <span class="text-sm text-gray-500">500g (20〜25粒)</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/67" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 商品2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1203190828_61a9ec9cc9d9f.jpg" alt="大粒！冷凍帆立貝柱500ｇ×2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">大粒！冷凍帆立貝柱500ｇ×2</h3>
+                        <p class="text-gray-600 mb-4">オホーツク海産の新鮮な大粒帆立貝柱を2パックセットでお届け。ご家庭でのお料理やおもてなしに便利な量です。急速冷凍でホタテ本来の甘みと旨味を閉じ込めました。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥6,200</span>
+                            <span class="text-sm text-gray-500">500g×2パック</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/44" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 商品3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1203191144_61a9ed60d2740.jpg" alt="大粒！冷凍帆立貝柱1㎏×1" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">大粒！冷凍帆立貝柱1㎏</h3>
+                        <p class="text-gray-600 mb-4">たっぷり1kgの大容量パック。ご家族の食卓やおもてなし、パーティーなどにも最適です。オホーツク海産の天然ホタテをお得にお楽しみいただけます。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥6,100</span>
+                            <span class="text-sm text-gray-500">1kg (40〜50粒)</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/47" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 商品4 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1119152047_6197423f84b0d.jpg" alt="帆立貝柱　特大(1㎏)" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">帆立貝柱 特大(1㎏)</h3>
+                        <p class="text-gray-600 mb-4">特大サイズの貝柱だけを厳選した贅沢な逸品。一粒一粒が大きく食べ応え抜群。刺身やカルパッチョはもちろん、バター焼きや炊き込みご飯にもおすすめです。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥8,100</span>
+                            <span class="text-sm text-gray-500">1kg (特大サイズ)</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/36" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 商品5 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1119153058_619744a278e35.jpg" alt="帆立貝柱200g(15粒前後)" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">帆立貝柱200g(15粒前後)</h3>
+                        <p class="text-gray-600 mb-4">少量タイプでお手軽にオホーツク海産の帆立をお試しいただけます。2〜3人前の使いやすいサイズで、様々なお料理にご活用いただけます。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥1,100</span>
+                            <span class="text-sm text-gray-500">200g (15粒前後)</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/40" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 商品6 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://sanwa-suisan.com/shop/html/upload/save_image/1119160902_61974d8e56a72.jpg" alt="帆立貝柱200g(15粒前後)×5" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">帆立貝柱200g×5パック</h3>
+                        <p class="text-gray-600 mb-4">使いやすい小分けタイプを5パックセットでお届け。必要な分だけ解凍できるので、いつでも鮮度の良いホタテを楽しめます。ご家庭のストックにもおすすめです。</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-blue-700">￥5,500</span>
+                            <span class="text-sm text-gray-500">200g×5パック</span>
+                        </div>
+                        <a href="https://sanwa-suisan.com/shop/products/detail/33" class="cta-button mt-6 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full text-center block">
+                            商品詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://sanwa-suisan.com/shop/products/list" class="cta-button bg-blue-900 hover:bg-blue-950 text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
+                    オンラインショップで全商品を見る <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活用法セクション -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">極上ホタテの<span class="text-blue-700">おいしい召し上がり方</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-blue-900 text-white p-4 text-center">
+                        <h3 class="text-xl font-bold">お刺身・カルパッチョ</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">冷蔵庫で自然解凍したホタテは、そのまま刺身やカルパッチョとしてお楽しみいただけます。柑橘系の酸味やオリーブオイル、岩塩などでシンプルに味わうのがおすすめです。</p>
+                        <div class="bg-blue-50 rounded p-4">
+                            <p class="text-sm font-medium text-blue-800"><i class="fas fa-lightbulb mr-2"></i>ポイント</p>
+                            <p class="text-sm text-gray-700">完全に解凍せず、中心部が少し凍っている状態でスライスすると、綺麗な切り口に仕上がります。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-blue-900 text-white p-4 text-center">
+                        <h3 class="text-xl font-bold">バター焼き・グリル</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">バターと相性抜群のホタテは、シンプルなバター焼きでも絶品です。軽く塩コショウで味付けし、熱したフライパンでサッと焼くだけで香ばしい一品に。</p>
+                        <div class="bg-blue-50 rounded p-4">
+                            <p class="text-sm font-medium text-blue-800"><i class="fas fa-lightbulb mr-2"></i>ポイント</p>
+                            <p class="text-sm text-gray-700">強火で手早く焼くことがポイント。焼きすぎるとパサパサになるので注意しましょう。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-blue-900 text-white p-4 text-center">
+                        <h3 class="text-xl font-bold">炊き込みご飯・パスタ</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">ホタテの旨味がたっぷり染み出す炊き込みご飯や、クリームパスタなどの料理にも最適。サイコロ状に切ったホタテを加えると、料理全体が贅沢な味わいに。</p>
+                        <div class="bg-blue-50 rounded p-4">
+                            <p class="text-sm font-medium text-blue-800"><i class="fas fa-lightbulb mr-2"></i>ポイント</p>
+                            <p class="text-sm text-gray-700">炊き込みご飯は、ホタテを小さめに切って加えると旨味が広がりやすくなります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品質・安全への取り組みセクション -->
+    <section class="py-20 bg-white" id="quality">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">安全・安心への取り組み</h2>
+            <p class="text-gray-600 text-center mb-16 max-w-3xl mx-auto">近年、食の安全への関心が高まってきており、食品を取り扱う業者として安全・安心な製品を製造することは、弊社の使命だと考えております。</p>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900 flex items-center">
+                        <i class="fas fa-shield-alt text-blue-700 mr-3 text-3xl"></i>
+                        HACCP認証取得
+                    </h3>
+                    <p class="text-gray-700 mb-4">弊社では、HACCP（ハサップ）と呼ばれる「Hazard（危害）」「Analysis（分析）」「Critical（重要）」「Control（管理）」「Point（点）」の5つの単語からなる衛生管理手法を取り入れており、作業工程にて危険物質の混入を防ぐための厳格な管理を行っております。</p>
+                    <p class="text-gray-700">また、製造に携わる従業員にHACCPの考え方を徹底させるため、水産食品加工施設におけるHACCPの講習会に出席し、定期的に現場での指導を行っております。</p>
+
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4 text-blue-800">各種認証の取得</h4>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>大日本水産会HACCP認定取得（冷凍帆立貝柱）</li>
+                            <li>大日本水産会HACCP認定取得（生冷ズワイガニカット製品）</li>
+                            <li>米国食品医薬品局(FDA)取得</li>
+                            <li>MSC/CoC認証(冷凍帆立貝柱) 取得</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900 flex items-center">
+                        <i class="fas fa-flask text-blue-700 mr-3 text-3xl"></i>
+                        徹底した品質管理
+                    </h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2 text-blue-800">製品検査</h4>
+                        <p class="text-gray-700">毎週外部の検査機関に製品の菌検査を提出し、安全性のチェックを受けております。その他にも賞味期限を定めたり、味や色などの見た目に至るまで評価する官能検査をシーズン中毎月行っております。また、長期間品質の保持が出来ているか確かめるために、キープサンプルを保管し、賞味期限の3ヵ月後においても製品の品質検査を行っております。</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-2 text-blue-800">水質検査</h4>
+                        <p class="text-gray-700">工場内で使用している水は、浄水場に検査を依頼し、検査結果を書面で受け取り、安全であることを確認し記録しております。また、自社で海水を紫外線と次亜塩素酸ナトリウムで滅菌した後に、ホタテ加工の海水として使用しています。</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-2 text-blue-800">トレーサビリティ</h4>
+                        <p class="text-gray-700">前浜の仕入れから、輸送、工場での洗浄・加工、急速冷凍、箱詰め・出荷、お客様の食卓へ届くまで、これら全ての工程を明確に管理しています。また、通常では仕入れから出荷までに3ヶ月程度かかるのが一般的ですが、弊社では効率的な作業体制で1ヶ月程度で出荷までを行い、お客様に新鮮でおいしい水産品をお届けすることにこだわっています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声セクション -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">お客様の声</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"初めて購入しましたが、想像以上の大きさと新鮮さに驚きました。刺身で食べたところ、甘みが強くて本当に美味しかったです。家族全員が気に入り、リピート確定です！"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-700 font-bold mr-3">
+                            T
+                        </div>
+                        <div>
+                            <p class="font-bold">田中さん</p>
+                            <p class="text-sm text-gray-500">東京都</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 text-gray-300">
+                        <i class="fas fa-quote-right text-4xl"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"バター焼きにして食べました。ジューシーで甘みがあり、市販のものとは格が違います。大きさも揃っていて見た目も良く、おもてなし料理にもピッタリです。このクオリティでこの価格はかなりお得だと思います。"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-700 font-bold mr-3">
+                            S
+                        </div>
+                        <div>
+                            <p class="font-bold">佐藤さん</p>
+                            <p class="text-sm text-gray-500">大阪府</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 text-gray-300">
+                        <i class="fas fa-quote-right text-4xl"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="text-yellow-400 flex mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"ホタテ好きの父への誕生日プレゼントに購入しました。「こんなに大きなホタテは初めて！」と大喜びでした。解凍後も生のような食感で、炊き込みご飯にしたら家族全員で美味しくいただきました。また注文します！"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-700 font-bold mr-3">
+                            K
+                        </div>
+                        <div>
+                            <p class="font-bold">小林さん</p>
+                            <p class="text-sm text-gray-500">北海道</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 text-gray-300">
+                        <i class="fas fa-quote-right text-4xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問セクション -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">よくある質問</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-50 px-6 py-4">
+                        <h3 class="text-lg font-bold">Q. 解凍後はどのくらいの期間保存できますか？</h3>
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-700">A. 解凍後は冷蔵庫で1〜2日以内にお召し上がりください。なるべく早めにお召し上がりいただくことで、より鮮度の良い状態でお楽しみいただけます。</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-50 px-6 py-4">
+                        <h3 class="text-lg font-bold">Q. 解凍方法を教えてください。</h3>
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-700">A. 冷蔵庫での自然解凍が最適です。必要な分だけ取り出し、冷蔵庫で6〜8時間ほど解凍してください。急いでいる場合は、密閉した袋に入れて流水解凍も可能ですが、風味が落ちる可能性があります。電子レンジでの解凍は風味や食感が損なわれるためおすすめしません。</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-50 px-6 py-4">
+                        <h3 class="text-lg font-bold">Q. 賞味期限はどのくらいですか？</h3>
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-700">A. 冷凍状態では製造日から2年間保存可能です。開封後は早めにお召し上がりください。</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-50 px-6 py-4">
+                        <h3 class="text-lg font-bold">Q. 配送方法と日数を教えてください。</h3>
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-700">A. クロネコヤマトのクール便（冷凍）でお届けしています。北海道から全国へ最短で翌日〜3日以内にお届けします。離島など一部地域は配送に時間がかかる場合があります。</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-50 px-6 py-4">
+                        <h3 class="text-lg font-bold">Q. ギフトとして送ることはできますか？</h3>
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-700">A. はい、ギフト対応も承っております。ご注文時に「ギフト包装希望」とお申し付けください。熨斗や包装紙、メッセージカード等のサービスも行っております。詳細はお問い合わせください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA セクション -->
+    <section class="py-20 bg-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">北海道オホーツク海の極上ホタテを<br>ご家庭でお楽しみください</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">鮮度抜群の大粒ホタテを<br>産地直送でお届けします</p>
+            
+            <a href="https://sanwa-suisan.com/shop/products/list" class="cta-button bg-white text-blue-700 text-xl font-bold py-4 px-10 rounded-full inline-block hover:bg-blue-50">
+                今すぐ商品を見る <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="py-20 bg-gray-100" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">お問い合わせ</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 bg-blue-900 text-white">
+                        <h3 class="text-2xl font-bold mb-6">お気軽にお問い合わせください</h3>
+                        <p class="mb-8">商品についてのご質問や、ご注文に関するお問い合わせなど、お気軽にご連絡ください。</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">所在地</h4>
+                                    <p>〒094-0011<br>北海道紋別市港町6丁目2番8号</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">お電話</h4>
+                                    <p>0158-23-3628</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-fax mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">FAX</h4>
+                                    <p>0158-23-9954</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">メール</h4>
+                                    <p>お問い合わせフォームよりご連絡ください</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold mb-6 text-blue-900">お問い合わせフォーム</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-bold mb-2" for="name">お名前 <span class="text-red-500">*</span></label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" id="name" type="text" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-bold mb-2" for="email">メールアドレス <span class="text-red-500">*</span></label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" id="email" type="email" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 font-bold mb-2" for="phone">電話番号</label>
+                                <input class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" id="phone" type="tel">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-bold mb-2" for="message">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                                <textarea class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" id="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button class="cta-button bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg w-full" type="submit">
+                                送信する
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <img src="https://sanwa-suisan.com/images/logo.png" alt="丸ウロコ三和水産株式会社" class="h-12 mb-6">
+                    <p class="mb-4">道東オホーツク海の新鮮な海産物を安全・安心にお届けいたします。</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-white hover:text-blue-300 transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-300 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-blue-300 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">サイトマップ</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="hover:text-blue-300 transition">私たちについて</a></li>
+                        <li><a href="#strength" class="hover:text-blue-300 transition">こだわり</a></li>
+                        <li><a href="#products" class="hover:text-blue-300 transition">商品ラインナップ</a></li>
+                        <li><a href="#quality" class="hover:text-blue-300 transition">品質への取り組み</a></li>
+                        <li><a href="#contact" class="hover:text-blue-300 transition">お問い合わせ</a></li>
+                        <li><a href="https://sanwa-suisan.com/shop/products/list" class="hover:text-blue-300 transition">オンラインショップ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">会社情報</h4>
+                    <ul class="space-y-3">
+                        <li>丸ウロコ三和水産株式会社</li>
+                        <li>〒094-0011 北海道紋別市港町6丁目2番8号</li>
+                        <li>TEL: 0158-23-3628</li>
+                        <li>FAX: 0158-23-9954</li>
+                        <li>代表取締役: 山崎和也</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-10 pt-6 text-center">
+                <p>&copy; 2025 丸ウロコ三和水産株式会社 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
