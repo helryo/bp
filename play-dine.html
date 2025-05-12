@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play & Dine -TOYOSU- プロジェクト提案書</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #1E40AF;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, #1E40AF);
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+        }
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #3B82F6;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 15px;
+            height: calc(100% + 5px);
+            width: 2px;
+            background-color: #93C5FD;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            color: #3B82F6;
+            margin-bottom: 15px;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #EFF6FF;
+        }
+        #revenue-chart, #attendance-chart, #seasonality-chart, #expansion-map, #customer-segments {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="page-container">
+        <!-- Header Section -->
+        <header class="header-bg text-white rounded-lg overflow-hidden shadow-xl mb-10">
+            <div class="p-16 text-center">
+                <h1 class="text-5xl font-bold mb-6">Play & Dine -TOYOSU-</h1>
+                <p class="text-2xl mb-8">食と音楽の街プロジェクト提案書</p>
+                <div class="flex justify-center items-center space-x-8">
+                    <div>
+                        <p class="text-lg font-medium">主催</p>
+                        <p class="text-xl font-bold">Wellen株式会社</p>
+                    </div>
+                    <div>
+                        <p class="text-lg font-medium">企画</p>
+                        <p class="text-xl font-bold">MTJグループ</p>
+                    </div>
+                    <div>
+                        <p class="text-lg font-medium">協賛</p>
+                        <p class="text-xl font-bold">ディアジオ ジャパン</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Project Overview -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">プロジェクト概要</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">
+                        <span class="font-bold text-blue-800">Play & Dine -TOYOSU-</span>は、豊洲の美しい水辺空間を活かした食と音楽の融合イベントです。ピアニストやバイオリン奏者などのライブパフォーマンスを楽しみながら、質の高い食事とドリンクを提供します。
+                    </p>
+                    <p class="mb-4">
+                        家族連れから大人のカップルまで幅広い層に向けた空間を創出し、豊洲エリアの新たな魅力を発信します。メディア露出を増やし、豊洲の「食と音楽の街」としてのブランド確立を目指します。
+                    </p>
+                    <p>
+                        毎月開催のイベントとして定着させ、豊洲をはじめとする東京ベイエリアの新たな文化の発信地へと発展させていきます。
+                    </p>
+                </div>
+                <div class="gradient-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">プロジェクト目標</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>豊洲エリアの賑わい創出と地域活性化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>音楽家の活躍の場を提供し、芸術文化の支援</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>質の高い食とお酒と音楽を融合させた新たな体験価値の創造</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>協賛企業ブランドの効果的なプロモーション</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                            <span>豊洲をモデルケースとした東京23区内の他エリアへの展開</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">マーケット分析</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">豊洲エリアの基本情報</h3>
+                    <table class="w-full border-collapse border border-blue-200">
+                        <tr>
+                            <th class="border border-blue-200">人口（2023年時点）</th>
+                            <td class="border border-blue-200">40,424人</td>
+                        </tr>
+                        <tr>
+                            <th class="border border-blue-200">世帯数</th>
+                            <td class="border border-blue-200">17,396世帯</td>
+                        </tr>
+                        <tr>
+                            <th class="border border-blue-200">人口密度</th>
+                            <td class="border border-blue-200">20,243.59人/km²</td>
+                        </tr>
+                        <tr>
+                            <th class="border border-blue-200">主要駅</th>
+                            <td class="border border-blue-200">豊洲駅（東京メトロ有楽町線、ゆりかもめ）</td>
+                        </tr>
+                        <tr>
+                            <th class="border border-blue-200">周辺施設</th>
+                            <td class="border border-blue-200">豊洲市場、豊洲ぐるり公園、豊洲センタービル</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ターゲット層分析</h3>
+                    <img id="customer-segments" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="顧客セグメント分析" class="mb-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">ファミリー層</h4>
+                            <p class="text-sm">子供と一緒に音楽と食事を楽しみたい30〜40代の家族</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">カップル層</h4>
+                            <p class="text-sm">特別な体験を求める20〜30代のカップル</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">富裕層</h4>
+                            <p class="text-sm">高品質な食事と音楽を求める40〜60代の男女</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">音楽愛好家</h4>
+                            <p class="text-sm">生演奏を好む幅広い年齢層</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">来場者数予測</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img id="attendance-chart" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="来場者数予測グラフ">
+                    </div>
+                    <div>
+                        <p class="mb-4">豊洲エリアの人口と周辺からの集客を考慮した月間来場者数予測：</p>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between border-b pb-2">
+                                <span>ランチタイム（平日）</span>
+                                <span class="font-bold">30〜50名/日</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-2">
+                                <span>ランチタイム（休日）</span>
+                                <span class="font-bold">60〜80名/日</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-2">
+                                <span>アフタヌーンティー（平日）</span>
+                                <span class="font-bold">20〜40名/日</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-2">
+                                <span>アフタヌーンティー（休日）</span>
+                                <span class="font-bold">50〜70名/日</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-2">
+                                <span>ディナータイム（平日）</span>
+                                <span class="font-bold">40〜60名/日</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span>ディナータイム（休日）</span>
+                                <span class="font-bold">80〜100名/日</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-sm text-gray-600">※イベント開催時には周辺エリア（江東区、中央区、港区等）からの集客も見込む</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">イベント企画詳細</h2>
+            <div class="mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-40 bg-blue-600 flex items-center justify-center">
+                            <i class="fas fa-music text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">音楽構成</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>ピアノソロ、バイオリンソロ、デュオ演奏など多彩なプログラム</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>クラシック、ジャズ、映画音楽など幅広いジャンルをカバー</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>時間帯や季節に合わせた選曲</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>リクエスト曲の演奏も可能</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-40 bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-utensils text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">フード構成</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>ランチ：季節のコース料理（3〜4品）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>アフタヌーンティー：スイーツと軽食のセット</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>ディナー：本格コース料理（5〜6品）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>豊洲市場の食材を活かした特別メニュー</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-40 bg-blue-800 flex items-center justify-center">
+                            <i class="fas fa-glass-cheers text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">ドリンク構成</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>ディアジオ ジャパン提供のプレミアムアルコール</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>オリジナルカクテル（アルコール/ノンアルコール）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>季節に合わせた特別メニュー</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2"></i>
+                                    <span>ペアリングドリンクサービス</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">イベントスケジュール（例）</h3>
+                    <table class="w-full border-collapse border border-blue-200">
+                        <tr>
+                            <th class="border border-blue-200">時間帯</th>
+                            <th class="border border-blue-200">内容</th>
+                            <th class="border border-blue-200">演奏時間</th>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">11:30〜14:00</td>
+                            <td class="border border-blue-200">ランチタイム演奏</td>
+                            <td class="border border-blue-200">各30分×3回</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">14:30〜17:00</td>
+                            <td class="border border-blue-200">アフタヌーンティー演奏</td>
+                            <td class="border border-blue-200">各30分×3回</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">18:00〜21:00</td>
+                            <td class="border border-blue-200">ディナータイム演奏</td>
+                            <td class="border border-blue-200">各45分×2回</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">特別イベント企画</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">シーズナルイベント</h4>
+                            <p>季節ごとのテーマに合わせた特別プログラム（春の桜、夏の海、秋の収穫、冬の雪景色など）</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">アーティストスポットライト</h4>
+                            <p>月替わりで特定のアーティストを特集する日を設定</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">テーマナイト</h4>
+                            <p>映画音楽の夕べ、ジャズナイト、クラシックの調べなど</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700">コラボレーションイベント</h4>
+                            <p>料理人×音楽家のスペシャルコラボレーション企画</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Strategies -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">季節対応策</h2>
+            <div class="mb-8">
+                <img id="seasonality-chart" src="https://images.unsplash.com/photo-1530563885674-66db50a1af19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="季節ごとの対策グラフ" class="mb-4">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">夏期対策（6月〜9月）</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-sun text-yellow-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">大型パラソル・テント設置</span>
+                                <p class="text-sm text-gray-600">UV加工済みの日除けで直射日光を遮断</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-tint text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">ミストファン/冷風機の導入</span>
+                                <p class="text-sm text-gray-600">水の気化熱を利用した冷却システム</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-wind text-cyan-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">大型サーキュレーター設置</span>
+                                <p class="text-sm text-gray-600">空気の循環を促進し体感温度を下げる</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-glass-martini-alt text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">冷たいドリンク提供の強化</span>
+                                <p class="text-sm text-gray-600">アイスカクテル、フローズンドリンクメニューの充実</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-heart text-red-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">熱中症対策キットの常備</span>
+                                <p class="text-sm text-gray-600">経口補水液、冷却シート、医療スタッフ配置</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 font-bold text-right text-blue-800">想定費用: 100〜150万円/シーズン</p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">冬期対策（12月〜2月）</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-fire text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">屋外用ヒーターの設置</span>
+                                <p class="text-sm text-gray-600">省エネ型遠赤外線ヒーター配置</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-indigo-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">風よけパネル・ビニールカーテン</span>
+                                <p class="text-sm text-gray-600">透明なので視界を遮らず保温効果を高める</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-mug-hot text-brown-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">温かい飲み物サービス強化</span>
+                                <p class="text-sm text-gray-600">ホットカクテル、マルドワインなど季節限定メニュー</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chair text-gray-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">座席用保温グッズ提供</span>
+                                <p class="text-sm text-gray-600">ブランケット、座面ヒーター付きクッションの用意</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-igloo text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">テント内暖房設備強化</span>
+                                <p class="text-sm text-gray-600">部分的なクローズドエリアで快適空間を確保</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 font-bold text-right text-blue-800">想定費用: 120〜180万円/シーズン</p>
+                </div>
+            </div>
+            <div class="mt-8 gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">季節別プログラミングのポイント</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-green-700">春（3月〜5月）</h4>
+                        <p class="text-sm">桜をテーマにした演出、新緑の中での爽やかな音楽プログラム</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-yellow-600">夏（6月〜8月）</h4>
+                        <p class="text-sm">水辺を活かした涼しげな演出、夕暮れからの夜間イベント強化</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-orange-700">秋（9月〜11月）</h4>
+                        <p class="text-sm">収穫祭テーマ、落ち着いた音色の音楽、紅葉ライトアップ</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-blue-700">冬（12月〜2月）</h4>
+                        <p class="text-sm">イルミネーション、温かな室内空間での特別企画強化</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Planning -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">時間帯別収益計画</h2>
+            <div class="mb-8">
+                <img id="revenue-chart" src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="時間帯別収益比較グラフ">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">ランチタイム</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">11:30〜14:00</span>
+                    </div>
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex justify-between border-b pb-2">
+                            <span>平均客単価</span>
+                            <span class="font-bold">5,000円</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（平日）</span>
+                            <span class="font-bold">1.5回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（休日）</span>
+                            <span class="font-bold">2回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>月間予想売上（平日20日）</span>
+                            <span class="font-bold">750万円</span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>月間予想売上（休日8日）</span>
+                            <span class="font-bold">640万円</span>
+                        </li>
+                    </ul>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="font-bold text-center text-blue-800">月間総売上見込み: 1,390万円</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">アフタヌーンティー</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">14:30〜17:00</span>
+                    </div>
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex justify-between border-b pb-2">
+                            <span>平均客単価</span>
+                            <span class="font-bold">4,500円</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（平日）</span>
+                            <span class="font-bold">1回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（休日）</span>
+                            <span class="font-bold">1.5回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>月間予想売上（平日20日）</span>
+                            <span class="font-bold">360万円</span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>月間予想売上（休日8日）</span>
+                            <span class="font-bold">360万円</span>
+                        </li>
+                    </ul>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="font-bold text-center text-blue-800">月間総売上見込み: 720万円</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">ディナータイム</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">18:00〜21:00</span>
+                    </div>
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex justify-between border-b pb-2">
+                            <span>平均客単価</span>
+                            <span class="font-bold">8,000円</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（平日）</span>
+                            <span class="font-bold">1回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>席回転率（休日）</span>
+                            <span class="font-bold">1.5回転</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span>月間予想売上（平日20日）</span>
+                            <span class="font-bold">640万円</span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>月間予想売上（休日8日）</span>
+                            <span class="font-bold">960万円</span>
+                        </li>
+                    </ul>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="font-bold text-center text-blue-800">月間総売上見込み: 1,600万円</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 p-6 gradient-card rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">収益分析と戦略</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-line text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">ディナータイムの収益性</span>
+                                    <p class="text-sm text-gray-600">最も高い客単価と週末の高稼働が見込め、アルコール飲料の販売も活発。主力の収益源として注力。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">ランチタイムの集客力</span>
+                                    <p class="text-sm text-gray-600">回転率の高さとビジネス利用を活かし、安定した売上基盤を形成。平日の稼働率向上が課題。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-coffee text-yellow-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">アフタヌーンティーの差別化</span>
+                                    <p class="text-sm text-gray-600">ターゲットを女性客とカップルに絞り、SNS映えする演出で口コミ効果を狙う。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <h4 class="font-bold text-blue-700">月間総売上予測</h4>
+                            <p class="text-2xl font-bold text-blue-800">3,710万円</p>
+                            <p class="text-sm text-gray-600">※イベント特別料金、追加ドリンク売上等を含む</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-blue-700">季節変動要素</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>春・秋（ピークシーズン）: 売上予測の110〜120%</li>
+                                <li>夏（暑さ対策必要）: 売上予測の90〜100%</li>
+                                <li>冬（寒さ対策必要）: 売上予測の80〜90%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverage Strategy -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">ドリンク提供計画</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ディアジオ ジャパン提供のアルコールラインナップ</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-3 border-b">
+                                <h4 class="font-bold">ウイスキー</h4>
+                                <ul class="text-sm space-y-1 mt-2">
+                                    <li>ジョニーウォーカー ブルーラベル</li>
+                                    <li>ジョニーウォーカー 18年</li>
+                                    <li>ラガヴーリン シングルモルト</li>
+                                    <li>モートラック スペシャルリリース</li>
+                                </ul>
+                            </div>
+                            <div class="p-3 border-b">
+                                <h4 class="font-bold">リキュール</h4>
+                                <ul class="text-sm space-y-1 mt-2">
+                                    <li>ベイリーズ アイリッシュクリーム</li>
+                                    <li>シロック プレミアムウォッカ</li>
+                                    <li>タンカレー No.10 ジン</li>
+                                    <li>ドンフリオ テキーラ</li>
+                                </ul>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="font-bold">シグネチャーカクテル</h4>
+                                <ul class="text-sm space-y-1 mt-2">
+                                    <li>Toyosu Night（限定カクテル）</li>
+                                    <li>Diageo Premium Moscow Mule</li>
+                                    <li>Japanese Garden Martini</li>
+                                    <li>Bay Area Highball</li>
+                                </ul>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="font-bold">季節限定ドリンク</h4>
+                                <ul class="text-sm space-y-1 mt-2">
+                                    <li>春：桜ジントニック</li>
+                                    <li>夏：シトラスウイスキーソーダ</li>
+                                    <li>秋：スパイスド ホットカクテル</li>
+                                    <li>冬：プレミアム マルドワイン</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ノンアルコールオプション</h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-3">ディアジオ提供のノンアルコールカクテル</h4>
+                            <p class="text-sm mb-4">ディアジオグループが出資する「SEEDLIP」を中心とした本格的なノンアルコールドリンク</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-3 bg-blue-50 rounded-lg">
+                                    <h5 class="font-bold text-sm">SEEDLIP Garden 108</h5>
+                                    <p class="text-xs text-gray-600">ハーブ系の味わいを楽しめるノンアルコールスピリッツ</p>
+                                </div>
+                                <div class="p-3 bg-blue-50 rounded-lg">
+                                    <h5 class="font-bold text-sm">SEEDLIP Spice 94</h5>
+                                    <p class="text-xs text-gray-600">スパイシーな風味が特徴のノンアルコールジン</p>
+                                </div>
+                                <div class="p-3 bg-blue-50 rounded-lg">
+                                    <h5 class="font-bold text-sm">ヴァージンモヒート</h5>
+                                    <p class="text-xs text-gray-600">爽やかなミントとライムの組み合わせ</p>
+                                </div>
+                                <div class="p-3 bg-blue-50 rounded-lg">
+                                    <h5 class="font-bold text-sm">ノンアルコール・ジンジャーモスコミュール</h5>
+                                    <p class="text-xs text-gray-600">スパイシーな味わいを楽しめるノンアルカクテル</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md mt-4">
+                            <h4 class="font-bold mb-3">ソフトドリンクオプション</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-bold text-sm">アサヒ提供パターン</h5>
+                                    <ul class="text-xs space-y-1 mt-2">
+                                        <li>ウィルキンソン各種</li>
+                                        <li>三ツ矢サイダー</li>
+                                        <li>カルピスウォーター</li>
+                                        <li>十六茶・おーいお茶</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm">サントリー提供パターン</h5>
+                                    <ul class="text-xs space-y-1 mt-2">
+                                        <li>プレミアムボス</li>
+                                        <li>伊右衛門・クラフトボス</li>
+                                        <li>南アルプスの天然水</li>
+                                        <li>オレンジーナ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">ディアジオ協賛メリット分析</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-3">ブランド露出効果</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">ターゲット層への直接アプローチ</span>
+                                    <p class="text-sm text-gray-600">アッパーミドル〜富裕層向けのプレミアムブランドイメージを強化</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">ブランド体験の創出</span>
+                                    <p class="text-sm text-gray-600">製品を実際に味わい、カクテルの魅力を体験できる場の提供</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">文化的価値との連動</span>
+                                    <p class="text-sm text-gray-600">音楽や食文化との結びつきによるブランド価値の向上</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">ノンアルコール製品の普及促進</span>
+                                    <p class="text-sm text-gray-600">SEEDLIPをはじめとするノンアルコール製品の認知拡大</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3">費用対効果分析</h4>
+                        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span>通常の広告・PR費用（想定）</span>
+                                <span class="font-bold">年間3,600万円</span>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <span>本プロジェクト協賛費用</span>
+                                <span class="font-bold">年間2,400万円</span>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <span>メディア露出相当額（想定）</span>
+                                <span class="font-bold">年間1,800万円</span>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <span>直接販売・試飲効果（想定）</span>
+                                <span class="font-bold">年間1,200万円</span>
+                            </div>
+                            <div class="flex justify-between font-bold text-blue-800 pt-2 border-t">
+                                <span>ROI（投資対効果）</span>
+                                <span>125%</span>
+                            </div>
+                        </div>
+                        <p class="text-sm">※一般的な広告出稿と比較して、イベント協賛の形態は直接的な製品体験と結びつくため、ブランド認知だけでなく実際の購買行動にもつながりやすいというメリットがあります。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performer Recruitment -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">演奏者募集戦略</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">演奏者募集計画</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold mb-3">フェーズ1: 初期ネットワーク活用（1〜3ヶ月）</h4>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-user-friends text-blue-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">知人ネットワーク活用</span>
+                                    <p class="text-sm text-gray-600">主催者の音楽関係者ネットワークから信頼できる演奏者を招聘</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-school text-blue-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">音楽大学との連携</span>
+                                    <p class="text-sm text-gray-600">東京藝術大学、国立音楽大学、桐朋学園大学等との協力関係構築</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="font-bold mb-3">フェーズ2: オープン募集展開（4ヶ月目〜）</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-globe text-blue-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">専用ウェブサイト構築</span>
+                                    <p class="text-sm text-gray-600">演奏者募集専用ページ、オーディション情報、実績紹介を含む総合サイト</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-instagram text-purple-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">SNS活用</span>
+                                    <p class="text-sm text-gray-600">Instagram、Twitter、YouTubeでの演奏風景発信とハッシュタグ戦略</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-handshake text-green-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">演奏者コミュニティ形成</span>
+                                    <p class="text-sm text-gray-600">既存演奏者による紹介制度、演奏者同士の交流会開催</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-music text-red-600 mt-1 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">専門サイト・媒体での募集</span>
+                                    <p class="text-sm text-gray-600">ムジカノーヴァ、音楽専門サイト、音楽大学掲示板等での告知</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">演奏者へのメリット</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-coins text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">適正な報酬</span>
+                                    <p class="text-sm text-gray-600">ソロ演奏：15,000円〜25,000円/回（30〜45分）</p>
+                                    <p class="text-sm text-gray-600">デュオ演奏：30,000円〜45,000円/回（30〜45分）</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-camera text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">プロモーション支援</span>
+                                    <p class="text-sm text-gray-600">Wellen株式会社によるSNSプロモーション</p>
+                                    <p class="text-sm text-gray-600">プロフィール動画制作・写真撮影サポート</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-network-wired text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">ネットワーク構築</span>
+                                    <p class="text-sm text-gray-600">スポンサー企業との接点提供</p>
+                                    <p class="text-sm text-gray-600">他イベント出演機会への橋渡し</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-calendar-alt text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">定期的な演奏機会</span>
+                                    <p class="text-sm text-gray-600">継続的な出演スケジュール提供</p>
+                                    <p class="text-sm text-gray-600">季節ごとの特別イベント参加機会</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-users text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">ファン獲得支援</span>
+                                    <p class="text-sm text-gray-600">来場者との交流機会の創出</p>
+                                    <p class="text-sm text-gray-600">演奏者のSNSフォロワー増加施策</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 bg-blue-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-3">演奏者コミュニティ構築</h4>
+                        <p class="mb-3">Play & Dine -TOYOSU-に参加する演奏者のネットワークを構築し、持続的なエコシステムを形成します。</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>四半期ごとの演奏者交流会</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>演奏者向けワークショップの開催</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>コラボレーション企画の促進</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">オーディション・選考プロセス</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-3">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-blue-800">1</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">応募</h4>
+                        <p class="text-sm">演奏動画、プロフィール、希望演奏日時などをウェブサイトから応募</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-3">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-blue-800">2</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">一次選考</h4>
+                        <p class="text-sm">提出された動画・資料による書類選考。技術力、表現力、オリジナリティを評価</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-3">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-blue-800">3</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">面談</h4>
+                        <p class="text-sm">対面またはオンラインでの面談。人柄、イベントコンセプトへの理解、実績確認</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-3">
+                            <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span class="font-bold text-blue-800">4</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-center mb-2">採用・登録</h4>
+                        <p class="text-sm">合格者は演奏者リストに登録。日程調整後、出演スケジュールを確定</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Planning -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">設備導入計画</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">必要設備リスト</h3>
+                    <table class="w-full border-collapse border border-blue-200">
+                        <tr>
+                            <th class="border border-blue-200">設備項目</th>
+                            <th class="border border-blue-200">費用（概算）</th>
+                            <th class="border border-blue-200">備考</th>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">屋外用ピアノ（アップライト）</td>
+                            <td class="border border-blue-200">320,000円〜</td>
+                            <td class="border border-blue-200">天候対策済み特殊仕様</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">音響システム一式</td>
+                            <td class="border border-blue-200">200,000円〜</td>
+                            <td class="border border-blue-200">屋外用スピーカー、ミキサー等</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">ステージ設営</td>
+                            <td class="border border-blue-200">150,000円〜</td>
+                            <td class="border border-blue-200">雨風対策用屋根付き</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">照明設備</td>
+                            <td class="border border-blue-200">100,000円〜</td>
+                            <td class="border border-blue-200">LED照明、装飾用イルミネーション</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">ピアノ調律・メンテナンス</td>
+                            <td class="border border-blue-200">16,500円/回</td>
+                            <td class="border border-blue-200">月2回の定期調律</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">季節対策設備</td>
+                            <td class="border border-blue-200">100〜180万円/季節</td>
+                            <td class="border border-blue-200">夏期・冬期対応</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-blue-200">客席・テーブル</td>
+                            <td class="border border-blue-200">200,000円〜</td>
+                            <td class="border border-blue-200">80席分</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">騒音対策と音響設計</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-volume-down text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">音量コントロール</span>
+                                    <p class="text-sm text-gray-600">法的騒音基準（65dB以下）を遵守するシステム導入</p>
+                                    <p class="text-sm text-gray-600">音量リミッター設置による自動制御</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-shield-alt text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">音響吸収材の活用</span>
+                                    <p class="text-sm text-gray-600">ステージ周辺に吸音パネルを設置</p>
+                                    <p class="text-sm text-gray-600">音の反射・拡散を制御する設計</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-broadcast-tower text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">指向性スピーカーシステム</span>
+                                    <p class="text-sm text-gray-600">客席エリアに集中して音が届く指向性スピーカーを採用</p>
+                                    <p class="text-sm text-gray-600">周辺区域への音漏れを最小化</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="far fa-clock text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">時間管理の徹底</span>
+                                    <p class="text-sm text-gray-600">夜間（21:00以降）の音量制限強化</p>
+                                    <p class="text-sm text-gray-600">周辺住民に配慮したスケジュール管理</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2">事前対策と継続モニタリング</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                    <span>イベント前の周辺住民への告知と理解促進</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                    <span>定期的な騒音測定と記録</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                    <span>苦情対応窓口の設置</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                    <span>地域コミュニティとの良好な関係構築</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">設備投資計画</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-center text-blue-700 mb-3">初期投資</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">基本設備一式</span>
+                                <span class="font-bold">約970万円</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">季節対応設備</span>
+                                <span class="font-bold">約300万円</span>
+                            </li>
+                            <li class="flex justify-between pb-1">
+                                <span class="text-sm">予備費</span>
+                                <span class="font-bold">約200万円</span>
+                            </li>
+                        </ul>
+                        <p class="font-bold text-right mt-2 text-blue-800">合計: 約1,470万円</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-center text-blue-700 mb-3">月間運営コスト</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">演奏者報酬</span>
+                                <span class="font-bold">約120万円</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">設備維持費</span>
+                                <span class="font-bold">約30万円</span>
+                            </li>
+                            <li class="flex justify-between pb-1">
+                                <span class="text-sm">季節対応費</span>
+                                <span class="font-bold">約40万円</span>
+                            </li>
+                        </ul>
+                        <p class="font-bold text-right mt-2 text-blue-800">合計: 約190万円/月</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-center text-blue-700 mb-3">投資回収計画</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">月間収益（見込み）</span>
+                                <span class="font-bold">約3,710万円</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-1">
+                                <span class="text-sm">月間運営コスト</span>
+                                <span class="font-bold">約190万円</span>
+                            </li>
+                            <li class="flex justify-between pb-1">
+                                <span class="text-sm">初期投資回収期間</span>
+                                <span class="font-bold">約1ヶ月</span>
+                            </li>
+                        </ul>
+                        <p class="text-xs text-center mt-2 text-gray-600">※食材費・人件費等の飲食事業コストは含まず</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket Design -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">チケット設計</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">ランチ＆ミュージック</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">11:30〜14:00</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">5,000円〜</span>
+                        <span class="text-gray-600">（税込）/ 1名</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>季節のランチコース（3〜4品）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>ソフトドリンク1杯</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>ライブ演奏（30分×3回）</span>
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>平日料金</span>
+                            <span class="font-bold">5,000円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>休日料金</span>
+                            <span class="font-bold">5,500円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>グループ割（4名以上）</span>
+                            <span class="font-bold">4,800円/人</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>アルコール追加</span>
+                            <span class="font-bold">+1,500円〜</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">アフタヌーンティー＆ミュージック</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">14:30〜17:00</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">4,500円〜</span>
+                        <span class="text-gray-600">（税込）/ 1名</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>スイーツ＆軽食セット</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>紅茶または珈琲</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>ライブ演奏（30分×3回）</span>
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>平日料金</span>
+                            <span class="font-bold">4,500円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>休日料金</span>
+                            <span class="font-bold">4,800円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>ペア割</span>
+                            <span class="font-bold">8,500円/2名</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>スパークリング追加</span>
+                            <span class="font-bold">+1,200円</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-blue-800">ディナー＆ミュージック</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 py-1 px-3 rounded-full">18:00〜21:00</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">8,000円〜</span>
+                        <span class="text-gray-600">（税込）/ 1名</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>本格ディナーコース（5〜6品）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>ウェルカムドリンク1杯</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                            <span>ライブ演奏（45分×2回）</span>
+                        </li>
+                    </ul>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>平日料金</span>
+                            <span class="font-bold">8,000円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>休日料金</span>
+                            <span class="font-bold">8,500円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b pb-1">
+                            <span>カップル割</span>
+                            <span class="font-bold">15,000円/2名</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>ドリンクペアリング</span>
+                            <span class="font-bold">+3,000円</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">特別イベントチケット</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-blue-700">シーズナルイベント</h4>
+                                <span class="text-sm">10,000円〜/人</span>
+                            </div>
+                            <p class="text-sm mb-2">季節ごとの特別テーマに合わせた食事と音楽の特別企画</p>
+                            <ul class="text-xs space-y-1">
+                                <li>・桜の季節（3〜4月）</li>
+                                <li>・夏の海（7〜8月）</li>
+                                <li>・収穫祭（9〜10月）</li>
+                                <li>・冬のイルミネーション（12月）</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-blue-700">コラボレーションイベント</h4>
+                                <span class="text-sm">12,000円〜/人</span>
+                            </div>
+                            <p class="text-sm mb-2">ゲストシェフと音楽家のスペシャルコラボレーション</p>
+                            <ul class="text-xs space-y-1">
+                                <li>・有名シェフによる特別メニュー</li>
+                                <li>・スペシャルゲスト演奏</li>
+                                <li>・限定ドリンクペアリング</li>
+                                <li>・記念品付き</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-700 mb-3">チケット販売チャネル</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-globe text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">公式ウェブサイト</span>
+                                    <p class="text-sm text-gray-600">オンライン予約システムを導入、キャンセルポリシーを明確化</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-mobile-alt text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">レストラン予約サービス</span>
+                                    <p class="text-sm text-gray-600">TableCheck、OpenTable等との連携</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-ticket-alt text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">チケット販売サイト</span>
+                                    <p class="text-sm text-gray-600">Peatixなどのイベントチケットプラットフォーム活用</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-store text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">現地販売</span>
+                                    <p class="text-sm text-gray-600">当日券の限定数販売（空席状況に応じて）</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm font-bold">市場相場との比較</p>
+                            <p class="text-xs">東京都内の類似サービス（音楽付き食事体験）と比較して、質の高い演奏と食事内容を考慮しつつ、競争力のある価格設定としています。特に平日料金を抑えることで、稼働率の向上と新規顧客の獲得を目指します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Expansion -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">将来展開計画</h2>
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">東京23区内の展開候補地</h3>
+                <img id="expansion-map" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="拡大展開マップ" class="mb-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h4 class="font-bold text-blue-700 mb-2">ベイエリア展開</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">お台場（港区）</span>
+                                    <p class="text-xs text-gray-600">観光客も多く、海を望む立地で豊洲と同様のコンセプトが活かせる</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">天王洲（品川区）</span>
+                                    <p class="text-xs text-gray-600">再開発が進む水辺エリアで、新たな顧客層を開拓できる</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">晴海（中央区）</span>
+                                    <p class="text-xs text-gray-600">五輪選手村跡地の再開発で人口増加中の新興エリア</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">有明（江東区）</span>
+                                    <p class="text-xs text-gray-600">アリーナやコンベンション施設と連携した展開が可能</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h4 class="font-bold text-blue-700 mb-2">都心展開</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">六本木ヒルズ（港区）</span>
+                                    <p class="text-xs text-gray-600">富裕層向けにアップスケールした展開が可能</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">代官山（渋谷区）</span>
+                                    <p class="text-xs text-gray-600">おしゃれなカップルやファミリー層が多い地域</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">日比谷公園（千代田区）</span>
+                                    <p class="text-xs text-gray-600">都心の緑豊かな空間で新たな顧客層にアプローチ</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">神宮外苑（新宿区）</span>
+                                    <p class="text-xs text-gray-600">広大な緑地と新国立競技場周辺の開発エリア</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h4 class="font-bold text-blue-700 mb-2">新興エリア展開</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">二子玉川（世田谷区）</span>
+                                    <p class="text-xs text-gray-600">高感度な富裕層が集まる再開発成功エリア</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">武蔵小杉（川崎市）</span>
+                                    <p class="text-xs text-gray-600">都心近接の新興住宅地、ファミリー層が豊富</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">立川（立川市）</span>
+                                    <p class="text-xs text-gray-600">多摩地区の中心地として商業発展が続くエリア</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                                <div>
+                                    <span class="font-bold">大宮（さいたま市）</span>
+                                    <p class="text-xs text-gray-600">北関東の玄関口として発展する商業都市</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">多様なイベント展開</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-spa text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">朝活ヨガ＆ブレックファスト</span>
+                                    <p class="text-sm text-gray-600">平日7:00〜9:00、朝日の中でのヨガセッションと健康的な朝食を提供</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-palette text-purple-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">アート＆クラフトワークショップ</span>
+                                    <p class="text-sm text-gray-600">週末午前中、クリエイティブな創作活動と軽食のセット</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wine-glass-alt text-red-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">ワインテイスティングセミナー</span>
+                                    <p class="text-sm text-gray-600">平日夜、ディアジオ提供のワインセミナーと軽食付き</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-seedling text-green-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">ガーデニングワークショップ</span>
+                                    <p class="text-sm text-gray-600">季節の植物を学び、育てるワークショップとブランチのセット</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-microphone text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">オープンマイクナイト</span>
+                                    <p class="text-sm text-gray-600">月1回、アマチュア音楽家に演奏機会を提供するイベント</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">拡大スケジュール</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-4">
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">フェーズ1: 豊洲モデル確立</span>
+                                    <p class="text-sm text-gray-600">2025年9月〜2026年8月</p>
+                                    <p class="text-sm">豊洲での事業モデル確立と収益性検証</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">フェーズ2: ベイエリア拡大</span>
+                                    <p class="text-sm text-gray-600">2026年9月〜2027年8月</p>
+                                    <p class="text-sm">お台場・天王洲への展開、ブランド認知拡大</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">フェーズ3: 都心部展開</span>
+                                    <p class="text-sm text-gray-600">2027年9月〜2028年8月</p>
+                                    <p class="text-sm">六本木・日比谷など都心部への展開</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">フェーズ4: 広域展開</span>
+                                    <p class="text-sm text-gray-600">2028年9月〜</p>
+                                    <p class="text-sm">東京近郊の主要都市への拡大</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 gradient-card p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-2">拡大における検討ポイント</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>各エリアの特性に合わせたコンセプトのカスタマイズ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>地域コミュニティとの連携強化</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>集客力の高い場所の選定と賃料対効果の検証</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>スケールメリットを活かした運営効率化</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Schedule -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">実施スケジュール</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">2025年9月オープンに向けたタイムライン</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-bold bg-blue-50 p-2 text-center rounded-t-lg">準備期（2025年2月〜4月）</h4>
+                        <ul class="border border-blue-100 rounded-b-lg p-4 space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>プロジェクト詳細計画の策定</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>会場確保・契約締結</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>ディアジオジャパンとの協賛詳細合意</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>演奏者募集サイト構築開始</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>必要設備の洗い出し・見積り取得</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold bg-blue-50 p-2 text-center rounded-t-lg">開発期（2025年5月〜7月）</h4>
+                        <ul class="border border-blue-100 rounded-b-lg p-4 space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>演奏者募集開始・オーディション実施</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>設備・備品の発注と設置工事</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>公式ウェブサイト・SNS開設</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>メニュー開発とテスト</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>チケット販売システム構築</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold bg-blue-50 p-2 text-center rounded-t-lg">ローンチ期（2025年8月〜9月）</h4>
+                        <ul class="border border-blue-100 rounded-b-lg p-4 space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>プレスリリース配信・メディア向け発表会</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>プレオープンイベント開催（招待制）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>チケット販売開始</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>最終リハーサル</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-600 mr-2"></i>
+                                <span>グランドオープン（2025年9月第1週目）</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">広報・マーケティングスケジュール</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-4">
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">ティザーフェーズ（2025年6月〜7月）</span>
+                                    <p class="text-sm">SNSでのティザー投稿開始、特設サイトオープン、来場者予約受付開始</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">プレローンチ（2025年8月）</span>
+                                    <p class="text-sm">メディア・インフルエンサー向け内覧会、プレスリリース配信、SNS広告開始</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">グランドオープン（2025年9月）</span>
+                                    <p class="text-sm">オープニングセレモニー開催、メディア取材、特別コラボイベント実施</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item pl-8">
+                                <div>
+                                    <span class="font-bold">継続プロモーション（2025年10月〜）</span>
+                                    <p class="text-sm">定期的なイベント情報発信、顧客レビュー収集と発信、季節イベントの告知</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">クリティカルパス</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">会場の確保・契約</span>
+                                    <p class="text-sm text-gray-600">2025年2月までに完了必須。適切な会場が確保できない場合は全体スケジュールに影響</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">屋外用ピアノの調達</span>
+                                    <p class="text-sm text-gray-600">2025年6月までに完了必須。調達・搬入・調律に時間がかかるため早期手配が必要</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">演奏者の確保</span>
+                                    <p class="text-sm text-gray-600">2025年7月までに必要人数の確保が必須。質の高い演奏者の確保が顧客満足度に直結</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">騒音対策の検証</span>
+                                    <p class="text-sm text-gray-600">2025年7月までに完了必須。近隣との関係維持と営業継続のためのクリティカルポイント</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits and Conclusion -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold">プロジェクト効果と結論</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-6">
+                            <i class="fas fa-map-marked-alt benefit-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">地域への効果</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>豊洲エリアの新たな賑わい創出</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>「食と音楽の街」としてのブランディング</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>周辺施設との相乗効果</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>地域文化・芸術の発展への貢献</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>地域経済への波及効果</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-6">
+                            <i class="fas fa-music benefit-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">音楽家への効果</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>安定した演奏機会の提供</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>適正な報酬による活動支援</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>演奏者の露出拡大・PR支援</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>ネットワーク構築の場の提供</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>キャリア構築・成長の機会創出</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex justify-center mb-6">
+                            <i class
