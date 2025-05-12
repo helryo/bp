@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事業売却提案書 - にんにく焼肉 プルシン 新宿店</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+        }
+        .paper {
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .gold-accent {
+            color: #D4AF37;
+        }
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+        .section-title {
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 0.5rem;
+        }
+        .highlight-box {
+            border: 1px solid #D4AF37;
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .timeline-container {
+            position: relative;
+            padding-left: 40px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 2px;
+            height: 100%;
+            background-color: #D4AF37;
+        }
+        .timeline-point {
+            position: absolute;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="paper max-w-5xl mx-auto my-8 px-8 py-10 rounded-lg">
+        <!-- ヘッダー -->
+        <header class="mb-12 text-center">
+            <div class="gradient-bg py-6 px-4 rounded-lg mb-6">
+                <h1 class="text-4xl font-bold text-white mb-2">事業売却提案書</h1>
+                <h2 class="text-2xl text-white">にんにく焼肉 プルシン 新宿店</h2>
+                <p class="text-gray-300 mt-2">売却元: 株式会社ISK</p>
+            </div>
+            <img src="https://imgfp.hotp.jp/magazine/images/2aedcc06-0d1b-4118-96f3-3ceb45076dae.jpg" alt="焼肉店イメージ" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        </header>
+
+        <!-- はじめに -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">事業概要</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-lg mb-4">
+                        この度ご提案する「にんにく焼肉 プルシン 新宿店」は、2022年12月に開業し、約2年間の運営実績を持つ焼肉専門店です。
+                        東新宿駅から徒歩3分という好立地に位置し、深夜営業（17:00〜03:00）を行っている12席のカウンター型焼肉店として、
+                        地元のお客様から高い評価をいただいております。
+                    </p>
+                    <p class="text-lg mb-4">
+                        当店は「にんにく」をコンセプトにした独自性のある焼肉店で、平均客単価4,000〜5,000円の価格帯で安定した売上を確保しています。
+                    </p>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-4">
+                        <p class="font-bold text-xl">売却希望価格: <span class="text-red-600">1,200万円</span></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="highlight-box p-4 rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2 gold-accent">店舗基本情報</h3>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-map-marker-alt gold-accent mr-2"></i> <span class="font-bold">場所:</span> 東京都新宿区大久保</li>
+                            <li><i class="fas fa-train gold-accent mr-2"></i> <span class="font-bold">アクセス:</span> 東新宿駅から徒歩3分 / 新大久保駅から徒歩10分</li>
+                            <li><i class="fas fa-chair gold-accent mr-2"></i> <span class="font-bold">席数:</span> カウンター12席</li>
+                            <li><i class="fas fa-clock gold-accent mr-2"></i> <span class="font-bold">営業時間:</span> 17:00〜03:00</li>
+                            <li><i class="fas fa-yen-sign gold-accent mr-2"></i> <span class="font-bold">平均客単価:</span> 4,000〜4,999円</li>
+                            <li><i class="fas fa-calendar-alt gold-accent mr-2"></i> <span class="font-bold">開業:</span> 2022年12月6日（約2年の運営実績）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コスト比較分析 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">投資メリット分析</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">開業コスト比較</h3>
+                    <p class="mb-4">
+                        焼肉店を新規開業する場合、一般的に<span class="font-bold">1,500万〜3,000万円</span>の初期投資が必要とされています。
+                        それに対し、当店の売却希望価格は<span class="font-bold text-red-600">1,200万円</span>であり、
+                        新規開業と比較して<span class="font-bold">300万〜1,800万円</span>のコスト削減が可能です。
+                    </p>
+                    <div class="highlight-box p-4 rounded-lg my-4">
+                        <h4 class="font-bold text-lg mb-2">新規開業時に必要な主な費用</h4>
+                        <ul class="list-disc pl-6 space-y-1">
+                            <li>店舗物件の取得費: 300万〜400万円</li>
+                            <li>内装工事費: 約1,000万円</li>
+                            <li>厨房の設備費: 300万〜600万円</li>
+                            <li>店舗の備品費: 30万〜100万円</li>
+                            <li>運転資金: 300万〜500万円</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="costComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">ランニングコスト</h3>
+                    <div class="chart-container">
+                        <canvas id="runningCostChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">ROI分析</h3>
+                    <div class="chart-container">
+                        <canvas id="roiChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">※売上推移は過去の実績と今後の予測に基づく参考値です</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 既存店譲渡のメリット -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">既存店譲渡の主なメリット</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg p-6 transform transition duration-300 hover:scale-105">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-money-bill-wave text-2xl gold-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">即時営業開始</h3>
+                    <p>内装工事やリノベーションの必要がなく、譲渡後すぐに営業を継続できます。設備や内装が整った状態での引き渡しとなります。</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 transform transition duration-300 hover:scale-105">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-users text-2xl gold-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">既存顧客基盤</h3>
+                    <p>約2年間の営業で築いた地域での認知度と顧客ベースをそのまま引き継ぐことができます。新規出店時の集客リスクを軽減できます。</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 transform transition duration-300 hover:scale-105">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-handshake text-2xl gold-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">引き継ぎサポート</h3>
+                    <p>ロックアップ期間中はマーケティング会社による運営サポートが提供されるため、飲食店経営が初めての方でも安心して事業を継続できます。</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-4">譲渡に含まれるもの</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="highlight-box p-5 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 gold-accent">設備・資産</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 店舗内装一式</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 厨房設備一式（焼肉用グリル、換気設備等）</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 家具・什器（カウンター席12席分）</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 営業権（店舗名、店舗コンセプト）</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> SNSアカウント、ウェブサイト</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box p-5 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 gold-accent">無形資産</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 既存のレシピ・ノウハウ</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 仕入れ先・取引業者との関係</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 地域での認知度・ブランドイメージ</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> リピーター顧客基盤</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 食べログなどの口コミ評価</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- エリア特性とのシナジー -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">新宿エリアの特性と水商売とのシナジー</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">ロケーション価値</h3>
+                    <img src="https://shinjuku-yakinikukuroki.com/serviceimg/gourmet/312557/pg-1665468925339-810.jpg" alt="焼肉店内装" class="w-full h-48 object-cover rounded-lg shadow-lg mb-4">
+                    <p class="mb-4">
+                        新宿エリア、特に歌舞伎町・東新宿エリアは、日本有数の繁華街として多くの飲食店が集中しています。
+                        特に水商売関係者には以下の点で大きなメリットがあります：
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><span class="font-bold">深夜営業の需要:</span> 当店の営業時間（17:00〜03:00）は、水商売関係者や顧客層の生活リズムと相性が良い</li>
+                        <li><span class="font-bold">業界ネットワーク:</span> 既存の水商売ビジネスから顧客を誘導しやすい環境</li>
+                        <li><span class="font-bold">従業員の確保:</span> 水商売経験者をアルバイトやスタッフとして採用しやすい</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">顧客層と消費動向</h3>
+                    <div class="chart-container mb-4">
+                        <canvas id="customerSegmentChart"></canvas>
+                    </div>
+                    <p class="mb-4">
+                        新宿エリアでは、以下のような特徴的な顧客層が見込めます：
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>水商売関係者とその常連客（仕事後の食事ニーズ）</li>
+                        <li>終電を逃した会社員やナイトワーカー</li>
+                        <li>接待や会食を求めるビジネスマン</li>
+                        <li>観光客（特に夜の新宿を楽しむ外国人観光客）</li>
+                    </ul>
+                    <p class="mt-4 text-lg font-semibold">
+                        これらの顧客層は平均客単価が高く、リピート率も期待できます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box p-6 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4 gold-accent">水商売ビジネスとの具体的なシナジー</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold text-lg mb-2">顧客相互送客</h4>
+                        <p>水商売店舗のお客様を焼肉店へ、焼肉店のお客様を水商売店舗へと相互に送客することで、双方の売上向上が期待できます。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold text-lg mb-2">営業時間の最適化</h4>
+                        <p>深夜営業のノウハウを活かし、水商売営業後の従業員や顧客をターゲットにした営業戦略が展開可能です。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h4 class="font-bold text-lg mb-2">経営リソースの共有</h4>
+                        <p>広告宣伝、人材採用、経理など、複数店舗を持つことによる経営効率化が図れます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 引き継ぎサポート体制 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">充実した引き継ぎサポート体制</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <img src="https://media-assets.aumo.jp/uploads/photo/external_photo/data/360626/large_webp_7ae387f5-47c7-4b5a-9f67-7ee43d01288d.webp" alt="焼肉" class="w-full h-64 object-cover rounded-lg shadow-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-4">ロックアップ期間のサポート内容</h3>
+                    <p class="mb-4">
+                        売却後の一定期間（ロックアップ期間）は、専門のマーケティング会社が経営サポートを提供します。
+                        これにより、飲食店経営が初めての方でも安心して事業を引き継ぐことが可能です。
+                    </p>
+                    <div class="highlight-box p-4 rounded-lg">
+                        <h4 class="text-xl font-bold mb-2 gold-accent">主なサポート内容</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check gold-accent mr-2"></i> 店舗運営ノウハウの引き継ぎ</li>
+                            <li><i class="fas fa-check gold-accent mr-2"></i> 仕入れ先の紹介と関係構築サポート</li>
+                            <li><i class="fas fa-check gold-accent mr-2"></i> スタッフ教育・研修プログラム</li>
+                            <li><i class="fas fa-check gold-accent mr-2"></i> マーケティング戦略の策定支援</li>
+                            <li><i class="fas fa-check gold-accent mr-2"></i> 顧客データベースの活用方法指導</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">引き継ぎスケジュール</h3>
+                    <div class="timeline-container">
+                        <div class="mb-8 relative">
+                            <div class="timeline-point" style="top: 0;"></div>
+                            <h4 class="font-bold text-lg">契約・引き継ぎ準備期間（1ヶ月）</h4>
+                            <ul class="mt-2 pl-4 space-y-1">
+                                <li>• 契約締結・売買代金の決済</li>
+                                <li>• 店舗運営概要の説明</li>
+                                <li>• 各種許認可の名義変更手続き</li>
+                                <li>• 引き継ぎスケジュールの確定</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8 relative">
+                            <div class="timeline-point" style="top: 0;"></div>
+                            <h4 class="font-bold text-lg">集中サポート期間（3ヶ月）</h4>
+                            <ul class="mt-2 pl-4 space-y-1">
+                                <li>• 週2-3回のオンサイトサポート</li>
+                                <li>• 日々の運営管理指導</li>
+                                <li>• メニュー提供トレーニング</li>
+                                <li>• 顧客対応・サービス研修</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8 relative">
+                            <div class="timeline-point" style="top: 0;"></div>
+                            <h4 class="font-bold text-lg">フォローアップ期間（6ヶ月）</h4>
+                            <ul class="mt-2 pl-4 space-y-1">
+                                <li>• 月1-2回のフォローアップミーティング</li>
+                                <li>• 定期的な経営相談</li>
+                                <li>• マーケティング戦略の見直し</li>
+                                <li>• 販促イベント企画支援</li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <div class="timeline-point" style="top: 0;"></div>
+                            <h4 class="font-bold text-lg">自立運営期間</h4>
+                            <ul class="mt-2 pl-4 space-y-1">
+                                <li>• 必要に応じたスポットコンサルティング</li>
+                                <li>• 定期的な業績レビュー</li>
+                                <li>• 新メニュー開発支援</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業発展可能性 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold section-title mb-6">事業の発展可能性</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">成長戦略</h3>
+                    <div class="chart-container mb-4">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                    <p>
+                        「にんにく焼肉 プルシン」ブランドは、独自性のあるコンセプトと味で差別化されており、
+                        将来的な多店舗展開や業態拡大の可能性を秘めています。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">事業拡大のオプション</h3>
+                    <div class="highlight-box p-5 rounded-lg mb-4">
+                        <h4 class="font-bold text-lg mb-2">多角化の可能性</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-arrow-right gold-accent mr-2"></i> <span class="font-bold">テイクアウト・デリバリー:</span> 新たな収益源として導入可能</li>
+                            <li><i class="fas fa-arrow-right gold-accent mr-2"></i> <span class="font-bold">オリジナル商品開発:</span> にんにく調味料などの物販展開</li>
+                            <li><i class="fas fa-arrow-right gold-accent mr-2"></i> <span class="font-bold">多店舗展開:</span> 水商売エリア近隣に2号店展開</li>
+                            <li><i class="fas fa-arrow-right gold-accent mr-2"></i> <span class="font-bold">業態ミックス:</span> 昼営業としてランチメニュー拡充</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg p-5">
+                        <h4 class="font-bold text-lg mb-2">水商売との相乗効果を活かした発展例</h4>
+                        <ul class="space-y-2">
+                            <li>• 水商売顧客向け特別コース・プランの開発</li>
+                            <li>• 接待・送別会などの団体予約の優先受付</li>
+                            <li>• 水商売従業員向け特典プログラムの導入</li>
+                            <li>• 水商売店舗とのコラボイベント開催</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- まとめ・CTA -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold section-title mb-6">まとめ</h2>
+            
+            <div class="gradient-bg p-6 rounded-lg text-white mb-8">
+                <h3 class="text-2xl font-bold mb-4">本提案の主なポイント</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border border-white/30 rounded p-4">
+                        <h4 class="text-xl font-bold mb-2">圧倒的なコストメリット</h4>
+                        <p>新規開業に比べ1,200万円という投資額は、開業コストの最大60%削減に相当します。</p>
+                    </div>
+                    <div class="border border-white/30 rounded p-4">
+                        <h4 class="text-xl font-bold mb-2">充実したサポート体制</h4>
+                        <p>ロックアップ期間中のマーケティング会社による全面サポートで、初めての飲食店経営でも安心です。</p>
+                    </div>
+                    <div class="border border-white/30 rounded p-4">
+                        <h4 class="text-xl font-bold mb-2">高いシナジー効果</h4>
+                        <p>新宿での水商売経営との相乗効果により、相互送客や経営資源の共有が可能です。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
+                <h3 class="text-2xl font-bold mb-2">売却希望価格</h3>
+                <p class="text-4xl font-bold text-red-600">1,200万円</p>
+                <p class="text-lg mt-2">※詳細な財務情報、設備リスト、在庫明細等は個別にご提供いたします。</p>
+            </div>
+
+            <div class="text-center">
+                <p class="text-lg mb-6">
+                    本提案についてのご質問や詳細な情報のご希望は、以下の連絡先までお気軽にお問い合わせください。
+                </p>
+                <div class="inline-block border-2 border-gray-800 px-8 py-4 rounded-lg">
+                    <p class="font-bold text-xl">株式会社ファーストプレイス</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <p>© 2025 株式会社ファーストプレイス All Rights Reserved.</p>
+            <p class="mt-1">本提案書に記載の情報は守秘義務の対象となります。第三者への開示はご遠慮ください。</p>
+        </footer>
+    </div>
+
+    <script>
+        // グラフの初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 開業コスト比較グラフ
+            const costComparisonCtx = document.getElementById('costComparisonChart').getContext('2d');
+            new Chart(costComparisonCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['新規開業（小規模）', '新規開業（一般的）', '本提案（事業譲渡）'],
+                    datasets: [{
+                        label: '初期投資額（万円）',
+                        data: [1500, 2500, 1200],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(212, 175, 55, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(212, 175, 55, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '金額（万円）'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '初期投資額の比較'
+                        }
+                    }
+                }
+            });
+
+            // ランニングコストグラフ
+            const runningCostCtx = document.getElementById('runningCostChart').getContext('2d');
+            new Chart(runningCostCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['家賃', '人件費', '食材費', '光熱費', '広告宣伝費', 'その他'],
+                    datasets: [{
+                        data: [20, 30, 25, 10, 5, 10],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)',
+                            'rgba(255, 159, 64, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '月間運営コスト内訳（%）'
+                        }
+                    }
+                }
+            });
+
+            // ROI分析グラフ
+            const roiCtx = document.getElementById('roiChart').getContext('2d');
+            new Chart(roiCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1ヶ月目', '3ヶ月目', '6ヶ月目', '12ヶ月目', '18ヶ月目', '24ヶ月目'],
+                    datasets: [{
+                        label: '累積利益（万円）',
+                        data: [0, 60, 180, 450, 750, 1080],
+                        fill: false,
+                        backgroundColor: 'rgba(212, 175, 55, 0.6)',
+                        borderColor: 'rgba(212, 175, 55, 1)',
+                        tension: 0.1
+                    },
+                    {
+                        label: '投資回収ライン',
+                        data: [1200, 1200, 1200, 1200, 1200, 1200],
+                        fill: false,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderDash: [5, 5],
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '金額（万円）'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '投資回収シミュレーション'
+                        }
+                    }
+                }
+            });
+
+            // 顧客セグメントグラフ
+            const customerSegmentCtx = document.getElementById('customerSegmentChart').getContext('2d');
+            new Chart(customerSegmentCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['水商売関係者', 'ビジネスマン', '観光客', '地元客', 'その他'],
+                    datasets: [{
+                        data: [30, 25, 20, 15, 10],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '現在の顧客層分布（%）'
+                        }
+                    }
+                }
+            });
+
+            // 成長戦略グラフ
+            const growthCtx = document.getElementById('growthChart').getContext('2d');
+            new Chart(growthCtx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        '客単価向上',
+                        '来店頻度増加',
+                        '新規顧客獲得',
+                        'SNS・口コミ強化',
+                        'テイクアウト拡充',
+                        '物販展開'
+                    ],
+                    datasets: [{
+                        label: '現状',
+                        data: [70, 60, 65, 55, 30, 20],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
+                    }, {
+                        label: '1年後目標',
+                        data: [85, 75, 80, 80, 70, 60],
+                        backgroundColor: 'rgba(212, 175, 55, 0.2)',
+                        borderColor: 'rgba(212, 175, 55, 1)',
+                        pointBackgroundColor: 'rgba(212, 175, 55, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(212, 175, 55, 1)'
+                    }]
+                },
+                options: {
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '事業成長ポテンシャル分析'
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
