@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デニーズ プロモーション提案書</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #e52d27 0%, #b31217 100%);
+            color: white;
+        }
+        .section-title {
+            border-bottom: 3px solid #e52d27;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #e52d27;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        .highlight-text {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(229, 45, 39, 0.2) 50%);
+            padding: 0 5px;
+        }
+        .graph-container {
+            height: 300px;
+            margin: 30px 0;
+        }
+        .table-of-contents {
+            background-color: #f9f9f9;
+            border-left: 4px solid #e52d27;
+        }
+        .table-of-contents a {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .table-of-contents a:hover {
+            color: #e52d27;
+            padding-left: 5px;
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-connector {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e52d27;
+        }
+        .timeline-point {
+            position: relative;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        .timeline-point:before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #e52d27;
+            z-index: 1;
+        }
+        .quote-box {
+            border-left: 4px solid #e52d27;
+            padding-left: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .data-box {
+            background-color: rgba(229, 45, 39, 0.05);
+            border: 1px solid rgba(229, 45, 39, 0.2);
+            border-radius: 8px;
+        }
+        @media print {
+            .page-break {
+                display: none;
+            }
+            body {
+                background-color: white;
+            }
+            .page-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container mx-auto bg-white">
+        <!-- ヘッダー -->
+        <header class="header-bg p-10 text-center">
+            <div class="mb-4">
+                <h1 class="text-5xl font-bold mb-4">デニーズ プロモーション提案書</h1>
+                <p class="text-xl">～新時代のフードビジネス展開～</p>
+            </div>
+            <div class="flex justify-between items-center mt-12">
+                <div class="text-left">
+                    <p class="text-xl font-semibold">提案先：デニーズ</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xl font-semibold">提案者：Wellen株式会社</p>
+                    <p>提出日：2025年5月12日</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 目次 -->
+        <div class="p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">目次</h2>
+            <div class="table-of-contents p-6 rounded-lg">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#introduction" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">1.</span>
+                            <span>はじめに - 現状と課題</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proposal1" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">2.</span>
+                            <span>提案① シェフ監修シリーズのSNS戦略</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proposal2" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">3.</span>
+                            <span>提案② インバウンド向け世界のブレックファスト企画</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proposal3" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">4.</span>
+                            <span>提案③ BtoB向けチルド弁当サービス</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proposal4" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">5.</span>
+                            <span>提案④ 地方音楽フェス向けキッチンカー展開</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#schedule" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">6.</span>
+                            <span>実施スケジュールと投資回収見込み</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#conclusion" class="flex items-center">
+                            <span class="text-xl font-semibold mr-2">7.</span>
+                            <span>まとめ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- イントロダクション -->
+        <section id="introduction" class="bg-gray-50 p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">はじめに - 現状と課題</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">デニーズの現状</h3>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>全国に<span class="highlight-text font-semibold">317店舗</span>を展開するファミリーレストラン</li>
+                        <li>東京都に97店舗、神奈川県に55店舗、千葉県に35店舗、埼玉県に26店舗など、<span class="highlight-text font-semibold">関東圏を中心に展開</span></li>
+                        <li>西日本や北日本での店舗展開が少なく、北海道には1店舗も無い</li>
+                        <li>近年、飯田商店など有名シェフとのコラボメニューを展開し好評</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">課題</h3>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>関東圏中心の出店戦略により、全国的な認知拡大の機会損失</li>
+                        <li>増加する訪日外国人観光客（インバウンド）への対応不足</li>
+                        <li>シェフコラボなどの優れた取り組みがあるが、宣伝方法に改善の余地</li>
+                        <li>新しい顧客層（企業・学生）の開拓が必要</li>
+                        <li>地方での知名度向上と思い出に残るブランド構築</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">デニーズ店舗分布状況</h3>
+                <div class="graph-container">
+                    <canvas id="storeDistributionChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-600 text-center">※2025年データに基づく</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">訪日外国人観光客の動向（2025年）</h3>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-1">
+                        <div class="graph-container h-64">
+                            <canvas id="inboundChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="data-box p-4 rounded-lg">
+                            <h4 class="font-bold text-lg mb-2">2025年インバウンド最新データ</h4>
+                            <ul class="list-disc ml-6 space-y-1">
+                                <li>2025年3月の訪日外客数は<span class="font-semibold">349.7万人</span>（前年同月比13.5%増）</li>
+                                <li>2025年第1四半期の訪日外国人旅行消費額は<span class="font-semibold">2兆2,270億円</span>（前年同期比+28.4％）</li>
+                                <li>2025年は過去最高の<span class="font-semibold">4,020万人</span>の訪日客数を予測（JTB調査）</li>
+                                <li>欧米など6つの海外市場で単月最高値を記録</li>
+                            </ul>
+                            <p class="mt-3 text-sm text-gray-600">出典：日本政府観光局（JNTO）、観光庁資料</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提案① シェフ監修シリーズのSNS戦略 -->
+        <section id="proposal1" class="p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">提案① シェフ監修シリーズのSNS戦略</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <img src="https://www.dennys.jp/images/top/topSlideimg-pc-2.jpg?0507" alt="飯田商店コラボメニュー" class="w-full h-auto rounded-lg shadow-md mb-4">
+                    <p class="text-sm text-center text-gray-600">飯田商店監修メニュー（デニーズ公式サイトより）</p>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-4">現状の取り組み</h3>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>飯田商店（人気ラーメン店）とのコラボレーション</li>
+                            <li>「オリエンタル冷やし豆乳担々麺」「担々麺Neo」などの期間限定メニュー</li>
+                            <li>公式サイトでの告知、店頭POPなどでの宣伝</li>
+                            <li>公式SNSアカウントでの情報発信</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                        <h3 class="text-2xl font-bold mb-4">課題</h3>
+                        <p>シェフコラボメニューは品質が高く好評だが、<span class="highlight-text font-semibold">宣伝方法に改善の余地がある</span>。SNSでの盛り上がりやムーブメント創出が不足しており、コラボの話題性が十分に活かせていない。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-4">新戦略のポイント</h3>
+                        <div class="card p-6 bg-white">
+                            <h4 class="text-xl font-bold text-red-600 mb-3">「#シェフデニ」キャンペーン</h4>
+                            <p class="mb-4">人気シェフとのコラボメニューをシリーズ化し、SNSを中心とした統一キャンペーンで展開</p>
+                            <ul class="list-disc ml-6 space-y-2">
+                                <li>四半期ごとに異なるジャンルの人気シェフとコラボ</li>
+                                <li>コラボシェフのストーリーを積極的に発信</li>
+                                <li>メニュー開発プロセスを「シェフデニ紀行」としてYouTubeで連載</li>
+                                <li>シェフとファンの交流イベントを主要店舗で実施</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-hashtag text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">ハッシュタグ戦略</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>共通タグ「#シェフデニ」の一貫した使用</li>
+                        <li>各シェフごとの個別タグ設計（例：#飯田シェフデニ）</li>
+                        <li>SNS投稿者向け特典クーポン配布</li>
+                        <li>人気インフルエンサーとのコラボ投稿</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-video text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">ショート動画戦略</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>TikTok/Instagram対応の15秒レシピ動画</li>
+                        <li>シェフの魅力的なエピソード短編集</li>
+                        <li>ユーザー参加型「シェフめし再現」チャレンジ</li>
+                        <li>BGMに「#シェフデニサウンド」を統一採用</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-users text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">コミュニティ戦略</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>公式アプリ内「シェフファンクラブ」創設</li>
+                        <li>デニーズアプリで先行メニュー試食権獲得企画</li>
+                        <li>シェフと一緒に試食会やオンライン料理教室</li>
+                        <li>次期コラボシェフをファン投票で決定</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">シェフコラボ年間計画案</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="py-4 px-4 text-left">期間</th>
+                                <th class="py-4 px-4 text-left">シェフジャンル</th>
+                                <th class="py-4 px-4 text-left">メニュー候補</th>
+                                <th class="py-4 px-4 text-left">プロモーション特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">第1四半期<br>（4-6月）</td>
+                                <td class="py-4 px-4">ラーメン<br>（飯田商店）</td>
+                                <td class="py-4 px-4">冷やし豆乳担々麺<br>オリエンタルヌードル</td>
+                                <td class="py-4 px-4">春のさっぱりラーメン特集<br>インスタグラム写真映えキャンペーン</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">第2四半期<br>（7-9月）</td>
+                                <td class="py-4 px-4">イタリアン<br>（有名パスタシェフ）</td>
+                                <td class="py-4 px-4">夏野菜の冷製パスタ<br>トリュフリゾット</td>
+                                <td class="py-4 px-4">夏の家族向けキャンペーン<br>地元野菜活用でサステナブル訴求</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">第3四半期<br>（10-12月）</td>
+                                <td class="py-4 px-4">フレンチ<br>（ビストロシェフ）</td>
+                                <td class="py-4 px-4">季節のビーフシチュー<br>北海道産チーズのグラタン</td>
+                                <td class="py-4 px-4">秋の味覚とワインペアリング企画<br>YouTube料理教室ライブ配信</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">第4四半期<br>（1-3月）</td>
+                                <td class="py-4 px-4">和食<br>（老舗料亭主人）</td>
+                                <td class="py-4 px-4">特製出汁の茶碗蒸し<br>季節の炊き込みご飯</td>
+                                <td class="py-4 px-4">冬の温かメニュー特集<br>TikTokでの和食テクニック動画</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">期待効果</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="graph-container h-64">
+                        <canvas id="effectChart1"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3">数値目標</h4>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>コラボメニュー売上：前年比<span class="highlight-text font-semibold">120%</span></li>
+                            <li>SNS言及量：キャンペーン前と比較して<span class="highlight-text font-semibold">300%増</span></li>
+                            <li>公式SNSアカウントフォロワー：年間<span class="highlight-text font-semibold">50%増</span></li>
+                            <li>アプリ会員数：年間<span class="highlight-text font-semibold">30%増</span></li>
+                            <li>店舗来客数：前年比<span class="highlight-text font-semibold">115%</span></li>
+                        </ul>
+                        
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                            <h4 class="font-bold mb-2">投資対効果（ROI）</h4>
+                            <p>初期投資（SNS運用強化、動画制作、イベント費用など）：<span class="font-semibold">3,500万円</span></p>
+                            <p>年間増加売上見込み：<span class="font-semibold">4億2,000万円</span></p>
+                            <p>ROI：<span class="font-semibold text-red-600">12倍</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提案② インバウンド向け世界のブレックファスト企画 -->
+        <section id="proposal2" class="bg-gray-50 p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">提案② インバウンド向け世界のブレックファスト企画</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">企画概要</h3>
+                    <p class="mb-4">訪日外国人向けに、世界各国の朝食文化を紹介しながら、日本の伝統的な朝食と融合させた「World Breakfast Festival」を期間限定で開催します。</p>
+                    
+                    <div class="quote-box my-6">
+                        <p>「旅の思い出に残る朝食体験を。自国の朝食をアレンジした料理と日本の朝食文化の融合で、デニーズだからこそ提供できる特別な一皿を。」</p>
+                    </div>
+                    
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>訪日外国人が多い10カ国の朝食メニューを厳選</li>
+                        <li>各国の朝食文化を紹介するテーブルマット設置</li>
+                        <li>多言語（英語・中国語・韓国語・タイ語等）メニュー対応</li>
+                        <li>SNSで共有したくなる「世界の朝食パスポート」配布</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">訪日外国人ニーズ分析</h3>
+                    <div class="graph-container h-64">
+                        <canvas id="inboundNeedsChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                        <h4 class="font-bold mb-2">インバウンド消費の特徴</h4>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>飲食費は訪日外国人消費額の<span class="font-semibold">約22.1%</span>を占める</li>
+                            <li>朝食を重視する欧米豪の観光客が増加傾向</li>
+                            <li>自国の食文化と日本食の組み合わせに高い関心</li>
+                            <li>SNS映えする食体験への需要が高い</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-gray-600">出典：観光庁「インバウンド消費動向調査2025年第1四半期」</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">「World Breakfast Festival」メニュー例</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="py-4 px-4 text-left">国・地域</th>
+                                <th class="py-4 px-4 text-left">メニュー名</th>
+                                <th class="py-4 px-4 text-left">特徴</th>
+                                <th class="py-4 px-4 text-left">日本の食材/調理法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">アメリカ</td>
+                                <td class="py-4 px-4">抹茶パンケーキ<br>グランドスラム</td>
+                                <td class="py-4 px-4">パンケーキ、卵、ベーコン、ソーセージの<br>伝統的な組み合わせに抹茶風味を追加</td>
+                                <td class="py-4 px-4">京都産抹茶パウダー<br>和風メープルシロップ</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">中国</td>
+                                <td class="py-4 px-4">お茶漬け<br>お粥セット</td>
+                                <td class="py-4 px-4">中国の伝統的なお粥と日本のお茶漬けを<br>融合したセット</td>
+                                <td class="py-4 px-4">だし汁<br>梅干し・おかか</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">イタリア</td>
+                                <td class="py-4 px-4">抹茶ティラミス<br>モーニング</td>
+                                <td class="py-4 px-4">甘いデザート朝食とエスプレッソに<br>日本の抹茶を組み合わせた一品</td>
+                                <td class="py-4 px-4">抹茶クリーム<br>黒蜜きなこソース</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">台湾</td>
+                                <td class="py-4 px-4">台湾風<br>卵かけご飯</td>
+                                <td class="py-4 px-4">台湾の朝食スタイルと日本の卵かけご飯を<br>組み合わせた一品</td>
+                                <td class="py-4 px-4">特製醤油<br>温泉卵</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">フランス</td>
+                                <td class="py-4 px-4">和風<br>クロックムッシュー</td>
+                                <td class="py-4 px-4">フランスの定番朝食サンドイッチに<br>和風だしとチーズを組み合わせた一品</td>
+                                <td class="py-4 px-4">かつお節<br>和風ベシャメルソース</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-map-marked-alt text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">インバウンド重点エリア</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>新宿・渋谷・秋葉原などの訪日客集中エリア</li>
+                        <li>東京スカイツリー・浅草周辺</li>
+                        <li>箱根・鎌倉・横浜などの観光地に近い店舗</li>
+                        <li>成田・羽田空港周辺店舗</li>
+                        <li>大阪・京都・名古屋の主要店舗</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-bullhorn text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">プロモーション戦略</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>訪日外国人向け観光アプリへの広告出稿</li>
+                        <li>ホテル・旅館との提携プロモーション</li>
+                        <li>多言語対応のデジタルプロモーション</li>
+                        <li>旅行インフルエンサーの招待・体験企画</li>
+                        <li>国際空港での店舗案内パンフレット配布</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-coins text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">コスト対策</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>既存メニューのアレンジで追加食材を最小化</li>
+                        <li>期間限定・対象店舗限定で運用コスト削減</li>
+                        <li>多言語メニューはデジタル化（QRコード活用）</li>
+                        <li>SNS拡散を促進し広告費を抑制</li>
+                        <li>セントラルキッチンでの一括調理による効率化</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">期待効果と投資回収見込み</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="graph-container h-64">
+                        <canvas id="roiChart2"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3">数値目標</h4>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>インバウンド顧客比率：対象店舗で<span class="highlight-text font-semibold">25%達成</span></li>
+                            <li>朝食時間帯（6-11時）の売上：<span class="highlight-text font-semibold">30%増</span></li>
+                            <li>SNS投稿数（ハッシュタグ分析）：<span class="highlight-text font-semibold">月間5,000件</span></li>
+                            <li>対象店舗来客数：<span class="highlight-text font-semibold">20%増</span></li>
+                        </ul>
+                        
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                            <h4 class="font-bold mb-2">投資対効果（ROI）</h4>
+                            <p>初期投資（メニュー開発、多言語対応、宣伝費など）：<span class="font-semibold">2,800万円</span></p>
+                            <p>年間増加売上見込み：<span class="font-semibold">3億1,000万円</span></p>
+                            <p>ROI：<span class="font-semibold text-red-600">11倍</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提案③ BtoB向けチルド弁当サービス -->
+        <section id="proposal3" class="p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">提案③ BtoB向けチルド弁当サービス</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">企画概要</h3>
+                    <p class="mb-4">地方の企業や学生向けにBtoB福利厚生サービスとして、デニーズの人気メニューをチルド弁当で提供する「デニーズBizランチ」を展開します。</p>
+                    
+                    <div class="quote-box my-6">
+                        <p>「関東圏で親しまれたデニーズの味を、地方の企業や学生にも。懐かしさと安心感を届ける福利厚生型フードサービス。」</p>
+                    </div>
+                    
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>企業向け社員食堂代替サービス</li>
+                        <li>大学・専門学校向け学食補完サービス</li>
+                        <li>定期契約型の安定収益モデル</li>
+                        <li>関東圏から地方へ転勤・上京した人の「懐かしの味」訴求</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">企業の福利厚生ニーズ分析</h3>
+                    <div class="graph-container h-64">
+                        <canvas id="corporateNeedsChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                        <h4 class="font-bold mb-2">BtoBフードサービスの市場動向</h4>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>コロナ後の企業内食堂の<span class="font-semibold">アウトソーシング化加速</span></li>
+                            <li>福利厚生としての「食」の重要性増加</li>
+                            <li>ブランド飲食店の企業向けサービス参入増加</li>
+                            <li>地方企業の福利厚生充実化ニーズ</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-gray-600">出典：2025年企業福利厚生実態調査</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">「デニーズBizランチ」メニュー例</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="py-4 px-4 text-left">カテゴリー</th>
+                                <th class="py-4 px-4 text-left">メニュー名</th>
+                                <th class="py-4 px-4 text-left">特徴</th>
+                                <th class="py-4 px-4 text-left">価格帯<br>(税込/1食)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">スタンダード</td>
+                                <td class="py-4 px-4">ハンバーグステーキ弁当<br>サラダバー付き</td>
+                                <td class="py-4 px-4">デニーズ定番のハンバーグステーキを<br>チルド技術で美味しさそのままに</td>
+                                <td class="py-4 px-4">650円<br>(月20食契約)</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">ヘルシー</td>
+                                <td class="py-4 px-4">チキンと15品目の<br>サラダ弁当</td>
+                                <td class="py-4 px-4">カロリー控えめ、栄養バランス重視の<br>ヘルシーメニュー</td>
+                                <td class="py-4 px-4">600円<br>(月20食契約)</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">プレミアム</td>
+                                <td class="py-4 px-4">サーロインステーキ<br>プレート</td>
+                                <td class="py-4 px-4">役員会議や来客時の接待用<br>高級感あるプレミアムメニュー</td>
+                                <td class="py-4 px-4">1,200円<br>(都度注文)</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">学生向け</td>
+                                <td class="py-4 px-4">学食デニーズ<br>日替わりセット</td>
+                                <td class="py-4 px-4">大学生向けの栄養バランス重視の<br>リーズナブルなメニュー</td>
+                                <td class="py-4 px-4">500円<br>(学校一括契約)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">期間限定</td>
+                                <td class="py-4 px-4">シェフコラボ<br>スペシャル弁当</td>
+                                <td class="py-4 px-4">人気シェフコラボメニューを<br>弁当形式で期間限定提供</td>
+                                <td class="py-4 px-4">800円<br>(月20食契約)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-building text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">ターゲット企業</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>従業員50〜300名規模の中小企業</li>
+                        <li>社員食堂を持たない企業</li>
+                        <li>地方支社・工場を持つ大手企業</li>
+                        <li>IT・クリエイティブ業界（食へのこだわり強い）</li>
+                        <li>大学・専門学校（学食補完）</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-truck text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">物流・配送計画</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>セントラルキッチンで一括調理・チルド加工</li>
+                        <li>物流会社との提携による全国配送網構築</li>
+                        <li>週2回の定期配送で鮮度維持（月・木曜日）</li>
+                        <li>一定エリア単位での配送効率化</li>
+                        <li>近隣店舗からの配送で一部エリアはコスト削減</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-hand-holding-usd text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">コスト削減策</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>定期契約による数量確保で材料費削減</li>
+                        <li>エリア集中配送日の設定で物流コスト最適化</li>
+                        <li>環境配慮型リサイクル容器の活用</li>
+                        <li>発注・決済のデジタル化による業務効率化</li>
+                        <li>余剰生産能力の活用による固定費分散</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">期待効果と投資回収見込み</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="graph-container h-64">
+                        <canvas id="roiChart3"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3">数値目標</h4>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>契約企業数：初年度<span class="highlight-text font-semibold">200社</span>達成</li>
+                            <li>学校・大学契約：初年度<span class="highlight-text font-semibold">30校</span></li>
+                            <li>月間販売食数：<span class="highlight-text font-semibold">10万食</span></li>
+                            <li>関東圏外での認知度向上：未出店エリアでの<span class="highlight-text font-semibold">ブランド認知30%向上</span></li>
+                        </ul>
+                        
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                            <h4 class="font-bold mb-2">投資対効果（ROI）</h4>
+                            <p>初期投資（設備投資、物流構築、営業体制など）：<span class="font-semibold">5,000万円</span></p>
+                            <p>年間売上見込み：<span class="font-semibold">7億2,000万円</span></p>
+                            <p>年間営業利益見込み：<span class="font-semibold">9,000万円</span></p>
+                            <p>投資回収期間：<span class="font-semibold text-red-600">7ヶ月</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提案④ 地方音楽フェス向けキッチンカー展開 -->
+        <section id="proposal4" class="bg-gray-50 p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">提案④ 地方音楽フェス向けキッチンカー展開</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">企画概要</h3>
+                    <p class="mb-4">デニーズブランドのキッチンカーを製作し、地方の音楽フェスや大型イベントに出店。「懐かしい、あの時期を支えてくれたファミレス」というエモーショナルな訴求と共に、関東圏外での認知拡大を図ります。</p>
+                    
+                    <div class="quote-box my-6">
+                        <p>「地方の音楽フェスはフードエリアも重要なコンテンツ。デニーズの看板メニューを屋外の開放的な空間で提供することで、新たなファン層の獲得と思い出づくりに貢献します。」</p>
+                    </div>
+                    
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>地方の主要音楽フェスへの戦略的出店</li>
+                        <li>店舗のない地域における認知拡大施策</li>
+                        <li>メニューはデニーズの看板メニューをフェス仕様にアレンジ</li>
+                        <li>セントラルキッチンからの配送で品質を担保</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">音楽フェス・大型イベント市場分析</h3>
+                    <div class="graph-container h-64">
+                        <canvas id="festivalMarketChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                        <h4 class="font-bold mb-2">音楽フェス市場の特徴</h4>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>コロナ後の音楽フェス市場<span class="font-semibold">急速回復傾向</span></li>
+                            <li>地方開催の中規模フェスが増加傾向</li>
+                            <li>フードエリアの充実化が集客に直結</li>
+                            <li>Z世代・ミレニアル世代の参加者増加</li>
+                        </ul>
+                        <p class="mt-2 text-sm text-gray-600">出典：2025年日本の音楽フェス市場調査</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">「デニーズFESキッチンカー」メニュー例</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="py-4 px-4 text-left">カテゴリー</th>
+                                <th class="py-4 px-4 text-left">メニュー名</th>
+                                <th class="py-4 px-4 text-left">特徴</th>
+                                <th class="py-4 px-4 text-left">価格<br>(税込)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">メイン</td>
+                                <td class="py-4 px-4">フェス限定<br>ミニハンバーグステーキBOX</td>
+                                <td class="py-4 px-4">デニーズ定番のハンバーグステーキを<br>片手で食べやすいミニサイズに</td>
+                                <td class="py-4 px-4">900円</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">サイド</td>
+                                <td class="py-4 px-4">FES特製<br>フライドポテト</td>
+                                <td class="py-4 px-4">食べ歩きしやすいカップ入り<br>オリジナルスパイス付き</td>
+                                <td class="py-4 px-4">500円</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">ドリンク</td>
+                                <td class="py-4 px-4">デニーズドリンクバー<br>テイクアウトカップ</td>
+                                <td class="py-4 px-4">人気のドリンクバーを<br>フェス仕様のカップで提供</td>
+                                <td class="py-4 px-4">400円</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-4">スイーツ</td>
+                                <td class="py-4 px-4">ミニパンケーキ<br>スティック</td>
+                                <td class="py-4 px-4">デニーズの人気パンケーキを<br>スティック状に加工</td>
+                                <td class="py-4 px-4">600円</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">セット</td>
+                                <td class="py-4 px-4">FESスペシャル<br>コンボセット</td>
+                                <td class="py-4 px-4">ミニハンバーグBOX+ポテト+ドリンク<br>特製デニーズトートバッグ付き</td>
+                                <td class="py-4 px-4">1,600円</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-calendar-alt text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">ターゲットイベント</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>地方開催の大型音楽フェス（FUJI ROCK等）</li>
+                        <li>地域密着型の中規模音楽イベント</li>
+                        <li>大学学園祭（特に関東圏外）</li>
+                        <li>地方の季節イベント（花火大会、祭り等）</li>
+                        <li>スポーツイベント（マラソン大会等）</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-car text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">キッチンカー仕様</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>2台体制（調理用・提供用に分離）</li>
+                        <li>デニーズブランドカラーの鮮やかな外装</li>
+                        <li>LEDイルミネーションで夜間の視認性確保</li>
+                        <li>環境配慮型発電システム（低騒音）</li>
+                        <li>キャッシュレス決済対応（QRコード決済等）</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6 bg-white">
+                    <div class="flex justify-center items-center h-16 mb-4">
+                        <i class="fas fa-shipping-fast text-4xl text-red-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-center mb-3">物流・運用計画</h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>セントラルキッチンでの半調理品を冷凍配送</li>
+                        <li>北・東・西日本の3エリア拠点化で物流効率化</li>
+                        <li>フェス専属運営スタッフの育成</li>
+                        <li>前日入りで準備・翌日撤収の3日サイクル</li>
+                        <li>地域ごとのイベントスケジュール最適化</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">期待効果と投資回収見込み</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="graph-container h-64">
+                        <canvas id="roiChart4"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3">数値目標</h4>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li>年間出店イベント数：<span class="highlight-text font-semibold">50イベント</span></li>
+                            <li>1イベントあたり売上：<span class="highlight-text font-semibold">120万円</span></li>
+                            <li>SNS言及量：<span class="highlight-text font-semibold">各イベント1,000件以上</span></li>
+                            <li>店舗未出店エリアでの認知度：<span class="highlight-text font-semibold">25%向上</span></li>
+                        </ul>
+                        
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                            <h4 class="font-bold mb-2">投資対効果（ROI）</h4>
+                            <p>初期投資（キッチンカー2台製作、設備投資など）：<span class="font-semibold">3,200万円</span></p>
+                            <p>年間売上見込み：<span class="font-semibold">6,000万円</span></p>
+                            <p>年間営業利益見込み：<span class="font-semibold">1,800万円</span></p>
+                            <p>投資回収期間：<span class="font-semibold text-red-600">1年9ヶ月</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実施スケジュール -->
+        <section id="schedule" class="p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">実施スケジュールと投資回収見込み</h2>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-6">年間実施スケジュール</h3>
+                <div class="timeline-container pl-10 relative">
+                    <div class="timeline-connector"></div>
+                    
+                    <div class="timeline-point pb-8">
+                        <h4 class="text-xl font-bold">第1四半期（4-6月）</h4>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li>#シェフデニ キャンペーン始動（飯田商店コラボ強化）</li>
+                            <li>インバウンド向け「World Breakfast Festival」準備期間</li>
+                            <li>BtoB向けチルド弁当 営業活動開始</li>
+                            <li>キッチンカー製作・準備</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-point pb-8">
+                        <h4 class="text-xl font-bold">第2四半期（7-9月）</h4>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li>#シェフデニ 夏シーズン（イタリアンシェフコラボ）</li>
+                            <li>インバウンド向け「World Breakfast Festival」夏季展開</li>
+                            <li>BtoB向けチルド弁当 初期顧客獲得フェーズ</li>
+                            <li>キッチンカー 夏フェス本格展開</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-point pb-8">
+                        <h4 class="text-xl font-bold">第3四半期（10-12月）</h4>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li>#シェフデニ 秋シーズン（フレンチシェフコラボ）</li>
+                            <li>インバウンド向け「World Breakfast Festival」秋季展開</li>
+                            <li>BtoB向けチルド弁当 販路拡大フェーズ</li>
+                            <li>キッチンカー 学園祭シーズン展開</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-point">
+                        <h4 class="text-xl font-bold">第4四半期（1-3月）</h4>
+                        <ul class="list-disc ml-6 mt-2 space-y-1">
+                            <li>#シェフデニ 冬シーズン（和食シェフコラボ）</li>
+                            <li>インバウンド向け「World Breakfast Festival」春節向け特別展開</li>
+                            <li>BtoB向けチルド弁当 新メニュー開発・次年度契約更新</li>
+                            <li>キッチンカー 次シーズン準備・イベント調整</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md mb-10">
+                <h3 class="text-2xl font-bold mb-4">投資総額と回収見込み</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="graph-container">
+                        <canvas id="investmentChart"></canvas>
+                    </div>
+                    <div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead>
+                                    <tr class="bg-red-600 text-white">
+                                        <th class="py-4 px-4 text-left">施策</th>
+                                        <th class="py-4 px-4 text-right">初期投資</th>
+                                        <th class="py-4 px-4 text-right">年間収益見込み</th>
+                                        <th class="py-4 px-4 text-right">ROI</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-4 px-4">シェフ監修シリーズSNS戦略</td>
+                                        <td class="py-4 px-4 text-right">3,500万円</td>
+                                        <td class="py-4 px-4 text-right">4億2,000万円</td>
+                                        <td class="py-4 px-4 text-right font-bold text-red-600">12倍</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-4 px-4">インバウンド向け企画</td>
+                                        <td class="py-4 px-4 text-right">2,800万円</td>
+                                        <td class="py-4 px-4 text-right">3億1,000万円</td>
+                                        <td class="py-4 px-4 text-right font-bold text-red-600">11倍</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-4 px-4">BtoB向けチルド弁当</td>
+                                        <td class="py-4 px-4 text-right">5,000万円</td>
+                                        <td class="py-4 px-4 text-right">7億2,000万円</td>
+                                        <td class="py-4 px-4 text-right font-bold text-green-600">14倍</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-4 px-4">キッチンカー展開</td>
+                                        <td class="py-4 px-4 text-right">3,200万円</td>
+                                        <td class="py-4 px-4 text-right">6,000万円</td>
+                                        <td class="py-4 px-4 text-right font-bold text-orange-600">1.9倍</td>
+                                    </tr>
+                                    <tr class="bg-gray-100 font-bold">
+                                        <td class="py-4 px-4">合計</td>
+                                        <td class="py-4 px-4 text-right">1億4,500万円</td>
+                                        <td class="py-4 px-4 text-right">15億1,000万円</td>
+                                        <td class="py-4 px-4 text-right text-red-600">10.4倍</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-red-50 rounded-lg">
+                    <h4 class="text-xl font-bold mb-3">投資回収の考え方</h4>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><span class="font-semibold">優先度による段階的投資</span>：ROIの高い施策から順次展開し、初期キャッシュフローを確保</li>
+                        <li><span class="font-semibold">既存リソースの最大活用</span>：セントラルキッチン、配送網など既存インフラの活用でコスト削減</li>
+                        <li><span class="font-semibold">相乗効果の最大化</span>：各施策の相互連携によるマーケティング効率の向上</li>
+                        <li><span class="font-semibold">固定費分散効果</span>：BtoB事業による安定収益確保と固定費の分散</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">5年間の売上・利益見通し</h3>
+                <div class="graph-container">
+                    <canvas id="fiveYearProjection"></canvas>
+                </div>
+                <p class="text-sm text-gray-600 text-center mt-2">※既存事業の自然成長に新規施策効果を加算</p>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section id="conclusion" class="bg-gray-50 p-10">
+            <h2 class="text-3xl font-bold mb-6 section-title">まとめ</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">本提案のポイント</h3>
+                    <ul class="list-disc ml-6 space-y-3">
+                        <li><span class="font-semibold">既存の強みを最大化</span>：人気シェフコラボをSNS強化で集客力向上</li>
+                        <li><span class="font-semibold">新規市場開拓</span>：インバウンド市場と企業向けBtoBビジネスの展開</li>
+                        <li><span class="font-semibold">地方展開の強化</span>：キッチンカーと弁当事業で関東圏外の認知度向上</li>
+                        <li><span class="font-semibold">長期的ブランド構築</span>：「思い出に残るファミレス」というブランド価値の創出</li>
+                        <li><span class="font-semibold">段階的投資</span>：ROIを重視した優先順位付けで投資効率を最大化</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">懸念事項と対策</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold">【懸念1】開発コストの増大</h4>
+                            <p>→ 既存メニューの活用と段階的展開で初期コストを抑制</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">【懸念2】配送料の負担増</h4>
+                            <p>→ エリア集中配送とロット最適化で物流効率化</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">【懸念3】運営人材の確保</h4>
+                            <p>→ 既存店舗スタッフの兼任と地域別責任者制度で効率化</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">【懸念4】ブランドイメージの一貫性</h4>
+                            <p>→ デザイン・品質基準の明確化とマニュアル整備</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-red-600 text-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-center">提案の総括 - デニーズの未来へ</h3>
+                <p class="text-lg mb-6">
+                    本提案は、デニーズが持つ「安心できる味」「高品質」「家族の思い出」という強みを活かしながら、新たな顧客層と地域への展開を目指す包括的な成長戦略です。シェフコラボからインバウンド対応、BtoB展開、そしてキッチンカーによる地方展開まで、複数の施策が相互に連携し、デニーズブランドの価値を高めていきます。
+                </p>
+                <p class="text-lg font-semibold text-center">
+                    創業50周年を超え、次の50年に向けて新たな成長の道を切り拓くデニーズの挑戦を、Wellen株式会社は全力でサポートいたします。
+                </p>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <p class="text-xl font-bold">提案者：Wellen株式会社</p>
+                <p class="mt-2">お問い合わせ：info@wellen.co.jp</p>
+                <p>提出日：2025年5月12日</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // グラフの描画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 店舗分布グラフ
+            const storeCtx = document.getElementById('storeDistributionChart').getContext('2d');
+            new Chart(storeCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['東京都', '神奈川県', '千葉県', '愛知県', '埼玉県', 'その他'],
+                    datasets: [{
+                        label: '店舗数',
+                        data: [97, 55, 35, 33, 26, 71],
+                        backgroundColor: [
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(229, 45, 39, 0.7)',
+                            'rgba(229, 45, 39, 0.6)',
+                            'rgba(229, 45, 39, 0.5)',
+                            'rgba(229, 45, 39, 0.4)',
+                            'rgba(229, 45, 39, 0.3)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'デニーズ店舗分布状況',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '店舗数'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // インバウンドグラフ
+            const inboundCtx = document.getElementById('inboundChart').getContext('2d');
+            new Chart(inboundCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2022', '2023', '2024', '2025(予測)'],
+                    datasets: [{
+                        label: '訪日外国人数(万人)',
+                        data: [1522, 2520, 3686, 4020],
+                        borderColor: 'rgba(229, 45, 39, 1)',
+                        backgroundColor: 'rgba(229, 45, 39, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true
+                        },
+                        title: {
+                            display: true,
+                            text: '訪日外国人観光客数の推移',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '人数(万人)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 効果予測チャート
+            const effectCtx = document.getElementById('effectChart1').getContext('2d');
+            new Chart(effectCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['メニュー売上', 'SNS言及量', 'フォロワー数', 'アプリ会員数', '来客数'],
+                    datasets: [{
+                        label: '現状(100%とした場合)',
+                        data: [100, 100, 100, 100, 100],
+                        backgroundColor: 'rgba(200, 200, 200, 0.3)',
+                        borderColor: 'rgba(200, 200, 200, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(200, 200, 200, 1)'
+                    }, {
+                        label: '施策実施後の予測',
+                        data: [120, 300, 150, 130, 115],
+                        backgroundColor: 'rgba(229, 45, 39, 0.3)',
+                        borderColor: 'rgba(229, 45, 39, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(229, 45, 39, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 350
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'シェフ監修シリーズの効果予測',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+
+            // インバウンドニーズチャート
+            const inboundNeedsCtx = document.getElementById('inboundNeedsChart').getContext('2d');
+            new Chart(inboundNeedsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['飲食費', '宿泊費', '買い物代', '交通費', 'その他'],
+                    datasets: [{
+                        data: [22.1, 28.3, 34.5, 10.2, 4.9],
+                        backgroundColor: [
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(253, 126, 20, 0.8)',
+                            'rgba(250, 196, 20, 0.8)',
+                            'rgba(42, 157, 143, 0.8)',
+                            'rgba(38, 70, 83, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '訪日外国人消費内訳(%)',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 企業ニーズチャート
+            const corporateNeedsCtx = document.getElementById('corporateNeedsChart').getContext('2d');
+            new Chart(corporateNeedsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['食事補助', 'フレックス制度', '健康支援', 'リモートワーク', '教育支援'],
+                    datasets: [{
+                        label: '導入企業の割合(%)',
+                        data: [72, 68, 65, 62, 58],
+                        backgroundColor: 'rgba(229, 45, 39, 0.7)',
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: '企業の福利厚生導入状況',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '導入企業の割合(%)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 音楽フェス市場チャート
+            const festivalMarketCtx = document.getElementById('festivalMarketChart').getContext('2d');
+            new Chart(festivalMarketCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2021', '2022', '2023', '2024', '2025(予測)'],
+                    datasets: [{
+                        label: '国内音楽フェス市場規模(億円)',
+                        data: [350, 680, 920, 1150, 1280],
+                        borderColor: 'rgba(229, 45, 39, 1)',
+                        backgroundColor: 'rgba(229, 45, 39, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true
+                        },
+                        title: {
+                            display: true,
+                            text: '国内音楽フェス市場規模推移',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '市場規模(億円)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // ROIチャート2
+            const roiCtx2 = document.getElementById('roiChart2').getContext('2d');
+            new Chart(roiCtx2, {
+                type: 'bar',
+                data: {
+                    labels: ['初期投資', '1年目売上', '2年目売上', '3年目売上'],
+                    datasets: [{
+                        label: '金額(万円)',
+                        data: [2800, 31000, 34000, 37000],
+                        backgroundColor: [
+                            'rgba(38, 70, 83, 0.7)',
+                            'rgba(229, 45, 39, 0.7)',
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(229, 45, 39, 0.9)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'インバウンド施策の投資対効果',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '金額(万円)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // ROIチャート3
+            const roiCtx3 = document.getElementById('roiChart3').getContext('2d');
+            new Chart(roiCtx3, {
+                type: 'bar',
+                data: {
+                    labels: ['初期投資', '1年目売上', '2年目売上', '3年目売上'],
+                    datasets: [{
+                        label: '金額(万円)',
+                        data: [5000, 72000, 86000, 95000],
+                        backgroundColor: [
+                            'rgba(38, 70, 83, 0.7)',
+                            'rgba(229, 45, 39, 0.7)',
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(229, 45, 39, 0.9)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'BtoB弁当事業の投資対効果',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '金額(万円)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // ROIチャート4
+            const roiCtx4 = document.getElementById('roiChart4').getContext('2d');
+            new Chart(roiCtx4, {
+                type: 'bar',
+                data: {
+                    labels: ['初期投資', '1年目売上', '2年目売上', '3年目売上'],
+                    datasets: [{
+                        label: '金額(万円)',
+                        data: [3200, 6000, 7200, 8400],
+                        backgroundColor: [
+                            'rgba(38, 70, 83, 0.7)',
+                            'rgba(229, 45, 39, 0.7)',
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(229, 45, 39, 0.9)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'キッチンカー展開の投資対効果',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '金額(万円)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 投資チャート
+            const investmentCtx = document.getElementById('investmentChart').getContext('2d');
+            new Chart(investmentCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['シェフ監修SNS戦略', 'インバウンド向け企画', 'BtoB弁当サービス', 'キッチンカー展開'],
+                    datasets: [{
+                        data: [3500, 2800, 5000, 3200],
+                        backgroundColor: [
+                            'rgba(229, 45, 39, 0.8)',
+                            'rgba(253, 126, 20, 0.8)',
+                            'rgba(42, 157, 143, 0.8)',
+                            'rgba(38, 70, 83, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '初期投資配分(万円)',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 5年プロジェクション
+            const projectionCtx = document.getElementById('fiveYearProjection').getContext('2d');
+            new Chart(projectionCtx, {
+                type: 'line',
+                data: {
+                    labels: ['現在', '1年後', '2年後', '3年後', '4年後', '5年後'],
+                    datasets: [{
+                        label: '既存事業売上',
+                        data: [462, 470, 480, 490, 500, 510],
+                        borderColor: 'rgba(73, 80, 87, 0.8)',
+                        backgroundColor: 'rgba(73, 80, 87, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true
+                    }, {
+                        label: '新規施策による増加売上',
+                        data: [0, 151, 186, 215, 240, 260],
+                        borderColor: 'rgba(229, 45, 39, 0.8)',
+                        backgroundColor: 'rgba(229, 45, 39, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '5年間の売上見通し',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '売上(億円)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '年度'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
