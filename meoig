@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google+インスタグラム一括集客サービス | 株式会社discovery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .pricing-card {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .pricing-card.featured {
+            border-color: #10b981;
+            transform: scale(1.05);
+        }
+        .savings-badge {
+            background: linear-gradient(45deg, #10b981, #059669);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Google+インスタグラム<br>一括集客サービス</h1>
+            <p class="text-xl mb-8 opacity-90">最大65.2%のコスト削減を実現する革新的なマーケティングソリューション</p>
+            <div class="inline-block bg-white text-purple-700 px-6 py-3 rounded-full font-semibold text-lg">
+                <i class="fas fa-building mr-2"></i>株式会社discovery
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Overview -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">サービス概要</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Google ビジネスプロフィールとInstagramを一括で運用し、効率的な集客を実現します</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://magecomp.com/blog/wp-content/uploads/2024/03/Google-My-Business-Maps-Marketing-png.webp" alt="Google Business Marketing" class="w-full rounded-lg card-shadow">
+                </div>
+                <div class="space-y-6">
+                    <div class="feature-card bg-white p-6 rounded-lg card-shadow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-search-plus text-3xl text-blue-600 mr-4"></i>
+                            <h3 class="text-xl font-semibold">Google上で集客につながるインスタ投稿</h3>
+                        </div>
+                        <p class="text-gray-600">Instagram投稿がGoogle検索結果にも表示され、集客効果を最大化</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg card-shadow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-3xl text-green-600 mr-4"></i>
+                            <h3 class="text-xl font-semibold">投稿するだけでGoogleの評価向上</h3>
+                        </div>
+                        <p class="text-gray-600">定期的な投稿により検索エンジンでの評価が自動的に向上</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg card-shadow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-robot text-3xl text-purple-600 mr-4"></i>
+                            <h3 class="text-xl font-semibold">口コミ返信の自動化</h3>
+                        </div>
+                        <p class="text-gray-600">AI技術により口コミへの返信を自動化し、業務効率を大幅改善</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Comparison -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">料金比較</h2>
+                <p class="text-xl text-gray-600">従来のサービスと比較して圧倒的なコストパフォーマンスを実現</p>
+            </div>
+            
+            <div class="mb-12">
+                <div class="chart-container bg-white rounded-lg card-shadow p-6">
+                    <canvas id="pricingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="pricing-card bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold mb-2">テンプレート投稿内容作成</h3>
+                    <div class="text-3xl font-bold text-red-600 mb-2">¥33,000</div>
+                    <div class="savings-badge text-white px-3 py-1 rounded-full text-sm font-semibold">65.2%削減</div>
+                </div>
+                
+                <div class="pricing-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold mb-2">投稿内容作成</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-2">¥55,000</div>
+                    <div class="savings-badge text-white px-3 py-1 rounded-full text-sm font-semibold">42.0%削減</div>
+                </div>
+                
+                <div class="pricing-card featured bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold mb-2">投稿内容作成+投稿管理</h3>
+                    <div class="text-3xl font-bold text-green-600 mb-2">¥77,000</div>
+                    <div class="savings-badge text-white px-3 py-1 rounded-full text-sm font-semibold">18.8%削減</div>
+                    <div class="mt-2 text-sm font-semibold text-green-600">おすすめ</div>
+                </div>
+                
+                <div class="pricing-card bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold mb-2">MEO+インスタ投稿<br>（別々の運用）</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-2">¥94,800</div>
+                    <div class="text-sm text-gray-600">従来サービス</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Savings Visualization -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">コスト削減効果</h2>
+                <p class="text-xl text-gray-600">サービス層ごとの具体的な削減率をご確認ください</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="chart-container bg-white rounded-lg card-shadow p-6" style="height: 500px;">
+                    <canvas id="savingsChart"></canvas>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-8 rounded-lg card-shadow">
+                        <img src="https://ppcexpo.com/blog/wp-content/uploads/2024/10/business-growth-chart-main.jpg" alt="Business Growth Chart" class="w-full rounded-lg mb-6">
+                        
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">最大65.2%のコスト削減を実現</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>テンプレート作成プラン：<strong>61,800円削減</strong></span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>投稿内容作成プラン：<strong>39,800円削減</strong></span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>フルサービスプラン：<strong>17,800円削減</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">機能比較</h2>
+                <p class="text-xl text-gray-600">弊社サービスと従来サービスの違い</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg card-shadow">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">
+                        <i class="fas fa-trophy mr-2"></i>弊社サービス
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl mr-3"></i>
+                            <span class="text-lg">Google上で集客につながるインスタ投稿を委託</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl mr-3"></i>
+                            <span class="text-lg">投稿するだけでGoogleの評価も向上</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl mr-3"></i>
+                            <span class="text-lg">口コミ返信の自動化</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl mr-3"></i>
+                            <span class="text-lg">定期的な更新保証</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl mr-3"></i>
+                            <span class="text-lg">インスタの常時稼働</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg card-shadow">
+                    <h3 class="text-2xl font-bold text-red-800 mb-6 text-center">
+                        <i class="fas fa-times-circle mr-2"></i>従来サービス
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-times-circle text-red-600 text-xl mr-3"></i>
+                            <span class="text-lg">インスタのみでしか訴求できない</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-times-circle text-red-600 text-xl mr-3"></i>
+                            <span class="text-lg">インスタ上でのキャンペーンは訴求力不足</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-times-circle text-red-600 text-xl mr-3"></i>
+                            <span class="text-lg">返信が面倒、質のムラがある</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-times-circle text-red-600 text-xl mr-3"></i>
+                            <span class="text-lg">更新がまばら</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-times-circle text-red-600 text-xl mr-3"></i>
+                            <span class="text-lg">更新が不定期</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Offers -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">導入キャンペーン</h2>
+                <p class="text-xl opacity-90">お得な契約プランをご用意しています</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4">3ヶ月契約</h3>
+                    <div class="text-4xl font-bold mb-4">初月無料</div>
+                    <p class="opacity-90">短期間での効果検証に最適</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-lg text-center border-2 border-white border-opacity-50 transform scale-105">
+                    <h3 class="text-2xl font-bold mb-4">6ヶ月契約</h3>
+                    <div class="text-4xl font-bold mb-2">初月無料</div>
+                    <div class="text-2xl font-semibold mb-4">+ 撮影無料</div>
+                    <p class="opacity-90">バランスの取れた人気プラン</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4">12ヶ月契約</h3>
+                    <div class="text-4xl font-bold mb-2">初月無料</div>
+                    <div class="text-2xl font-semibold mb-2">+ 撮影無料</div>
+                    <div class="text-2xl font-semibold mb-4">+ 50%OFF</div>
+                    <p class="opacity-90">最もお得な長期プラン</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Collaboration -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">プロフェッショナルチームによる運用</h2>
+                    <p class="text-xl text-gray-600 mb-6">経験豊富なマーケティングチームが、お客様のビジネスに最適化されたコンテンツを継続的に提供します</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-2xl text-blue-600 mr-4"></i>
+                            <span class="text-lg font-semibold">専門チームによる24時間体制での運用</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-camera text-2xl text-green-600 mr-4"></i>
+                            <span class="text-lg font-semibold">プロフォトグラファーによる撮影サービス</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-bar text-2xl text-purple-600 mr-4"></i>
+                            <span class="text-lg font-semibold">データ分析に基づく戦略的投稿</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.socialpilot.co/wp-content/uploads/2022/12/8-Ways-to-Nail-Social-Media-Collaboration-Within-Your-Marketing-Team.jpg" alt="Social Media Team Collaboration" class="w-full rounded-lg card-shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional Services -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">オプションサービス</h2>
+                <p class="text-xl text-gray-600">さらなるクオリティアップをご希望の方へ</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-8 rounded-lg card-shadow text-center">
+                    <h3 class="text-3xl font-bold mb-4">
+                        <i class="fas fa-camera-retro mr-3"></i>
+                        撮影＋レタッチ+素材提供
+                    </h3>
+                    <div class="text-5xl font-bold mb-4">¥55,000</div>
+                    <p class="text-xl mb-6">プロフェッショナルな写真撮影からレタッチ、素材提供まで一貫してサポート</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 mt-8 text-left">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <i class="fas fa-camera text-2xl mb-2"></i>
+                            <h4 class="font-semibold">プロ撮影</h4>
+                            <p class="text-sm opacity-90">商品・店舗の魅力を最大限に引き出す撮影</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <i class="fas fa-magic text-2xl mb-2"></i>
+                            <h4 class="font-semibold">レタッチ</h4>
+                            <p class="text-sm opacity-90">色調補正・画質向上による美しい仕上がり</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <i class="fas fa-download text-2xl mb-2"></i>
+                            <h4 class="font-semibold">素材提供</h4>
+                            <p class="text-sm opacity-90">高解像度データの提供で他用途にも活用可能</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">お申し込み・契約方法</h2>
+                <p class="text-xl opacity-90">簡単3ステップでサービス開始</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mouse-pointer text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">STEP 1</h3>
+                    <h4 class="text-xl font-semibold mb-2">WEB申し込み</h4>
+                    <p class="opacity-90">オンラインフォームから簡単にお申し込みいただけます</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-credit-card text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">STEP 2</h3>
+                    <h4 class="text-xl font-semibold mb-2">クレジット決済</h4>
+                    <p class="opacity-90">安全なクレジットカード決済でスムーズにお支払い</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">STEP 3</h3>
+                    <h4 class="text-xl font-semibold mb-2">サービス開始</h4>
+                    <p class="opacity-90">お申し込み完了後、即座にサービスを開始いたします</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6">今すぐ始めて<br>集客力を最大化しませんか？</h2>
+            <p class="text-2xl mb-8 opacity-90">最大65.2%のコスト削減で、プロフェッショナルなSNS運用を実現</p>
+            
+            <div class="inline-block bg-white text-purple-700 px-12 py-4 rounded-full text-2xl font-bold mb-8 hover:bg-opacity-90 transition-all duration-300 cursor-pointer">
+                <i class="fas fa-phone mr-3"></i>お問い合わせはこちら
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg">
+                <h3 class="text-3xl font-bold mb-6">株式会社discovery</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">サービス特徴</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check mr-2"></i>Google+Instagram一括運用</li>
+                            <li><i class="fas fa-check mr-2"></i>最大65.2%コスト削減</li>
+                            <li><i class="fas fa-check mr-2"></i>AI技術による自動化</li>
+                            <li><i class="fas fa-check mr-2"></i>プロフェッショナルチーム</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">導入メリット</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-chart-line mr-2"></i>集客効果の最大化</li>
+                            <li><i class="fas fa-time mr-2"></i>業務効率の大幅改善</li>
+                            <li><i class="fas fa-yen-sign mr-2"></i>運用コストの大幅削減</li>
+                            <li><i class="fas fa-trophy mr-2"></i>競合他社との差別化</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Pricing Comparison Chart
+        const pricingCtx = document.getElementById('pricingChart').getContext('2d');
+        new Chart(pricingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['テンプレート投稿内容作成', '投稿内容作成', '投稿内容作成+投稿管理', 'MEO+インスタ投稿（別々の運用）'],
+                datasets: [{
+                    label: '価格 (円)',
+                    data: [33000, 55000, 77000, 94800],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.8)',
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(245, 158, 11, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(16, 185, 129, 1)',
+                        'rgba(245, 158, 11, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'サービス料金比較',
+                        font: {
+                            size: 18,
+                            weight: 'bold'
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100000,
+                        ticks: {
+                            callback: function(value) {
+                                return '¥' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Cost Savings Donut Chart
+        const savingsCtx = document.getElementById('savingsChart').getContext('2d');
+        new Chart(savingsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['テンプレート作成', '投稿内容作成', '投稿内容作成+管理'],
+                datasets: [{
+                    data: [65.2, 42.0, 18.8],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.8)',
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(16, 185, 129, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(16, 185, 129, 1)'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'サービス層ごとのコスト削減率',
+                        font: {
+                            size: 18,
+                            weight: 'bold'
+                        }
+                    },
+                    legend: {
+                        position: 'right'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%削減';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
