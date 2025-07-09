@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMKホールディングス｜挑戦するあなたの毎日が、もっと輝き出す。</title>
+    <meta name="description" content="専門家直伝のヘルス＆ビューティー情報を、今すぐLINEで。簡単な質問に答えるだけで、あなたに合った「セルフケア診断」をお届け。さらに、LINE登録者限定で、すぐに使える豪華特典をプレゼント中！">
+    <style>
+        /* 基本スタイル */
+        :root {
+            --primary-color: #2c3e50; /* メインテキストカラー（濃いグレー） */
+            --secondary-color: #3498db; /* サブカラー（青系） */
+            --accent-color: #2ecc71; /* アクセントカラー・CTAボタン（緑） */
+            --accent-hover-color: #27ae60; /* アクセントカラー（ホバー時） */
+            --bg-color: #ffffff; /* 背景色（白） */
+            --light-bg-color: #f8f9fa; /* 薄い背景色 */
+        }
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', 'Osaka', 'MS PGothic', sans-serif;
+            margin: 0;
+            color: var(--primary-color);
+            line-height: 1.8;
+            background-color: var(--bg-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 1. ファーストビュー */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1500x800/87CEEB/FFFFFF?text=Hero+Image'); /* 明るく希望に満ちた画像に */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* CTAボタン共通スタイル */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: var(--accent-hover-color);
+            transform: translateY(-3px);
+        }
+        .cta-note {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* 2. 悩みへの共感 */
+        .problems {
+            background-color: var(--light-bg-color);
+        }
+        .problem-list {
+            list-style-type: none;
+            padding-left: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .problem-list li {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+        .problem-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        /* 3. 解決策の提示 */
+        .solution {
+            text-align: center;
+        }
+        .solution-text {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: var(--light-bg-color);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        /* 4. LINE登録のメリット */
+        .benefits {
+            background-color: var(--light-bg-color);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .benefit-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .benefit-number {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .benefit-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        .benefit-description {
+            font-size: 0.9rem;
+        }
+
+        /* 5. 信頼性の担保 */
+        .trust {
+            text-align: center;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .trust-item h3 {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+        .logos img {
+            max-height: 50px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: filter 0.3s, opacity 0.3s;
+        }
+        .logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        .testimonial {
+            background-color: var(--light-bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 0 auto 15px;
+            text-align: left;
+            position: relative;
+        }
+        .testimonial:before {
+            content: '“';
+            position: absolute;
+            top: 0;
+            left: 15px;
+            font-size: 4em;
+            color: var(--secondary-color);
+            opacity: 0.1;
+            font-family: serif;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        /* 6. 最後の後押し */
+        .final-cta {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        .final-cta .section-title {
+            color: white;
+        }
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .step {
+            background: rgba(255,255,255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .step span {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        .ceo-message {
+            background: rgba(255,255,255, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .final-cta .cta-button {
+            transform: scale(1.1);
+        }
+        .final-cta .cta-button:hover {
+            transform: scale(1.15) translateY(-3px);
+        }
+        .limited-offer {
+            margin-top: 20px;
+            color: #ffdd57; /* 黄色系の注意喚起色 */
+            font-weight: bold;
+        }
+        
+        /* フッター */
+        .footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+        .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .cta-button { padding: 15px 30px; font-size: 1.2rem; }
+            .steps { flex-direction: column; align-items: center; }
+            .step { width: 80%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">挑戦するあなたの毎日が、<br>もっと輝き出す。</h1>
+            <h2 class="hero-subtitle fade-in">専門家直伝のヘルス＆ビューティー情報を、今すぐLINEで。</h2>
+            <p class="fade-in">簡単な質問に答えるだけで、あなたに合った「セルフケア診断」をお届け。さらに、LINE登録者限定で、すぐに使える豪華特典をプレゼント中！</p>
+            <a href="#" class="cta-button fade-in">【無料】LINE友だち追加で豪華特典を受け取る</a>
+            <p class="cta-note fade-in">タップして簡単登録！ いつでもブロックできます</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="problems">
+            <div class="container">
+                <h2 class="section-title fade-in">こんなお悩み、<br>ありませんか？</h2>
+                <ul class="problem-list">
+                    <li class="fade-in">健康や美容の情報が多すぎて、何が正しいのか分からない</li>
+                    <li class="fade-in">仕事や家事で忙しく、自分のケアは後回しになりがち</li>
+                    <li class="fade-in">何か新しいことを始めたいけど、きっかけが見つからない</li>
+                    <li class="fade-in">もっと自分に自信を持ちたい、毎日を前向きに過ごしたい</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="solution">
+            <div class="container">
+                <h2 class="section-title fade-in">そのお悩み、<br>IMKホールディングスが解決のヒントを届けます！</h2>
+                <div class="solution-text fade-in">
+                    <p>私たちは、海外の専門的な健康医学書の翻訳出版や、プロを育てる検定講座を運営する「ヘルスケア事業」、そしてあなたの魅力を最大限に引き出す「ビューティー事業」を展開する、心と体のプロフェッショナル集団です。</p>
+                    <p><strong>私たちのLINEでは、あなたが「新しい自分へ挑戦する」ための、信頼できる情報だけを厳選してお届けします。</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title fade-in">今、友だち追加するだけ！<br>明日から使える「豪華5大特典」を全員にプレゼント！</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-number">1</div>
+                        <h3 class="benefit-title">専門家監修<br>オンライン・セルフケア診断</h3>
+                        <p class="benefit-description">LINEで届く質問に答えるだけ！あなたの心と体の状態に合わせたアドバイスが届きます。</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-number">2</div>
+                        <h3 class="benefit-title">ベストセラー健康医学書<br>特別ダイジェスト版PDF</h3>
+                        <p class="benefit-description">人気の翻訳出版書籍から、特に役立つ一冊を要約してプレゼント。</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-number">3</div>
+                        <h3 class="benefit-title">メイクアップサロン「SuMinus」<br>20%OFFクーポン</h3>
+                        <p class="benefit-description">プロのメイクレッスンで、新しい自分を発見するチャンス！</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-number">4</div>
+                        <h3 class="benefit-title">会員限定<br>先行案内・割引情報</h3>
+                        <p class="benefit-description">新講座の開講や書籍の発売情報、会員限定の割引などをいち早くお届け。</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-number">5</div>
+                        <h3 class="benefit-title">医師・専門家監修<br>週刊ウェルネス通信</h3>
+                        <p class="benefit-description">最新の健康・美容情報を、LINEで毎週分かりやすく解説します。</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#" class="cta-button fade-in">【無料】5大特典を今すぐ受け取る</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust">
+            <div class="container">
+                <h2 class="section-title fade-in">健康と美容の分野で、<br>確かな実績があります。</h2>
+                <div class="trust-grid">
+                    <div class="trust-item fade-in">
+                        <h3>翻訳出版書籍・運営講座の一部</h3>
+                        <div class="logos">
+                            <img src="https://via.placeholder.com/200x80/CCCCCC/FFFFFF?text=書籍・講座ロゴ1" alt="実績ロゴ1">
+                            <img src="https://via.placeholder.com/200x80/CCCCCC/FFFFFF?text=書籍・講座ロゴ2" alt="実績ロゴ2">
+                            <img src="https://via.placeholder.com/200x80/CCCCCC/FFFFFF?text=書籍・講座ロゴ3" alt="実績ロゴ3">
+                        </div>
+                    </div>
+                    <div class="trust-item fade-in">
+                        <h3>お客様の声</h3>
+                        <div class="testimonial">
+                            <p>正しい知識で、長年の不調が改善しました！情報が溢れる中で、信頼できる指針ができて本当に感謝しています。</p>
+                            <p class="testimonial-author">40代・女性（講座受講）</p>
+                        </div>
+                        <div class="testimonial">
+                            <p>自分に似合うメイクが分かり、自信が持てるようになりました。毎日のメイクが楽しくて仕方ありません！</p>
+                            <p class="testimonial-author">30代・女性（サロン利用）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <h2 class="section-title fade-in">登録は、たったの30秒。<br>新しい自分への一歩を、ここから踏み出しませんか？</h2>
+                <div class="steps fade-in">
+                    <div class="step"><span>STEP 1</span><br>下のボタンをタップ</div>
+                    <div class="step"><span>STEP 2</span><br>LINEアプリが起動</div>
+                    <div class="step"><span>STEP 3</span><br>「友だち追加」で登録完了！</div>
+                </div>
+                
+                <div class="ceo-message fade-in">
+                    <p><strong>代表取締役CEO [氏名]</strong></p>
+                    <p>「子供も大人も挑戦したくなる世界をつくる」という理念のもと、私たちは皆様一人ひとりの輝く毎日を応援しています。このLINEが、あなたの新たな挑戦のきっかけになれば幸いです。</p>
+                </div>
+
+                <a href="#" class="cta-button fade-in">LINEで専門家からの情報を無料で受け取る</a>
+                <p class="limited-offer fade-in">特典は期間限定です。この機会をお見逃しなく！</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">会社概要</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+            <p>&copy; 2025 IMK Holdings Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // スクロールで要素をフェードインさせる
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2, // 20%見えたら表示
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
