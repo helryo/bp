@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社三共住宅｜足立区の住宅リフォーム・床下診断</title>
+    <style>
+        /* --- 基本設定 --- */
+        body {
+            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .text-center { text-align: center; }
+        section {
+            padding: 60px 0;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* --- ファーストビュー --- */
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x600.png?text=清潔感のあるスタッフや作業風景の画像'); /* TODO: 画像を差し替え */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero p {
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .hero-badges {
+            margin: 30px 0;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e64a19;
+            transform: translateY(-3px);
+        }
+
+        /* --- 共感・問題提起 --- */
+        .problem-check ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .problem-check li {
+            background: #f1f1f1;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .problem-check li::before {
+            content: '✓';
+            color: #ff5722;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        /* --- 解決策 --- */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .solution-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .solution-item img { /* アイコン用 */
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .solution-item h3 {
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        /* --- 信頼の理由 --- */
+        .reason-box {
+            background: #f9f9f9;
+            border-left: 5px solid #007bff;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .reason-box h3 {
+            font-size: 22px;
+            text-align: left;
+        }
+        .reason-box p {
+            font-size: 16px;
+        }
+
+        /* --- お客様の声 --- */
+        .testimonial {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* --- ご利用の流れ --- */
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin-top: 50px;
+        }
+        .flow-step {
+            width: 22%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .flow-steps::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: #007bff;
+            z-index: 0;
+        }
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px auto;
+            font-size: 18px;
+            font-weight: bold;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #007bff;
+        }
+        .step-title {
+            font-weight: bold;
+        }
+
+        /* --- フッターと最終CTA --- */
+        .final-cta {
+            background-color: #333;
+            color: white;
+            padding: 60px 0;
+        }
+        .final-cta h2 {
+            color: white;
+            border-color: #ffc107;
+        }
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* --- 追従電話ボタン --- */
+        .sticky-phone-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none; /* 初期は非表示 */
+        }
+        .sticky-phone-button a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            background-color: #28a745;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .sticky-phone-button a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+        .phone-icon {
+            font-size: 24px;
+        }
+        .phone-text {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* PC用スタイル */
+        @media (min-width: 769px) {
+            .sticky-phone-button {
+                display: block;
+            }
+            .sticky-phone-button a {
+                height: 60px;
+                padding: 0 20px;
+            }
+            .sticky-phone-button .phone-icon {
+                margin-right: 0; /* 最初はアイコンのみ */
+            }
+            .sticky-phone-button .phone-text {
+                display: none;
+                white-space: nowrap;
+                margin-left: 10px;
+            }
+            .sticky-phone-button a:hover .phone-text {
+                display: block; /* ホバーでテキスト表示 */
+            }
+        }
+
+        /* スマートフォン用スタイル */
+        @media (max-width: 768px) {
+            h2 { font-size: 22px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .cta-button { font-size: 18px; padding: 15px 30px; }
+            
+            .solution-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; align-items: center; gap: 40px; }
+            .flow-step { width: 80%; }
+            .flow-steps::after { display: none; }
+            
+            .sticky-phone-button {
+                display: block;
+            }
+            .sticky-phone-button a {
+                flex-direction: column;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+            }
+            .sticky-phone-button .phone-icon {
+                font-size: 28px;
+                margin-bottom: 3px;
+            }
+            .sticky-phone-button .phone-text {
+                font-size: 11px;
+                font-weight: normal;
+            }
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+                70% { box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>床下の異音、湿気、害虫…<br>見て見ぬフリ、していませんか？</h1>
+            <p>足立区で12年。国家資格を持つ専門家が、あなたの大切な住まいを「無料」で健康診断。<br>無理な営業は一切ありません。</p>
+            <div class="hero-badges">
+                <span class="badge">年間施工実績〇〇件</span>
+                <span class="badge">お客様満足度9X%</span>
+                <span class="badge">有資格者在籍</span>
+            </div>
+            <a href="#contact" class="cta-button">まずは無料相談・床下診断を予約する</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2><span style="color: #ff5722;">1つでも当てはまったら要注意！</span><br>こんなお悩み、ありませんか？</h2>
+            <div class="problem-check">
+                <ul>
+                    <li>家の中にカビ臭い、湿っぽい場所がある</li>
+                    <li>歩くと床がギシギシと鳴る</li>
+                    <li>羽アリや、見たことのない虫を見かけた</li>
+                    <li>ネズミの足音やフンが気になる</li>
+                    <li>親から譲り受けた家で、床下を見たことがない</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #f9f9f9;">
+        <div class="container text-center">
+            <h2>そのお悩み、三共住宅の<br>「床下まるごと対策」がすべて解決します！</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <img src="https://via.placeholder.com/80x80.png?text=アイコン" alt="害虫対策"> <h3>害虫対策</h3>
+                    <p>シロアリ、ゴキブリなど、住まいの大敵を根本から駆除。安全性の高い薬剤で、ご家族も安心です。</p>
+                </div>
+                <div class="solution-item">
+                    <img src="https://via.placeholder.com/80x80.png?text=アイコン" alt="害獣対策"> <h3>害獣対策</h3>
+                    <p>ネズミの侵入経路を特定し、徹底的に封鎖。糞尿の清掃・消毒まで行い、衛生的な環境を取り戻します。</p>
+                </div>
+                <div class="solution-item">
+                    <img src="https://via.placeholder.com/80x80.png?text=アイコン" alt="湿気・カビ対策"> <h3>湿気・カビ対策</h3>
+                    <p>床下の湿度をコントロールする調湿材や、カビの発生を抑える防カビ剤で、建物の寿命を延ばします。</p>
+                </div>
+                <div class="solution-item">
+                    <img src="https://via.placeholder.com/80x80.png?text=アイコン" alt="住宅補強"> <h3>住宅補強</h3>
+                    <p>床のきしみや沈みを改善。地震などの揺れに備え、床下からお住まいの強度を高めます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2>三共住宅が12年間、<br>足立区で選ばれ続ける3つの理由</h2>
+            <div class="reason-box">
+                <h3>理由1：顔が見える安心感！経験豊富な自社スタッフが対応</h3>
+                <p><br>
+                私たちは、問い合わせから施工、アフターフォローまで、すべて経験豊富な自社のスタッフが一貫して担当します。「誰が来るか分からない」といった不安はありません。地域を知り尽くしたプロとして、責任を持ってお客様のお住まいと向き合います。</p>
+            </div>
+            <div class="reason-box">
+                <h3>理由2：安全性と効果を両立した薬剤と工法</h3>
+                <p><br>
+                小さなお子様やペットがいるご家庭でも安心していただけるよう、天然成分由来の薬剤や、人体への影響が極めて少ないものを厳選して使用しています。建物を傷つけない丁寧な施工をお約束します。</p>
+            </div>
+            <div class="reason-box">
+                <h3>理由3：明朗会計と安心の保証制度</h3>
+                <p>「何にいくらかかるのか分からない」という不安を解消するため、詳細で分かりやすいお見積りを提出します。お見積り以上の追加料金は一切いただきません。また、施工後も安心の最長〇年のアフター保証をご用意しております。</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #f9f9f9;">
+        <div class="container text-center">
+            <h2>お客様からの喜びの声</h2>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100x100.png?text=お客様写真" alt="お客様"> <div>
+                    <h4>足立区・A様</h4>
+                    <p>「説明がとても丁寧で、床下の状態を写真で見せてもらいながら説明してくれたので安心できました。料金も思ったより安く、もっと早く相談すればよかったです。」</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100x100.png?text=お客様写真" alt="お客様"> <div>
+                    <h4>葛飾区・S様</h4>
+                    <p>「他社で見積りを取ったら高額で諦めかけていましたが、三共さんは良心的な価格で対応してくれました。作業もスムーズで、本当に感謝しています。」</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2>お問い合わせから施工完了までの簡単4ステップ</h2>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-icon">STEP 1</div>
+                    <div class="step-title">お問い合わせ</div>
+                    <p>お電話またはフォームからお気軽にご連絡ください。</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">STEP 2</div>
+                    <div class="step-title">無料診断・お見積り</div>
+                    <p>専門家がご自宅に伺い、床下の状態を徹底調査します。</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">STEP 3</div>
+                    <div class="step-title">ご契約・施工</div>
+                    <p>お見積りにご納得いただけたら、丁寧に施工を行います。</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">STEP 4</div>
+                    <div class="step-title">アフターフォロー</div>
+                    <p>施工後も保証制度で、末永くお住まいを見守ります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="final-cta">
+        <div class="container text-center">
+            <h2>お電話一本で、住まいの不安をプロが解決します</h2>
+            <p>どんな些細なことでも構いません。まずは私たち専門家にご相談いただき、安心を手に入れてください。</p>
+            <a href="tel:03-6820-4362" class="cta-button">03-6820-4362 に電話する<br><small>(受付時間: 平日9:00-18:00)</small></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>株式会社三共住宅 〒120-0042 東京都足立区千住龍田町5-2-302</p>
+        <p>&copy; 2024 SANKYO-REFORM. All Rights Reserved.</p>
+    </footer>
+
+
+    <div class="sticky-phone-button">
+        <a href="tel:03-6820-4362">
+            <span class="phone-icon" style="display: none;" aria-hidden="true">📞</span>
+            <span class="phone-text" style="display: none;" aria-hidden="true">03-6820-4362<br><small>無料相談はこちら</small></span>
+            <span class="phone-icon" aria-hidden="true">📞</span>
+            <span class="phone-text">タップで<br>無料相談</span>
+        </a>
+    </div>
+
+    <script>
+        // PC/スマホで表示を切り替えるための簡単なスクリプト
+        document.addEventListener('DOMContentLoaded', function() {
+            const isMobile = window.matchMedia("(max-width: 768px)").matches;
+            const stickyButton = document.querySelector('.sticky-phone-button a');
+            const pcIcon = stickyButton.querySelector('.phone-icon[style*="display: none"]');
+            const pcText = stickyButton.querySelector('.phone-text[style*="display: none"]');
+            const mobileIcon = stickyButton.querySelectorAll('.phone-icon')[1];
+            const mobileText = stickyButton.querySelectorAll('.phone-text')[1];
+
+            if (isMobile) {
+                pcIcon.style.display = 'none';
+                pcText.style.display = 'none';
+                mobileIcon.style.display = 'block';
+                mobileText.style.display = 'block';
+            } else {
+                pcIcon.style.display = 'block';
+                // pcTextはホバーで表示するので、ここでは何もしない
+                mobileIcon.style.display = 'none';
+                mobileText.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
