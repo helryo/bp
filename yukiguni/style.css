@@ -1,0 +1,147 @@
+/* ===================================================
+   1. カラーパレット・基本設定
+   =================================================== */
+:root {
+    --color-primary: #0A1931; /* ネイビー */
+    --color-accent: #D4AF37;  /* ゴールド */
+    --color-secondary: #005A9C; /* フレッシュブルー */
+    --color-base: #FFFFFF;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8; /* 高級感を出すため行間を広めに */
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===================================================
+   2. タイポグラフィと見出し
+   =================================================== */
+h1, h2, h3 {
+    font-family: 'Yu Mincho', 'serif'; /* 見出しを明朝体にして高級感を演出 */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: var(--color-primary);
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent); /* ゴールドのアンダーライン */
+    padding-bottom: 5px;
+}
+
+/* ===================================================
+   3. ファーストビュー (Header)
+   =================================================== */
+header#main-visual {
+    background-color: var(--color-primary); /* ネイビーの背景 */
+    color: var(--color-base);
+    padding: 40px 0;
+}
+
+header h1 {
+    color: var(--color-base);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sub-catch {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--color-accent); /* ゴールドのサブキャッチ */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.price-box {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border: 1px solid var(--color-accent);
+    margin: 20px auto;
+    width: 60%;
+}
+
+.price-box h2 {
+    color: var(--color-accent);
+    border: none;
+    margin: 5px 0;
+}
+
+.price-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-base);
+}
+
+/* ===================================================
+   4. CTAボタン
+   =================================================== */
+.cta-button {
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px 10px;
+    background: var(--color-primary);
+    color: var(--color-accent); /* ゴールドの文字 */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 3px solid var(--color-accent); /* ゴールドの縁取り */
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary); /* ホバーで鮮度を表すブルーに */
+    color: var(--color-base);
+    border-color: var(--color-base);
+}
+
+/* ===================================================
+   5. セクションコンテンツ
+   =================================================== */
+.section-content {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+/* 交互のセクションデザイン（例：こだわり3番目など） */
+.feature-item:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* 商品情報テーブル */
+#product-detail table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#product-detail th, #product-detail td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#product-detail th {
+    background-color: var(--color-primary);
+    color: var(--color-base);
+    width: 30%;
+}
