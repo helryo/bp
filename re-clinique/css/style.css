@@ -234,13 +234,13 @@ header {
 }
 
 .fv-discount-badge img {
-  width: 160px;
+  width: auto;
   display: block;
 }
 
 @media (max-width: 480px) {
   .fv-discount-badge img {
-    width: 140px;
+    width: auto;
   }
 }
 
