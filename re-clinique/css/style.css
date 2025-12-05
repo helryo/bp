@@ -146,8 +146,9 @@ header {
 
 /* top visual */
 .top-visual img {
-  width: 100%;
+  width: 960px;
   display: block;
+  margin: auto;
 }
 
 /* FV */
