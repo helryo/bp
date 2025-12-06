@@ -68,7 +68,6 @@ header {
   gap: 10px;
   font-size: 13px;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .tel-link { font-weight: 600; color: var(--navy); }
@@ -507,8 +506,12 @@ footer {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
   }
-  .header-actions { justify-content: flex-start; }
+  .header-actions { 
+    justify-content: center;
+    text-align: center;
+  }
   .features-grid,
   .services-grid,
   .flow-steps { grid-template-columns: minmax(0, 1fr); }
