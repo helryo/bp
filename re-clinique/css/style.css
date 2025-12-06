@@ -124,6 +124,7 @@ header {
   align-items: center;
   font-size: 18px;
   letter-spacing: 0.16em;
+  gap: 8px;
 }
 
 .header-logo span {
