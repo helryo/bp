@@ -505,6 +505,9 @@ footer {
   .header-tel strong {
     font-size: 14px;
   }
+  .header-logo span {
+    display: none;
+  }
 }
 
 /* floating CTA */
