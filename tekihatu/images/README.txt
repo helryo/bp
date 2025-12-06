@@ -1,0 +1,1 @@
+ここに logo-tekihatsu.png などの画像ファイルを入れてください。
