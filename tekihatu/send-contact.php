@@ -93,37 +93,7 @@ if ($sent && $email !== "") {
     $auto_from = $encoded_from;
     mb_send_mail($email, $auto_subject, $auto_body, $auto_from);
 }
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>送信完了｜摘発探偵.com</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <main>
-    <section>
-      <div class="container">
-        <div class="section-header" style="max-width:640px;margin:40px auto 20px;text-align:left;">
-          <h1 class="section-title">お問い合わせありがとうございます</h1>
-          <p class="section-sub">
-            お問い合わせ内容を送信しました。担当者が内容を確認のうえ、原則として2営業日以内にご連絡いたします。<br />
-            しばらく経っても返信がない場合は、迷惑メールフォルダをご確認いただくか、お電話にてお問い合わせください。
-          </p>
-        </div>
-        <div class="info-card" style="max-width:640px;margin:0 auto 24px;">
-          <p style="font-size:13px;">
-            このページを閉じていただいて問題ございません。<br />
-            トップページへ戻る場合は、下記ボタンをクリックしてください。
-          </p>
-          <p style="margin-top:12px;">
-            <a href="index.html" class="btn btn-outline">トップページへ戻る</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+
+// 送信完了後はサンキューページへリダイレクト
+header("Location: thanks.html");
+exit;
