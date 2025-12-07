@@ -267,12 +267,11 @@ header {
   border-width: 0 3px 3px 0;
   padding: 6px;
 }
-
-.twentytwenty-horizontal .twentytwenty-handle:before {
+.twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-horizontal .twentytwenty-handle:before {
     width: 3px;
     height: 9999px;
     left: 50%;
-    margin-left: -6px;
+    margin-left: -6px!important;
 }
 
 
