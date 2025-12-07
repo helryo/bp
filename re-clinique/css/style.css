@@ -380,7 +380,7 @@ header {
   height: 32px;
   border-radius: 999px;
   border: none;
-  background: #ff9cab;
+  background: #f2b691;   /* 柔らかいサーモンベージュ */
   color: #fff;
   font-size: 18px;
   display: flex;
