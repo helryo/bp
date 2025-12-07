@@ -268,6 +268,22 @@ header {
   padding: 6px;
 }
 
+.ba-handle,
+.twentytwenty-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中心に配置 */
+  /* 以下はお好みの色・影などでOK */
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 3px solid #fff;
+  background: #ff9cab;
+  box-shadow: 0 0 12px rgba(0,0,0,.4);
+}
+
+
 .fv-discount-badge {
   margin-bottom: 10px;
 }
