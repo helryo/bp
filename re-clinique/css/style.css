@@ -841,3 +841,63 @@ footer {
   background: #e07a34;
   border-color: #e07a34;
 }
+
+/* ===== 症例スワイプのヒント ===== */
+
+.cases-hint {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #9b8f81;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* 矢印アイコン（左右にゆらっと動く） */
+.cases-hint-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid #e7b28b;
+  position: relative;
+  overflow: hidden;
+}
+
+.cases-hint-icon::before,
+.cases-hint-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border: solid #e7b28b;
+  border-width: 0 2px 2px 0;
+  transform-origin: center;
+}
+
+.cases-hint-icon::before {
+  left: 6px;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.cases-hint-icon::after {
+  right: 6px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* アイコン自体を左右にふわっと動かす */
+@keyframes cases-swipe-hint {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-4px); }
+  50%  { transform: translateX(0); }
+  75%  { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+.cases-hint-icon {
+  animation: cases-swipe-hint 1.6s ease-in-out infinite;
+}
+
