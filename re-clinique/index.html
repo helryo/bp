@@ -57,15 +57,11 @@
       </div>
     </div>
     <div class="fv-image">
-      <div class="ba-inner" id="ba-inner">
-        <!-- 右側：After -->
-        <img src="img/after.jpg" alt="after" class="ba-img" />
-        <!-- 左側：Before（twentytwenty-overlay をここに使う） -->
-        <div class="twentytwenty-overlay" id="ba-overlay">
-          <img src="img/before.jpg" alt="before" class="ba-img" />
-        </div>
-        <!-- 真ん中の丸いハンドル -->
-        <div class="ba-handle" id="ba-handle"></div>
+      <div class="twentytwenty-container fv-twentytwenty">
+        <!-- 左側 = BEFORE -->
+        <img src="img/before.jpg" alt="before">
+        <!-- 右側 = AFTER -->
+        <img src="img/after.jpg" alt="after">
       </div>
     </div>
   </div>
@@ -420,47 +416,18 @@
     <p>© RÉ CLINIQUE SENDAI. All rights reserved.</p>
   </div>
 </footer>
-<script>
-  (function () {
-    const inner = document.getElementById("ba-inner");
-    const overlay = document.getElementById("ba-overlay");
-    const handle = document.getElementById("ba-handle");
+<!-- jQuery 本体 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    if (!inner || !overlay || !handle) return;
+<!-- twentytwenty 用 CSS -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mhayes-twentytwenty/1.0.0/css/foundation.min.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css">
 
-    function setPosition(percent) {
-      percent = Math.min(100, Math.max(0, percent));
-      overlay.style.width = percent + "%";
-      handle.style.left = percent + "%";
-    }
+<!-- twentytwenty 用 JS -->
+<script src="https://cdn.bootcdn.net/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
 
-    function pointerPos(e) {
-      const rect = inner.getBoundingClientRect();
-      const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
-      const percent = ((clientX - rect.left) / rect.width) * 100;
-      setPosition(percent);
-    }
-
-    let isDragging = false;
-
-    inner.addEventListener("pointerdown", function (e) {
-      isDragging = true;
-      pointerPos(e);
-    });
-
-    window.addEventListener("pointermove", function (e) {
-      if (!isDragging) return;
-      pointerPos(e);
-    });
-
-    window.addEventListener("pointerup", function () {
-      isDragging = false;
-    });
-
-    // 初期位置を真ん中に
-    setPosition(50);
-  })();
-</script>
-
+<!-- あなたの main.js（最後に） -->
+<script src="js/main.js"></script>
 </body>
 </html>
