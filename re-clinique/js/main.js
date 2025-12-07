@@ -21,36 +21,28 @@ function initCasesSlider() {
   const prevBtn = slider.querySelector(".cases-arrow--prev");
   const nextBtn = slider.querySelector(".cases-arrow--next");
 
-  // どれか欠けていたら何もしない
   if (!track || slides.length === 0 || !prevBtn || !nextBtn) return;
 
-  let current = 0; // 0,1,2,... 何枚目か
+  let current = 0;
 
   function update() {
-    // current 番目が見える位置まで移動
     track.style.transform = "translateX(-" + current * 100 + "%)";
   }
 
-  // ← ボタン：1つ前へ（先頭 → 最後 にループ）
   prevBtn.addEventListener("click", function () {
     current = (current - 1 + slides.length) % slides.length;
     update();
   });
 
-  // → ボタン：1つ次へ（最後 → 先頭 にループ）
   nextBtn.addEventListener("click", function () {
     current = (current + 1) % slides.length;
     update();
   });
 
-  // 初期表示
   update();
 }
 
-// =====================
-// ページ読み込み後にまとめて初期化
-// =====================
 document.addEventListener("DOMContentLoaded", function () {
-  initBeforeAfterSlider(); // FVのビフォーアフター
-  initCasesSlider();       // 症例スライダー
+  initCasesSlider(); // ← これだけ
 });
+
