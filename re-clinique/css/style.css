@@ -246,110 +246,27 @@ header {
   margin-right: 2px;
 }
 
-/*.fv-image {
-  border-radius: 32px;
-  overflow: hidden;
-  background: #ddd;
-  aspect-ratio: 4 / 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: #666;
-}
-*/
-
-/* ===== Before / After slider in fv-image ===== */
-
-/* ===== fv ビフォーアフター ===== */
-
-.fv-image {
-  position: relative;
-}
-
-/* コンテナ（twentytwenty-container 相当） */
-.ba-inner {
-  position: relative;
-  width: 100%;
-  max-width: 360px;        /* 必要なら調整 */
+/* fv コンテナ調整（サイズはお好みで） */
+.fv-image .twentytwenty-container {
+  max-width: 360px;
   margin: 0 auto;
-  aspect-ratio: 3 / 4;     /* 画像比率に合わせて変更 */
-  overflow: hidden;
   border-radius: 12px;
-  background: #000;
-  cursor: ew-resize;
-  touch-action: none;
-}
-
-/* 画像共通 */
-.ba-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  user-select: none;
-  pointer-events: none;
-}
-
-/* 左側の before 部分 = twentytwenty-overlay 相当 */
-.twentytwenty-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;             /* 初期位置：中央 */
-  height: 100%;
   overflow: hidden;
 }
 
-/* 縦の仕切り線（twentytwenty-overlay を参考） */
-.twentytwenty-overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1px;            /* 1px はみ出させて綺麗に重ねる */
-  width: 2px;
-  height: 100%;
-  background: #ffffff;
-}
-
-/* ハンドル（twentytwenty-handle っぽく） */
-.ba-handle {
-  position: absolute;
-  top: 50%;
-  left: 50%;              /* JS で left を動かす */
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
+/* ハンドルをピンクに */
+.twentytwenty-handle {
+  background: #ff9cab;         /* ピンク */
   border: 3px solid #fff;
-  background: rgba(255, 156, 170, 0.95);  /* PRISM に近いピンク系 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  pointer-events: none;   /* ドラッグはコンテナで */
+  box-shadow: 0 0 12px rgba(0,0,0,.4);
 }
 
-/* 両側の矢印（twentytwenty の▲っぽく） */
-.ba-handle::before,
-.ba-handle::after {
-  content: "";
-  border: solid #fff;
+/* 矢印を少し大きめに */
+.twentytwenty-handle:before,
+.twentytwenty-handle:after {
   border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 5px;
+  padding: 6px;
 }
-
-.ba-handle::before {
-  transform: rotate(135deg);
-  margin-right: 4px;
-}
-
-.ba-handle::after {
-  transform: rotate(-45deg);
-  margin-left: 4px;
-}
-
 
 .fv-discount-badge {
   margin-bottom: 10px;
