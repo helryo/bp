@@ -18,30 +18,29 @@ function initCasesSlider() {
   const prevBtn = slider.querySelector('.cases-arrow--prev');
   const nextBtn = slider.querySelector('.cases-arrow--next');
 
-  let current = 0;
+  let current = 0; // 0,1,2,... = 何枚目か
 
   function update() {
+    // current 番目のスライドが見えるように移動
     track.style.transform = 'translateX(-' + current * 100 + '%)';
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === slides.length - 1;
   }
 
+  // ← ボタン：1つ前へ（先頭なら最後へループ）
   prevBtn.addEventListener('click', function () {
-    if (current > 0) {
-      current--;
-      update();
-    }
+    current = (current - 1 + slides.length) % slides.length;
+    update();
   });
 
+  // → ボタン：1つ次へ（最後なら先頭へループ）
   nextBtn.addEventListener('click', function () {
-    if (current < slides.length - 1) {
-      current++;
-      update();
-    }
+    current = (current + 1) % slides.length;
+    update();
   });
 
+  // 初期表示
   update();
 }
+
 
 // =====================
 // ページ読み込み後に実行
