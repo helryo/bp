@@ -57,7 +57,26 @@
       </div>
     </div>
     <div class="fv-image">
-      <img src="img/fv-kuma.jpg" alt="目の下のクマ取り・糸リフトのイメージ">
+      <div class="ba-inner" id="ba-inner">
+        <!-- After（右側の画像） -->
+        <img
+          src="img/after.jpg"      <!-- ★右側の画像パス -->
+        alt="after"
+        class="ba-img"
+        />
+        
+        <!-- Before（左側に重ねる画像） -->
+        <div class="ba-overlay" id="ba-overlay">
+          <img
+            src="img/before.jpg"   <!-- ★左側の画像パス -->
+          alt="before"
+          class="ba-img"
+          />
+        </div>
+        
+        <!-- 真ん中の丸いハンドル -->
+        <div class="ba-handle" id="ba-handle"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -411,6 +430,47 @@
     <p>© RÉ CLINIQUE SENDAI. All rights reserved.</p>
   </div>
 </footer>
+<script>
+  (function () {
+    const inner = document.getElementById("ba-inner");
+    const overlay = document.getElementById("ba-overlay");
+    const handle = document.getElementById("ba-handle");
+
+    if (!inner || !overlay || !handle) return;
+
+    function setPosition(percent) {
+      percent = Math.min(100, Math.max(0, percent));
+      overlay.style.width = percent + "%";
+      handle.style.left = percent + "%";
+    }
+
+    function pointerPos(e) {
+      const rect = inner.getBoundingClientRect();
+      const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
+      const percent = ((clientX - rect.left) / rect.width) * 100;
+      setPosition(percent);
+    }
+
+    let isDragging = false;
+
+    inner.addEventListener("pointerdown", function (e) {
+      isDragging = true;
+      pointerPos(e);
+    });
+
+    window.addEventListener("pointermove", function (e) {
+      if (!isDragging) return;
+      pointerPos(e);
+    });
+
+    window.addEventListener("pointerup", function () {
+      isDragging = false;
+    });
+
+    // 初期位置を真ん中に
+    setPosition(50);
+  })();
+</script>
 
 </body>
 </html>
