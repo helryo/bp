@@ -261,16 +261,19 @@ header {
 
 /* ===== Before / After slider in fv-image ===== */
 
+/* ===== fv ビフォーアフター ===== */
+
 .fv-image {
   position: relative;
 }
 
+/* コンテナ（twentytwenty-container 相当） */
 .ba-inner {
   position: relative;
   width: 100%;
-  max-width: 360px;      /* 必要なら調整。fv 内で中央寄せなら margin: 0 auto; を付けてもOK */
+  max-width: 360px;        /* 必要なら調整 */
   margin: 0 auto;
-  aspect-ratio: 3 / 4;   /* 写真の縦横比に合わせて変更 */
+  aspect-ratio: 3 / 4;     /* 画像比率に合わせて変更 */
   overflow: hidden;
   border-radius: 12px;
   background: #000;
@@ -278,6 +281,7 @@ header {
   touch-action: none;
 }
 
+/* 画像共通 */
 .ba-img {
   width: 100%;
   height: 100%;
@@ -287,39 +291,53 @@ header {
   pointer-events: none;
 }
 
-.ba-overlay {
+/* 左側の before 部分 = twentytwenty-overlay 相当 */
+.twentytwenty-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;            /* 初期位置・真ん中 */
+  width: 50%;             /* 初期位置：中央 */
   height: 100%;
   overflow: hidden;
 }
 
+/* 縦の仕切り線（twentytwenty-overlay を参考） */
+.twentytwenty-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;            /* 1px はみ出させて綺麗に重ねる */
+  width: 2px;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* ハンドル（twentytwenty-handle っぽく） */
 .ba-handle {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%;              /* JS で left を動かす */
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 3px solid #fff;
+  background: rgba(255, 156, 170, 0.95);  /* PRISM に近いピンク系 */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.3);
-  pointer-events: none;  /* ドラッグ自体は .ba-inner で取る */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;   /* ドラッグはコンテナで */
 }
 
+/* 両側の矢印（twentytwenty の▲っぽく） */
 .ba-handle::before,
 .ba-handle::after {
   content: "";
   border: solid #fff;
-  border-width: 0 2px 2px 0;
+  border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 4px;
+  padding: 5px;
 }
 
 .ba-handle::before {
