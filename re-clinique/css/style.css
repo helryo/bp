@@ -268,7 +268,11 @@ header {
   padding: 6px;
 }
 
-.twentytwenty-handle {
+.twentytwenty-horizontal .twentytwenty-handle:before {
+    width: 3px;
+    height: 9999px;
+    left: 50%;
+    margin-left: -6px;
 }
 
 
