@@ -1,48 +1,13 @@
 // =====================
 // FV ビフォーアフター（左右にスライドするやつ）
 // =====================
-function initBeforeAfterSlider() {
-  const inner = document.getElementById("ba-inner");
-  const overlay = document.getElementById("ba-overlay");
-  const handle = document.getElementById("ba-handle");
-
-  // FV がないページでは何もしない
-  if (!inner || !overlay || !handle) return;
-
-  function setPosition(percent) {
-    // 0〜100% にクランプ
-    percent = Math.min(100, Math.max(0, percent));
-    overlay.style.width = percent + "%";
-    handle.style.left = percent + "%";
-  }
-
-  function pointerPos(e) {
-    const rect = inner.getBoundingClientRect();
-    const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
-    if (clientX == null) return;
-    const percent = ((clientX - rect.left) / rect.width) * 100;
-    setPosition(percent);
-  }
-
-  let isDragging = false;
-
-  inner.addEventListener("pointerdown", function (e) {
-    isDragging = true;
-    pointerPos(e);
+// fv のビフォーアフター
+$(window).on('load', function () {
+  $('.fv-twentytwenty').twentytwenty({
+    default_offset_pct: 0.5, // 初期位置（0.5でど真ん中）
+    no_overlay: true         // 「Before / After」の黒帯を消す
   });
-
-  window.addEventListener("pointermove", function (e) {
-    if (!isDragging) return;
-    pointerPos(e);
-  });
-
-  window.addEventListener("pointerup", function () {
-    isDragging = false;
-  });
-
-  // 初期位置：中央
-  setPosition(50);
-}
+});
 
 // =====================
 // 症例一覧スライダー（左右にループ）
