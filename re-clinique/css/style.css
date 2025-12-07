@@ -315,6 +315,95 @@ header {
   letter-spacing: 0.12em;
 }
 
+/* ===== 症例一覧スライダー ===== */
+
+.cases {
+  margin-top: 48px;
+}
+
+.cases-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.cases-note {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.cases-slider {
+  position: relative;
+  max-width: 320px;     /* 全体の幅：必要なら変えてOK */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cases-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.cases-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.cases-thumb {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5f2ef;
+}
+
+.cases-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cases-caption {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* 矢印ボタン */
+.cases-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: #ff9cab;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cases-arrow--prev {
+  left: -4px;
+}
+
+.cases-arrow--next {
+  right: -4px;
+}
+
+.cases-arrow:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+
 /* price */
 .price-grid {
   display: grid;
