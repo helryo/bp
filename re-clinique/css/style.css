@@ -670,3 +670,174 @@ footer {
   font-size: 13px;
   white-space: nowrap;
 }
+
+/* ==============================
+   PRICE セクション強調まわり
+   ============================== */
+
+/* 料金セクション背景を少し濃いめにしてブロック感を出す */
+.section.price,
+.price-section {
+  background: radial-gradient(circle at top, #f6efe6 0, #f7f5f2 45%, #f7f5f2 100%);
+}
+
+/* タイトルを少しだけ強調 */
+.section.price .section-subtitle,
+.price-section .section-subtitle {
+  color: #c27a46;
+  letter-spacing: 0.22em;
+}
+
+.section.price .section-title,
+.price-section .section-title {
+  font-size: 26px;
+  letter-spacing: 0.12em;
+}
+
+/* カード同士の余白をちょい広めに */
+.price-grid {
+  gap: 20px;
+}
+
+/* カード自体を「キャンペーン感」あるカードに */
+.price-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 22px 20px 18px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(194, 122, 70, 0.12);
+  background: radial-gradient(circle at top left, rgba(255, 236, 212, 0.55), #ffffff 55%);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* ホバーでちょっと浮く（PCのみ効くイメージ） */
+@media (hover: hover) {
+  .price-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+  }
+}
+
+/* 左上の「キャンペーン」ラベル感を少しUP */
+.price-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(246, 225, 201, 0.8);
+  color: #a86533;
+  font-weight: 600;
+}
+
+/* メインタイトルはちょっと大きめ＆行間詰め */
+.price-title {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* 説明文は少しだけ薄くして、価格とのメリハリを作る */
+.price-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+/* 金額ブロックを“ボックス”にする */
+.price-row {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 244, 233, 0.9);
+  border: 1px dashed rgba(194, 122, 70, 0.45);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 通常価格は右上に小さく */
+.price-original {
+  font-size: 12px;
+  color: #b1a69a;
+}
+
+/* キャンペーン価格をドーンと */
+.price-campaign {
+  font-size: 22px;
+  font-weight: 800;
+  color: #e07a34;
+}
+
+/* OFF率をバッジっぽく */
+.price-off {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #ffe0bf;
+  color: #c25e1e;
+  font-size: 11px;
+}
+
+/* 備考も枠内に軽く寄せる */
+.price-note {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #8b7f6e;
+}
+
+/* 「切らない〜」みたいな施術名をもう少し目立たせる用 */
+.price-card strong {
+  font-weight: 700;
+}
+
+/* ------------------------------
+   症例スライダーと価格のつながり調整
+   ------------------------------ */
+
+/* 症例スライダーの下にちょい余白 */
+.cases {
+  margin-bottom: 20px;
+}
+
+/* 症例キャプションを価格カードとトンマナ合わせ */
+.cases-caption {
+  font-size: 12px;
+  color: #5d5247;
+}
+
+/* 矢印ボタンの色を価格のアクセントカラーに寄せる */
+.cases-arrow {
+  background: #e7b28b;
+}
+
+.cases-arrow:hover {
+  background: #d79b6b;
+}
+
+/* ------------------------------
+   全体のタイポ・余白を少し調整
+   ------------------------------ */
+
+.section-lead {
+  font-size: 14px;
+  color: #6a5b4a;
+}
+
+/* CAMPAIGNの英字を少し細くスッキリ */
+.section-subtitle {
+  font-weight: 500;
+}
+
+/* ボタンをサイトカラー寄りに */
+.btn-primary {
+  background: #e07a34;
+  border-color: #e07a34;
+}
+
+.btn-primary:hover {
+  background: #cf6c29;
+}
+
+/* フローティングCTAも同じ色味に */
+.floating-cta .btn-primary {
+  background: #e07a34;
+  border-color: #e07a34;
+}
