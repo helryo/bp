@@ -246,7 +246,7 @@ header {
   margin-right: 2px;
 }
 
-.fv-image {
+/*.fv-image {
   border-radius: 32px;
   overflow: hidden;
   background: #ddd;
@@ -257,6 +257,81 @@ header {
   font-size: 12px;
   color: #666;
 }
+*/
+
+/* ===== Before / After slider in fv-image ===== */
+
+.fv-image {
+  position: relative;
+}
+
+.ba-inner {
+  position: relative;
+  width: 100%;
+  max-width: 360px;      /* 必要なら調整。fv 内で中央寄せなら margin: 0 auto; を付けてもOK */
+  margin: 0 auto;
+  aspect-ratio: 3 / 4;   /* 写真の縦横比に合わせて変更 */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.ba-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ba-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;            /* 初期位置・真ん中 */
+  height: 100%;
+  overflow: hidden;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.3);
+  pointer-events: none;  /* ドラッグ自体は .ba-inner で取る */
+}
+
+.ba-handle::before,
+.ba-handle::after {
+  content: "";
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.ba-handle::before {
+  transform: rotate(135deg);
+  margin-right: 4px;
+}
+
+.ba-handle::after {
+  transform: rotate(-45deg);
+  margin-left: 4px;
+}
+
 
 .fv-discount-badge {
   margin-bottom: 10px;
