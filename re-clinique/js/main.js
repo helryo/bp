@@ -7,7 +7,7 @@ $(window).on('load', function () {
 });
 
 // =====================
-// 症例一覧スライダー
+// 症例一覧スライダー本体
 // =====================
 function initCasesSlider() {
   const slider = document.querySelector('[data-cases-slider]');
@@ -22,7 +22,6 @@ function initCasesSlider() {
 
   function update() {
     track.style.transform = 'translateX(-' + current * 100 + '%)';
-    // 端まで行ったら矢印をグレーアウト（任意）
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === slides.length - 1;
   }
@@ -44,13 +43,11 @@ function initCasesSlider() {
   update();
 }
 
-// ここから追加
-function initCasesSlider() {
-  ...（さっきの中身）...
-}
-
+// =====================
+// ページ読み込み後に実行
+// =====================
 document.addEventListener('DOMContentLoaded', function () {
   initCasesSlider();
-  // 既存の初期化があればここに追記してもOK
 });
+
 
