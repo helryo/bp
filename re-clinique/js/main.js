@@ -43,3 +43,14 @@ function initCasesSlider() {
 
   update();
 }
+
+// ここから追加
+function initCasesSlider() {
+  ...（さっきの中身）...
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initCasesSlider();
+  // 既存の初期化があればここに追記してもOK
+});
+
