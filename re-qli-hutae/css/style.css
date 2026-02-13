@@ -101,7 +101,7 @@ ul {
 }
 
 .btn-primary,
-.btn-line {
+.btn-instagram {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -118,15 +118,20 @@ ul {
 }
 
 .btn-primary:hover,
-.btn-line:hover {
+.btn-instagram:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0.95;
 }
 
-.btn-line {
-  background: #00c300;
-  border-color: #00c300;
+.btn-primary {
+  background: #e07a34;
+  border-color: #e07a34;
+}
+
+.btn-instagram {
+  background: #111;
+  border-color: #111;
 }
 
 .btn-small {
@@ -560,7 +565,7 @@ footer {
 }
 
 .floating-cta .btn-primary,
-.floating-cta .btn-line {
+.floating-cta .btn-instagram {
   flex: 1;
   padding: 10px 16px;
   font-size: 13px;
