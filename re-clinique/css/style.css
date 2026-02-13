@@ -5,6 +5,7 @@ body {
   line-height: 1.8;
   color: #222;
   background: #f7f5f2;
+  padding-bottom: 90px!important;
 }
 
 img {
@@ -900,4 +901,3 @@ footer {
 .cases-hint-icon {
   animation: cases-swipe-hint 1.6s ease-in-out infinite;
 }
-
