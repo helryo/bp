@@ -1,10 +1,27 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --surface-soft: #faf7f2;
+  --text: #222222;
+  --muted: #666666;
+  --line: rgba(0,0,0,0.08);
+  --accent: #b9772f;
+  --accent-dark: #8e571c;
+  --sale-30-bg: #fff0f0;
+  --sale-30-text: #d94343;
+  --sale-20-bg: #fff6e9;
+  --sale-20-text: #c27a46;
+  --free-bg: #edf7ef;
+  --free-text: #2d8a49;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", "游ゴシック体", "YuGothic", "メイリオ", sans-serif;
   line-height: 1.8;
-  color: #222;
-  background: #f7f5f2;
+  color: var(--text);
+  background: var(--bg);
   padding-bottom: 90px;
 }
 
@@ -33,12 +50,9 @@ ul {
   padding: 56px 0;
 }
 
-.section-light {
-  background: #fff;
-}
-
+.section-light,
 .section-cases {
-  background: #fff;
+  background: var(--surface);
 }
 
 .section-title {
@@ -53,14 +67,14 @@ ul {
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #a28d73;
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
 .section-lead {
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: var(--muted);
   margin-bottom: 32px;
 }
 
@@ -71,7 +85,7 @@ ul {
 
 .section-text {
   font-size: 14px;
-  color: #555;
+  color: var(--muted);
   margin-bottom: 14px;
 }
 
@@ -90,63 +104,63 @@ ul {
   display: block;
 }
 
-header {
-  background: #f7f5f2;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
+.section-hero {
+  background: linear-gradient(180deg, #f5efe7 0%, #f7f5f2 100%);
 }
 
-.header-inner {
-  max-width: 1080px;
+.hero-copy {
+  max-width: 760px;
   margin: 0 auto;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  text-align: center;
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 18px;
-  letter-spacing: 0.16em;
+.hero-title {
+  font-size: 34px;
+  line-height: 1.4;
+  margin-bottom: 14px;
 }
 
-.header-logo span {
-  font-size: 10px;
-  color: #999;
-  letter-spacing: 0.18em;
-}
-
-.header-tel-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  padding: 6px 12px;
+.hero-title span {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 12px;
   border-radius: 999px;
-  border: 1px solid #111;
-  background: #fff;
-}
-
-.header-tel-btn span {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-}
-
-.header-tel-btn strong {
-  font-size: 15px;
-}
-
-.header-tel-btn:hover {
   background: #111;
   color: #fff;
-  transition: background 0.15s ease, color 0.15s ease;
+  font-size: 14px;
+}
+
+.hero-lead {
+  margin-bottom: 18px;
+}
+
+.hero-highlight-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-highlight-main {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hero-highlight-main strong {
+  color: var(--sale-30-text);
+  font-size: 28px;
+}
+
+.hero-highlight-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.hero-highlight-sub strong {
+  color: var(--accent-dark);
 }
 
 .campaign-bar {
@@ -156,86 +170,6 @@ header {
   padding: 11px 16px;
   font-size: 12px;
   letter-spacing: 0.12em;
-}
-
-.fv {
-  background: #f1ece6;
-  padding: 42px 0 48px;
-}
-
-.fv-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .fv-inner {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  }
-}
-
-.fv-copy-badge {
-  display: inline-flex;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid #c8bfb0;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  margin-bottom: 12px;
-  color: #8b816f;
-  background: rgba(255,255,255,0.65);
-}
-
-.fv-discount-badge {
-  margin-bottom: 10px;
-}
-
-.fv-discount-badge img {
-  width: 150px;
-}
-
-.fv-title-main {
-  font-size: 30px;
-  line-height: 1.45;
-  margin-bottom: 10px;
-}
-
-.fv-title-main span {
-  display: inline-block;
-  background: #111;
-  color: #fff;
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  margin-left: 6px;
-}
-
-.fv-title-sub {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 16px;
-}
-
-.fv-point-list {
-  font-size: 13px;
-  color: #555;
-}
-
-.fv-point-list li::before {
-  content: "・";
-  margin-right: 2px;
-}
-
-.fv-image {
-  border-radius: 32px;
-  overflow: hidden;
-  background: #ddd;
-  aspect-ratio: 4 / 5;
 }
 
 .btn-area {
@@ -291,25 +225,46 @@ header {
 }
 
 .price-card {
-  background: #fff;
+  background: var(--surface);
   border-radius: 24px;
   padding: 20px 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   position: relative;
   overflow: hidden;
+  border: 1px solid transparent;
 }
 
-.price-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 72px;
+.featured-card {
+  border-color: rgba(217,67,67,0.15);
+  background: linear-gradient(180deg, #fff8f8 0%, #ffffff 70%);
+}
+
+.discount-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.discount-chip-30 {
+  background: var(--sale-30-bg);
+  color: var(--sale-30-text);
+}
+
+.discount-chip-20 {
+  background: var(--sale-20-bg);
+  color: var(--sale-20-text);
 }
 
 .price-tag {
   font-size: 12px;
   letter-spacing: 0.18em;
-  color: #a28d73;
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
@@ -327,6 +282,10 @@ header {
   margin-bottom: 4px;
 }
 
+.price-row-campaign {
+  margin-top: 4px;
+}
+
 .price-original {
   font-size: 13px;
   text-decoration: line-through;
@@ -334,26 +293,32 @@ header {
 }
 
 .price-campaign {
-  font-size: 22px;
-  font-weight: 700;
-  color: #c27a46;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--sale-30-text);
+  line-height: 1.2;
 }
 
 .price-off {
   font-size: 12px;
-  color: #c27a46;
-  font-weight: 600;
+  color: var(--sale-30-text);
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
-.campaign-note-box {
-  background: #fff;
-  border-radius: 18px;
+.campaign-note-box,
+.content-card,
+.risk-box {
+  background: var(--surface);
+  border-radius: 20px;
   padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+.campaign-note-box {
   margin-top: 18px;
   font-size: 13px;
-  color: #555;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+  color: var(--muted);
 }
 
 .cols {
@@ -369,16 +334,9 @@ header {
   }
 }
 
-.content-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-}
-
 .check-list {
   font-size: 13px;
-  color: #555;
+  color: var(--muted);
 }
 
 .check-list li {
@@ -412,7 +370,7 @@ header {
 }
 
 .case-card {
-  background: #faf7f2;
+  background: var(--surface-soft);
   border-radius: 20px;
   padding: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.03);
@@ -449,7 +407,7 @@ header {
 
 .case-text {
   font-size: 12px;
-  color: #666;
+  color: var(--muted);
 }
 
 .case-note {
@@ -464,27 +422,106 @@ header {
 }
 
 .price-table {
-  background: #fff;
+  background: var(--surface);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
-.price-table-row {
+.price-table-rich {
+  overflow: hidden;
+}
+
+.price-table-head {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  font-size: 14px;
+  padding: 12px 16px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.06em;
 }
 
-.price-table-row:last-child {
+.price-table-rich-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+
+.price-table-rich-row:last-child {
   border-bottom: none;
 }
 
-.price-table-row strong {
-  white-space: nowrap;
+.price-table-rich-row.is-featured {
+  background: linear-gradient(180deg, #fff6f6 0%, #fff 100%);
+}
+
+.price-table-rich-row.is-free {
+  background: #f8fcf8;
+}
+
+.menu-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu-prices {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu-regular {
+  font-size: 12px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.menu-campaign {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent-dark);
+  line-height: 1.2;
+}
+
+.is-featured .menu-campaign {
+  color: var(--sale-30-text);
+}
+
+.free-price {
+  color: var(--free-text);
+}
+
+.menu-discount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.discount-30 {
+  background: var(--sale-30-bg);
+  color: var(--sale-30-text);
+}
+
+.discount-20 {
+  background: var(--sale-20-bg);
+  color: var(--sale-20-text);
+}
+
+.discount-free {
+  background: var(--free-bg);
+  color: var(--free-text);
 }
 
 .flow-list {
@@ -493,7 +530,7 @@ header {
 }
 
 .flow-item {
-  background: #fff;
+  background: var(--surface);
   border-radius: 20px;
   padding: 14px;
   font-size: 13px;
@@ -504,22 +541,13 @@ header {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: #a28d73;
+  color: var(--accent);
   margin-bottom: 4px;
 }
 
 .flow-title {
   font-weight: 600;
   margin-bottom: 4px;
-}
-
-.risk-box {
-  background: #fff;
-  border-radius: 20px;
-  padding: 16px;
-  font-size: 13px;
-  color: #555;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .risk-list {
@@ -566,6 +594,21 @@ footer {
   white-space: nowrap;
 }
 
+@media (max-width: 767px) {
+  .price-table-head {
+    display: none;
+  }
+
+  .price-table-rich-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .menu-prices {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 480px) {
   .section {
     padding: 42px 0;
@@ -575,28 +618,24 @@ footer {
     font-size: 23px;
   }
 
-  .fv-title-main {
-    font-size: 24px;
+  .hero-title {
+    font-size: 26px;
   }
 
-  .header-logo {
-    font-size: 16px;
+  .hero-title span {
+    font-size: 12px;
   }
 
-  .header-tel-btn strong {
-    font-size: 14px;
+  .hero-highlight-main {
+    font-size: 15px;
   }
 
-  .fv-discount-badge img {
-    width: 132px;
+  .hero-highlight-main strong {
+    font-size: 22px;
   }
 
-  .price-badge {
-    width: 60px;
-  }
-
-  .price-table-row {
-    flex-direction: column;
-    gap: 4px;
+  .menu-campaign,
+  .price-campaign {
+    font-size: 20px;
   }
 }
