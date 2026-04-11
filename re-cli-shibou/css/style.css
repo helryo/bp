@@ -181,7 +181,7 @@ ul {
 }
 
 .btn-primary,
-.btn-line {
+.btn-instagram {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -193,19 +193,20 @@ ul {
   border: 1px solid #111;
   background: #111;
   color: #fff;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-}
-
-.btn-line {
-  background: #00c300;
-  border-color: #00c300;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
 .btn-primary:hover,
-.btn-line:hover {
+.btn-instagram:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0.95;
+}
+
+.btn-instagram {
+  background: #111;
+  border-color: #111;
 }
 
 .price-grid {
