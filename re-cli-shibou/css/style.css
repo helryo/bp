@@ -40,6 +40,12 @@ ul {
   list-style: none;
 }
 
+.top-visual img {
+    width: 960px;
+    display: block;
+    margin: auto;
+}
+
 .wrapper {
   max-width: 1080px;
   margin: 0 auto;
