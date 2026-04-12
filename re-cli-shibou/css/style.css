@@ -105,11 +105,6 @@ ul {
   text-align: center;
 }
 
-.top-visual img {
-  width: 100%;
-  display: block;
-}
-
 .section-hero {
   background: linear-gradient(180deg, #f5efe7 0%, #f7f5f2 100%);
 }
