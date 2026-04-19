@@ -82,9 +82,11 @@ ul {
   text-align: center;
 }
 
+/* top visual */
 .top-visual img {
-  width: 100%;
+  width: 960px;
   display: block;
+  margin: auto;
 }
 
 .hero-offer-grid {
