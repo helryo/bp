@@ -602,7 +602,7 @@ img { display: block; width: 100%; height: auto; }
 
   .event-data div {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 0px;
   }
 
   .card-panel,
@@ -802,14 +802,14 @@ main,
   }
 
   .info-grid {
-    gap: 10px;
+    gap: 6px;
     padding: 18px 0 4px;
   }
 
   .info-card {
-    padding: 14px;
+    padding: 6px 16px;
     border-radius: 18px;
-    gap: 4px;
+    gap: 0px;
   }
 
   .info-card strong {
@@ -860,7 +860,7 @@ main,
   }
 
   .event-data div {
-    padding: 11px 0;
+    padding: 6px 0;
   }
 
   .event-data dt {
