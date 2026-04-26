@@ -902,17 +902,33 @@ main,
     padding-bottom: 46px;
   }
 
+  /* Mobile member carousel */
   .member-grid {
-    gap: 12px;
-    margin-top: 20px;
+    display: flex;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 12px;
+    padding: 0 12px 8px;
+    margin: 20px -12px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .member-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .member-card {
+    flex: 0 0 84%;
     border-radius: 20px;
+    scroll-snap-align: start;
   }
 
   .member-card img {
-    aspect-ratio: 16 / 12;
+    aspect-ratio: 4 / 5;
   }
 
   .member-copy h3 {
