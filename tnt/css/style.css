@@ -686,9 +686,10 @@ main,
 }
 
 .hero-visual {
-  width: min(100%, 1040px);
-  min-height: clamp(420px, 46vw, 580px);
-  aspect-ratio: 16 / 10;
+  /* PC: top visual uses a 2:3 portrait ratio and stays within the first view. */
+  width: min(100%, calc((100svh - 130px) * 2 / 3), 720px);
+  min-height: 0;
+  aspect-ratio: 2 / 3;
   border-radius: clamp(22px, 3vw, 34px);
 }
 
@@ -1029,81 +1030,5 @@ main,
     transform: none;
     filter: none;
     transition: none;
-  }
-}
-
-/* Final hero spacing and background fixes */
-.hero {
-  isolation: isolate;
-}
-
-.hero::before {
-  z-index: 0;
-}
-
-.hero-grid,
-.hero-orb {
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 721px) {
-  .hero {
-    min-height: auto !important;
-    height: auto !important;
-    padding-top: 0 !important;
-  }
-
-  .hero::before {
-    background:
-      linear-gradient(90deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.62) 32%, rgba(0,0,0,0.68) 68%, rgba(0,0,0,0.92) 100%),
-      linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.82) 100%),
-      radial-gradient(circle at 50% 8%, rgba(255,255,255,0.10), transparent 32%),
-      url('../img/hero_pc_bg.jpg') center center / cover no-repeat;
-    opacity: 1;
-    transform: scale(1.03);
-  }
-
-  .hero-grid {
-    min-height: auto !important;
-    height: auto !important;
-    align-items: start !important;
-    justify-items: center !important;
-    padding-top: clamp(14px, 1.8vw, 28px) !important;
-    padding-bottom: clamp(36px, 4vw, 60px) !important;
-  }
-
-  .hero-visual {
-    margin-top: 0 !important;
-  }
-}
-
-@media (max-width: 720px) {
-  .hero {
-    min-height: auto !important;
-    height: auto !important;
-    padding-top: 0 !important;
-  }
-
-  .hero::before {
-    background:
-      linear-gradient(135deg, transparent 0 42%, rgba(255,108,47,0.12) 42% 43%, transparent 43% 100%),
-      radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 36%);
-    opacity: 0.75;
-    transform: none;
-  }
-
-  .hero-grid {
-    min-height: auto !important;
-    height: auto !important;
-    align-items: start !important;
-    justify-items: center !important;
-    padding-top: 10px !important;
-    padding-bottom: 24px !important;
-  }
-
-  .hero-visual {
-    margin-top: 0 !important;
-    min-height: 0 !important;
   }
 }
