@@ -1272,7 +1272,6 @@ main,
 
   .ticket-head .ticket-seat-box strong {
     margin-bottom: 12px;
-    font-size: clamp(42px, 13vw, 56px);
   }
 
   .ticket-head .ticket-seat-box em {
