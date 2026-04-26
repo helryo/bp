@@ -226,7 +226,7 @@ img { display: block; width: 100%; height: auto; }
   position: relative;
   width: min(100%, 980px);
   min-height: clamp(520px, 52vw, 680px);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 3;
 }
 .hero-visual::after {
   content: "";
