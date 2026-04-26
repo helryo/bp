@@ -1069,3 +1069,52 @@ main,
     display: none;
   }
 }
+
+
+/* ===== Separate SEAT TYPE from UPGRADE NOTE ===== */
+.ticket-note {
+  grid-column: 1 / 2;
+  display: block;
+}
+
+.ticket-seat-box {
+  grid-column: 2 / 3;
+  align-self: stretch;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+}
+
+.ticket-seat-box strong {
+  line-height: 1.15;
+}
+
+@media (max-width: 1080px) {
+  .ticket-note {
+    grid-column: 1 / 2;
+  }
+
+  .ticket-seat-box {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 720px) {
+  .ticket-note {
+    grid-column: 1 / -1;
+    display: block;
+  }
+
+  .ticket-seat-box {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 17px;
+    border-radius: 22px;
+  }
+}
