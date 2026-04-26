@@ -770,7 +770,7 @@ main,
 
   .hero-visual {
     min-height: clamp(320px, 70svh, 440px);
-    aspect-ratio: 4 / 4.7;
+    aspect-ratio: 2 / 3;
     border-radius: 24px;
   }
 
