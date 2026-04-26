@@ -586,7 +586,7 @@ img { display: block; width: 100%; height: auto; }
   .hero-visual {
     width: 100%;
     min-height: 420px;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 2 / 3;
   }
 
   .member-grid,
