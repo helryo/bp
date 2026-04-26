@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T.N.T in 日本武道館 | Special Site Mockup</title>
+</head>
+<body style="margin:0; background:#050505; color:#f4f4f4; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Yu Gothic',sans-serif; letter-spacing:0.02em; line-height:1.7; background-image:radial-gradient(circle at 15% 10%, rgba(255,108,34,0.18) 0, rgba(255,108,34,0) 28%), radial-gradient(circle at 85% 22%, rgba(255,255,255,0.09) 0, rgba(255,255,255,0) 22%), linear-gradient(180deg, #111 0%, #070707 28%, #020202 100%);">
+  <div style="position:fixed; inset:0; pointer-events:none; opacity:0.16; background-image:linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size:32px 32px;"></div>
+
+  <header style="position:sticky; top:0; z-index:10; backdrop-filter:blur(18px); background:rgba(0,0,0,0.72); border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 20px; display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.28em; color:#ff7b39; text-transform:uppercase;">special site</div>
+        <div style="width:1px; height:18px; background:rgba(255,255,255,0.14);"></div>
+        <div style="font-size:15px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">T.N.T IN NIPPON BUDOKAN</div>
+      </div>
+      <nav style="display:flex; gap:18px; flex-wrap:wrap; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;">
+        <a href="#overview" style="color:#d7d7d7; text-decoration:none;">Overview</a>
+        <a href="#profile" style="color:#d7d7d7; text-decoration:none;">Profile</a>
+        <a href="#members" style="color:#d7d7d7; text-decoration:none;">Members</a>
+        <a href="#ticket" style="color:#d7d7d7; text-decoration:none;">Ticket</a>
+        <a href="#road" style="color:#d7d7d7; text-decoration:none;">Road</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="position:absolute; inset:auto -10% 12% auto; width:440px; height:440px; border:1px solid rgba(255,255,255,0.08); border-radius:50%; opacity:0.5;"></div>
+      <div style="position:absolute; top:90px; right:-70px; width:320px; height:320px; transform:rotate(24deg); background:linear-gradient(135deg, rgba(255,123,57,0.32), rgba(255,123,57,0)); filter:blur(6px);"></div>
+      <div style="max-width:1180px; margin:0 auto; padding:78px 20px 66px; display:flex; gap:28px; align-items:stretch; flex-wrap:wrap;">
+        <div style="flex:1 1 620px; min-width:300px;">
+          <div style="display:inline-flex; align-items:center; gap:10px; padding:8px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:999px; background:rgba(255,255,255,0.03); font-size:11px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; color:#ff8f59;">
+            Budokan one-man live
+          </div>
+          <div style="margin-top:28px; font-size:clamp(48px, 9vw, 112px); font-weight:900; line-height:0.9; letter-spacing:0.02em; text-transform:uppercase;">
+            <span style="display:block; color:#ffffff;">T.N.T</span>
+            <span style="display:block; color:#a9a9a9;">IN</span>
+            <span style="display:block; color:#ff7b39; text-shadow:0 0 26px rgba(255,123,57,0.18);">NIPPON</span>
+            <span style="display:block; color:#ffffff;">BUDOKAN</span>
+          </div>
+          <div style="margin-top:24px; max-width:760px; color:#c9c9c9; font-size:16px;">
+            T.N.T初の日本武道館単独公演に向けた、ダークでエッジの立ったロングスクロールLP。オフィシャルサイトの硬質な空気感をベースに、参考サイトのような「ヒーロー → 公演概要 → チケット → ROAD TO BUDOKAN」の流れで設計したモックです。
+          </div>
+          <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#ticket" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 22px; border-radius:999px; background:linear-gradient(135deg,#ff7b39,#ff4f1f); color:#fff; text-decoration:none; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; box-shadow:0 18px 36px rgba(255,94,31,0.18);">FC先行</a>
+            <a href="#road" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 22px; border-radius:999px; background:transparent; color:#fff; text-decoration:none; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.16);">Road to Budokan</a>
+          </div>
+          <div style="margin-top:18px; font-size:12px; color:#9b9b9b;">※KV・正式タイトル・販売URLは差し替え前提のモック設計</div>
+        </div>
+
+        <div style="flex:1 1 380px; min-width:300px; display:flex; flex-direction:column; gap:16px;">
+          <div style="position:relative; overflow:hidden; min-height:420px; border-radius:28px; border:1px solid rgba(255,255,255,0.12); background:linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); box-shadow:0 26px 60px rgba(0,0,0,0.35);">
+            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.34));"></div>
+            <div style="position:absolute; top:0; right:0; width:55%; height:100%; background:linear-gradient(180deg, rgba(255,123,57,0.35), rgba(255,123,57,0));"></div>
+            <div style="position:absolute; left:26px; top:24px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#c7c7c7; text-transform:uppercase;">Official Key Visual</div>
+            <div style="position:absolute; left:26px; right:26px; bottom:28px;">
+              <div style="font-size:18px; font-weight:800; letter-spacing:0.12em; color:#fff; text-transform:uppercase;">2027.02.04 Thu</div>
+              <div style="font-size:34px; line-height:1.05; font-weight:900; margin-top:10px;">日本武道館</div>
+              <div style="margin-top:14px; color:#d0d0d0; font-size:14px; max-width:270px;">メインビジュアル差し替え位置。写真を入れると一気に完成度が上がるエリアです。</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <div style="flex:1 1 150px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); padding:18px;">
+              <div style="font-size:11px; color:#9f9f9f; font-weight:800; letter-spacing:0.16em; text-transform:uppercase;">Price</div>
+              <div style="margin-top:10px; font-size:24px; font-weight:900;">11,000<span style="font-size:14px; margin-left:4px; color:#bbb;">yen</span></div>
+            </div>
+            <div style="flex:1 1 150px; border-radius:20px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); padding:18px;">
+              <div style="font-size:11px; color:#9f9f9f; font-weight:800; letter-spacing:0.16em; text-transform:uppercase;">Release</div>
+              <div style="margin-top:10px; font-size:24px; font-weight:900;">21:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" style="border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="max-width:1180px; margin:0 auto; padding:26px 20px 22px; display:flex; gap:14px; flex-wrap:wrap;">
+        <div style="flex:1 1 180px; padding:18px 18px 16px; border-radius:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:11px; color:#8f8f8f; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">Date</div>
+          <div style="margin-top:8px; font-size:20px; font-weight:900;">2027.02.04</div>
+          <div style="margin-top:4px; color:#c4c4c4; font-size:13px;">Thursday</div>
+        </div>
+        <div style="flex:1 1 180px; padding:18px 18px 16px; border-radius:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:11px; color:#8f8f8f; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">Venue</div>
+          <div style="margin-top:8px; font-size:20px; font-weight:900;">NIPPON BUDOKAN</div>
+          <div style="margin-top:4px; color:#c4c4c4; font-size:13px;">Tokyo</div>
+        </div>
+        <div style="flex:1 1 180px; padding:18px 18px 16px; border-radius:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:11px; color:#8f8f8f; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">Ticket</div>
+          <div style="margin-top:8px; font-size:20px; font-weight:900;">All Reserved</div>
+          <div style="margin-top:4px; color:#c4c4c4; font-size:13px;">11,000円(税込)</div>
+        </div>
+        <div style="flex:1 1 180px; padding:18px 18px 16px; border-radius:22px; background:linear-gradient(135deg, rgba(255,123,57,0.18), rgba(255,123,57,0.06)); border:1px solid rgba(255,123,57,0.28);">
+          <div style="font-size:11px; color:#ffb18c; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">Upgrade</div>
+          <div style="margin-top:8px; font-size:20px; font-weight:900;">Coming Soon</div>
+          <div style="margin-top:4px; color:#ffd3bf; font-size:13px;">詳細後日発表</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="max-width:1180px; margin:0 auto; padding:70px 20px; display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+        <div style="flex:1 1 300px; min-width:280px; position:sticky; top:84px;">
+          <div style="font-size:12px; font-weight:800; letter-spacing:0.22em; color:#ff8f59; text-transform:uppercase;">Information</div>
+          <h2 style="margin:16px 0 0; font-size:clamp(32px, 5vw, 54px); line-height:0.98; font-weight:900; text-transform:uppercase;">A HARD<br>AND CINEMATIC<br>ONE-PAGE FLOW</h2>
+          <p style="margin:22px 0 0; color:#bbbbbb; max-width:340px; font-size:15px;">
+            上段で一気に期待を作り、そのまま下にスクロールすると情報が整理されて読める構成。参考サイトの縦スクロール感を残しつつ、T.N.T側はもっと無骨でライブ感のある見せ方に寄せています。
+          </p>
+        </div>
+        <div style="flex:2 1 720px; min-width:300px; display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="flex:1 1 260px; min-height:220px; border-radius:28px; padding:24px; border:1px solid rgba(255,255,255,0.1); background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));">
+            <div style="font-size:11px; font-weight:800; letter-spacing:0.18em; color:#8f8f8f; text-transform:uppercase;">01 / Hero</div>
+            <div style="margin-top:18px; font-size:28px; line-height:1.05; font-weight:900; text-transform:uppercase;">Massive typography &amp; visual block</div>
+            <p style="margin-top:14px; color:#bfbfbf; font-size:14px;">主役はタイトル。ビジュアルなしでも成立するよう、タイポで圧を作るファーストビュー。</p>
+          </div>
+          <div style="flex:1 1 260px; min-height:220px; border-radius:28px; padding:24px; border:1px solid rgba(255,255,255,0.1); background:linear-gradient(160deg, rgba(255,123,57,0.16), rgba(255,255,255,0.03));">
+            <div style="font-size:11px; font-weight:800; letter-spacing:0.18em; color:#ffc2a6; text-transform:uppercase;">02 / Ticket</div>
+            <div style="margin-top:18px; font-size:28px; line-height:1.05; font-weight:900; text-transform:uppercase;">Clear pre-sale entry points</div>
+            <p style="margin-top:14px; color:#f0d6c9; font-size:14px;">FC先行とオフィシャル最速先行を迷わず見つけられる、情報優先の導線に変更。</p>
+          </div>
+          <div style="flex:1 1 100%; border-radius:28px; padding:26px; border:1px solid rgba(255,255,255,0.1); background:#0b0b0b;">
+            <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start; justify-content:space-between;">
+              <div style="min-width:240px; flex:1 1 240px;">
+                <div style="font-size:11px; font-weight:800; letter-spacing:0.18em; color:#8f8f8f; text-transform:uppercase;">03 / Moduler Sections</div>
+                <div style="margin-top:18px; font-size:30px; line-height:1.05; font-weight:900; text-transform:uppercase;">Profile / Members / Ticket / Road</div>
+              </div>
+              <div style="min-width:260px; flex:1 1 360px; color:#bebebe; font-size:14px;">
+                トップの熱量は高く、本文は見やすく。黒ベースのまま情報ブロックごとに密度差をつけて、読み疲れしにくいLPにしています。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" style="border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="max-width:1180px; margin:0 auto; padding:72px 20px; display:flex; gap:22px; flex-wrap:wrap; align-items:stretch;">
+        <div style="flex:1 1 360px; min-width:280px; border-radius:30px; padding:30px; border:1px solid rgba(255,255,255,0.1); background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));">
+          <div style="font-size:12px; font-weight:800; letter-spacing:0.22em; color:#ff8f59; text-transform:uppercase;">T.N.T Profile</div>
+          <h2 style="margin:18px 0 0; font-size:clamp(30px, 4vw, 46px); line-height:0.98; font-weight:900; text-transform:uppercase;">From Zero<br>to Budokan</h2>
+          <p style="margin:20px 0 0; color:#bfbfbf; font-size:15px;">結成から武道館決定までを、LPの世界観に馴染む短い文章で再編集。オフィシャルの勢いと、資料の実績情報を両方見せるセクションです。</p>
+        </div>
+        <div style="flex:2 1 700px; min-width:300px; border-radius:30px; padding:30px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.025); box-shadow:0 24px 48px rgba(0,0,0,0.24);">
+          <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start;">
+            <div style="flex:0 0 260px; min-height:280px; border-radius:24px; border:1px solid rgba(255,255,255,0.1); background:linear-gradient(135deg, rgba(255,123,57,0.18), rgba(255,255,255,0.04)); display:flex; align-items:flex-end; padding:22px; font-size:12px; font-weight:800; letter-spacing:0.18em; color:#ffffff; text-transform:uppercase;">Band Photo / Artist Visual</div>
+            <div style="flex:1 1 320px; min-width:260px;">
+              <div style="font-size:18px; color:#f6f6f6; font-weight:800;">2025年2月始動のロックバンド、T.N.T。</div>
+              <p style="margin:14px 0 0; color:#c0c0c0; font-size:15px;">手越祐也（Vo.）、kyohey（Dr.）、Furutatsu（Ba.）、Ryu.（Gt.）の4人編成。デビュー直後にリリースした1st EP『ZERO』が主要配信チャートで存在感を示し、その後も話題曲を連投。高等学校サッカー選手権大会応援歌『未来へ』や、VALORANT Challengers Japan 2026応援ソング『RADIANT』などで注目を集め、初のお披露目ツアー完売を経て、ついに日本武道館へ向かう流れが見える構成にしています。</p>
+              <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+                <span style="display:inline-flex; align-items:center; min-height:34px; padding:0 14px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); font-size:12px; font-weight:700; color:#efefef;">1st EP「ZERO」</span>
+                <span style="display:inline-flex; align-items:center; min-height:34px; padding:0 14px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); font-size:12px; font-weight:700; color:#efefef;">『未来へ』</span>
+                <span style="display:inline-flex; align-items:center; min-height:34px; padding:0 14px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); font-size:12px; font-weight:700; color:#efefef;">『RADIANT』</span>
+                <span style="display:inline-flex; align-items:center; min-height:34px; padding:0 14px; border-radius:999px; background:rgba(255,123,57,0.12); border:1px solid rgba(255,123,57,0.22); font-size:12px; font-weight:700; color:#ffd6c5;">DETONATION TOUR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="members" style="border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="max-width:1180px; margin:0 auto; padding:72px 20px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.22em; color:#ff8f59; text-transform:uppercase;">Members Comment</div>
+        <h2 style="margin:16px 0 0; font-size:clamp(30px, 5vw, 52px); line-height:0.98; font-weight:900; text-transform:uppercase;">Vo. / Dr. / Ba. / Gt.</h2>
+        <p style="margin:18px 0 0; max-width:720px; color:#bcbcbc; font-size:15px;">ここは資料のコメントが入り次第そのまま流し込める想定。横並びではなく、参考サイトの縦スクロール感を活かして1枚ずつ強く見せる設計にしています。</p>
+        <div style="margin-top:28px; display:flex; flex-wrap:wrap; gap:16px;">
+          <div style="flex:1 1 250px; min-width:250px; border-radius:26px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0a0a0a;">
+            <div style="height:210px; background:linear-gradient(135deg, rgba(255,123,57,0.32), rgba(255,255,255,0.04)); padding:20px; display:flex; align-items:flex-end; font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#fff;">Visual / Tegoshi Yuya</div>
+            <div style="padding:22px;">
+              <div style="font-size:24px; font-weight:900;">手越祐也 <span style="font-size:14px; color:#9b9b9b;">Vo.</span></div>
+              <div style="margin-top:12px; color:#d2d2d2; font-size:14px;">コメント差し込みエリア。熱量高めの一言を入れるとヒーローの延長として効きます。</div>
+            </div>
+          </div>
+          <div style="flex:1 1 250px; min-width:250px; border-radius:26px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0a0a0a;">
+            <div style="height:210px; background:linear-gradient(135deg, rgba(116,155,255,0.24), rgba(255,255,255,0.04)); padding:20px; display:flex; align-items:flex-end; font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#fff;">Visual / kyohey</div>
+            <div style="padding:22px;">
+              <div style="font-size:24px; font-weight:900;">kyohey <span style="font-size:14px; color:#9b9b9b;">Dr.</span></div>
+              <div style="margin-top:12px; color:#d2d2d2; font-size:14px;">コメント差し込みエリア。硬質でテンポ感のある短文が相性良いです。</div>
+            </div>
+          </div>
+          <div style="flex:1 1 250px; min-width:250px; border-radius:26px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0a0a0a;">
+            <div style="height:210px; background:linear-gradient(135deg, rgba(255,96,150,0.26), rgba(255,255,255,0.04)); padding:20px; display:flex; align-items:flex-end; font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#fff;">Visual / Furutatsu</div>
+            <div style="padding:22px;">
+              <div style="font-size:24px; font-weight:900;">Furutatsu <span style="font-size:14px; color:#9b9b9b;">Ba.</span></div>
+              <div style="margin-top:12px; color:#d2d2d2; font-size:14px;">コメント差し込みエリア。フレーズを太く見せる余白多めのカードです。</div>
+            </div>
+          </div>
+          <div style="flex:1 1 250px; min-width:250px; border-radius:26px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0a0a0a;">
+            <div style="height:210px; background:linear-gradient(135deg, rgba(132,132,132,0.32), rgba(255,255,255,0.04)); padding:20px; display:flex; align-items:flex-end; font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#fff;">Visual / Ryu.</div>
+            <div style="padding:22px;">
+              <div style="font-size:24px; font-weight:900;">Ryu. <span style="font-size:14px; color:#9b9b9b;">Gt.</span></div>
+              <div style="margin-top:12px; color:#d2d2d2; font-size:14px;">コメント差し込みエリア。クールで引いた温度感のテキストにも合います。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ticket" style="border-bottom:1px solid rgba(255,255,255,0.08); background:linear-gradient(180deg, rgba(255,123,57,0.04), rgba(255,123,57,0.00));">
+      <div style="max-width:1180px; margin:0 auto; padding:76px 20px; display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+        <div style="flex:1 1 340px; min-width:280px;">
+          <div style="font-size:12px; font-weight:800; letter-spacing:0.22em; color:#ff8f59; text-transform:uppercase;">Ticket Information</div>
+          <h2 style="margin:16px 0 0; font-size:clamp(30px, 5vw, 54px); line-height:0.98; font-weight:900; text-transform:uppercase;">Choose your entrance</h2>
+          <p style="margin:20px 0 0; color:#bdbdbd; font-size:15px; max-width:420px;">チケット導線は参考サイト寄りに大きく整理。どこから申し込むかがひと目で分かるよう、先行ごとにカード分けしています。</p>
+        </div>
+        <div style="flex:2 1 720px; min-width:300px; display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="flex:1 1 320px; min-width:280px; border-radius:30px; padding:28px; border:1px solid rgba(255,123,57,0.24); background:linear-gradient(180deg, rgba(255,123,57,0.16), rgba(255,255,255,0.03)); box-shadow:0 28px 56px rgba(0,0,0,0.24);">
+            <div style="font-size:11px; font-weight:800; letter-spacing:0.18em; color:#ffd4c1; text-transform:uppercase;">Priority Entry</div>
+            <div style="margin-top:14px; font-size:28px; line-height:1.05; font-weight:900; text-transform:uppercase;">T.N.T FC先行</div>
+            <div style="margin-top:16px; font-size:15px; color:#fff; font-weight:800;">2026/5/1(金) 21:00 ～ 5/12(火) 23:59</div>
+            <div style="margin-top:10px; color:#ffe0d0; font-size:14px;">抽選・アップグレード対象</div>
+            <div style="margin-top:18px; padding:14px 16px; border-radius:18px; background:rgba(0,0,0,0.26); border:1px solid rgba(255,255,255,0.08); color:#d9d9d9; font-size:14px;">FC入会が必要。正式販売URL差し替え前提のCTAボタンを設置。</div>
+            <a href="#" style="margin-top:22px; display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 20px; border-radius:999px; background:#fff; color:#0b0b0b; text-decoration:none; font-weight:900; letter-spacing:0.12em; text-transform:uppercase;">FC 先行はこちら</a>
+          </div>
+          <div style="flex:1 1 320px; min-width:280px; border-radius:30px; padding:28px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+            <div style="font-size:11px; font-weight:800; letter-spacing:0.18em; color:#b0b0b0; text-transform:uppercase;">Public Pre-sale</div>
+            <div style="margin-top:14px; font-size:28px; line-height:1.05; font-weight:900; text-transform:uppercase;">オフィシャル最速先行</div>
+            <div style="margin-top:16px; font-size:15px; color:#fff; font-weight:800;">2026/5/13(水) 10:00 ～ 5/24(日) 23:59</div>
+            <div style="margin-top:10px; color:#d7d7d7; font-size:14px;">抽選・アップグレード対象</div>
+            <div style="margin-top:18px; padding:14px 16px; border-radius:18px; background:rgba(0,0,0,0.26); border:1px solid rgba(255,255,255,0.08); color:#d9d9d9; font-size:14px;">受付URL確認中を前提に、後日差し替えしやすいパーツ設計。</div>
+            <a href="#" style="margin-top:22px; display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 20px; border-radius:999px; background:transparent; color:#fff; text-decoration:none; font-weight:900; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.18);">公式先行はこちら</a>
+          </div>
+          <div style="flex:1 1 100%; border-radius:28px; padding:22px 24px; border:1px solid rgba(255,255,255,0.1); background:#0c0c0c; display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap; align-items:flex-start;">
+            <div style="flex:1 1 340px; min-width:260px; color:#dedede; font-size:14px;">
+              <div style="font-size:16px; font-weight:800; color:#fff;">アップグレード注意文を目立たせるエリア</div>
+              <div style="margin-top:10px; color:#bdbdbd;">各種先行申込のみがアップグレード抽選対象。一般発売・イベント会場手売り・キャンペーン当選・当日引換紙チケット等は対象外、という注意事項をここで強く見せます。</div>
+            </div>
+            <div style="flex:0 1 240px; min-width:220px; padding:18px; border-radius:20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
+              <div style="font-size:11px; font-weight:800; color:#969696; letter-spacing:0.16em; text-transform:uppercase;">Seat Type</div>
+              <div style="margin-top:10px; font-size:24px; font-weight:900;">全席指定</div>
+              <div style="margin-top:8px; color:#bdbdbd; font-size:14px;">11,000円(税込)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="road" style="border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="max-width:1180px; margin:0 auto; padding:76px 20px 84px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.22em; color:#ff8f59; text-transform:uppercase;">The Road to Nippon Budokan</div>
+        <h2 style="margin:16px 0 0; font-size:clamp(30px, 5vw, 56px); line-height:0.98; font-weight:900; text-transform:uppercase;">Road Map Section</h2>
+        <p style="margin:18px 0 0; max-width:760px; color:#bbbbbb; font-size:15px;">参考サイトの「道のり」パートをT.N.T用に置き換え。武道館までのストーリーを、ニュースカードやタイムラインとして継続追加できる設計にしています。</p>
+        <div style="margin-top:30px; display:flex; gap:16px; overflow:auto; padding-bottom:8px;">
+          <div style="flex:0 0 250px; min-height:280px; border-radius:28px; padding:22px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.035);">
+            <div style="font-size:42px; font-weight:900; line-height:1; color:#4f4f4f;">01</div>
+            <div style="margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.16em; color:#9a9a9a; text-transform:uppercase;">2025.02</div>
+            <div style="margin-top:12px; font-size:24px; line-height:1.05; font-weight:900; text-transform:uppercase;">Band Formation</div>
+            <div style="margin-top:12px; color:#c0c0c0; font-size:14px;">T.N.T始動。物語の起点として最初のカードに配置。</div>
+          </div>
+          <div style="flex:0 0 250px; min-height:280px; border-radius:28px; padding:22px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.035);">
+            <div style="font-size:42px; font-weight:900; line-height:1; color:#4f4f4f;">02</div>
+            <div style="margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.16em; color:#9a9a9a; text-transform:uppercase;">2026.01</div>
+            <div style="margin-top:12px; font-size:24px; line-height:1.05; font-weight:900; text-transform:uppercase;">First Tour Sold Out</div>
+            <div style="margin-top:12px; color:#c0c0c0; font-size:14px;">初のお披露目ツアー全公演完売。勢いの証明として見せるカード。</div>
+          </div>
+          <div style="flex:0 0 250px; min-height:280px; border-radius:28px; padding:22px; border:1px solid rgba(255,123,57,0.22); background:linear-gradient(180deg, rgba(255,123,57,0.14), rgba(255,255,255,0.03));">
+            <div style="font-size:42px; font-weight:900; line-height:1; color:#ff8f59;">03</div>
+            <div style="margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.16em; color:#ffd3bf; text-transform:uppercase;">2026.04</div>
+            <div style="margin-top:12px; font-size:24px; line-height:1.05; font-weight:900; text-transform:uppercase;">DETONATION Tour</div>
+            <div style="margin-top:12px; color:#ffe0d0; font-size:14px;">初のフルアルバムを掲げた全国6都市ツアー。</div>
+          </div>
+          <div style="flex:0 0 250px; min-height:280px; border-radius:28px; padding:22px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.035);">
+            <div style="font-size:42px; font-weight:900; line-height:1; color:#4f4f4f;">04</div>
+            <div style="margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.16em; color:#9a9a9a; text-transform:uppercase;">2026.05.01</div>
+            <div style="margin-top:12px; font-size:24px; line-height:1.05; font-weight:900; text-transform:uppercase;">Budokan Announced</div>
+            <div style="margin-top:12px; color:#c0c0c0; font-size:14px;">東京公演千秋楽で武道館単独公演を発表。</div>
+          </div>
+          <div style="flex:0 0 250px; min-height:280px; border-radius:28px; padding:22px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.035);">
+            <div style="font-size:42px; font-weight:900; line-height:1; color:#4f4f4f;">05</div>
+            <div style="margin-top:18px; font-size:12px; font-weight:800; letter-spacing:0.16em; color:#9a9a9a; text-transform:uppercase;">2027.02.04</div>
+            <div style="margin-top:12px; font-size:24px; line-height:1.05; font-weight:900; text-transform:uppercase;">Live at Budokan</div>
+            <div style="margin-top:12px; color:#c0c0c0; font-size:14px;">最終ゴール。ここにライブロゴや追加施策を展開可能。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding:28px 20px 44px;">
+    <div style="max-width:1180px; margin:0 auto; display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:22px;">
+      <div>
+        <div style="font-size:14px; font-weight:900; letter-spacing:0.14em; text-transform:uppercase;">T.N.T in Nippon Budokan</div>
+        <div style="margin-top:8px; color:#9e9e9e; font-size:12px;">Special site mockup / inline CSS only</div>
+      </div>
+      <div style="max-width:520px; color:#8f8f8f; font-size:12px; text-align:left;">
+        本モックはレイアウト検討用です。正式タイトル、KV、販売URL、注意事項、画像素材、開場開演表記は本番反映時に最終確認してください。
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
