@@ -941,7 +941,7 @@ main,
 
   .ticket-grid {
     gap: 18px;
-    padding: 46px 0 42px;
+    padding: 0px 0 42px;
   }
 
   .ticket-cards {
@@ -1243,7 +1243,6 @@ main,
 
 .ticket-head .ticket-seat-box strong {
   margin: 0 0 18px;
-  font-size: clamp(48px, 5.3vw, 68px);
   line-height: 0.96;
   white-space: nowrap;
 }
