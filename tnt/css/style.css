@@ -1261,11 +1261,11 @@ main,
   .ticket-head .ticket-seat-box {
     width: 100%;
     margin-top: 28px;
-    padding: 28px 24px;
+    padding: 18px;
   }
 
   .ticket-head .ticket-seat-box span {
-    margin-bottom: 18px;
+    margin-bottom: 8px;
     font-size: 13px;
     letter-spacing: 0.28em;
   }
