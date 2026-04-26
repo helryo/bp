@@ -1032,7 +1032,7 @@ main,
   }
 }
 
-/* PC only: top hero background image */
+/* Final hero spacing and background fixes */
 .hero {
   isolation: isolate;
 }
@@ -1048,6 +1048,12 @@ main,
 }
 
 @media (min-width: 721px) {
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 0 !important;
+  }
+
   .hero::before {
     background:
       linear-gradient(90deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.62) 32%, rgba(0,0,0,0.68) 68%, rgba(0,0,0,0.92) 100%),
@@ -1057,14 +1063,47 @@ main,
     opacity: 1;
     transform: scale(1.03);
   }
+
+  .hero-grid {
+    min-height: auto !important;
+    height: auto !important;
+    align-items: start !important;
+    justify-items: center !important;
+    padding-top: clamp(14px, 1.8vw, 28px) !important;
+    padding-bottom: clamp(36px, 4vw, 60px) !important;
+  }
+
+  .hero-visual {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 720px) {
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 0 !important;
+  }
+
   .hero::before {
     background:
       linear-gradient(135deg, transparent 0 42%, rgba(255,108,47,0.12) 42% 43%, transparent 43% 100%),
       radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 36%);
     opacity: 0.75;
     transform: none;
+  }
+
+  .hero-grid {
+    min-height: auto !important;
+    height: auto !important;
+    align-items: start !important;
+    justify-items: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .hero-visual {
+    margin-top: 0 !important;
+    min-height: 0 !important;
   }
 }
