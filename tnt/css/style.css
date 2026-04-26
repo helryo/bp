@@ -613,3 +613,421 @@ img { display: block; width: 100%; height: auto; }
   }
 }
 
+
+
+/* ===== Requested refinements: compact mobile, sticky CTA, scroll animation, rock texture ===== */
+body {
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 18% 9%, rgba(255, 91, 35, 0.25), transparent 23%),
+    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.08), transparent 18%),
+    radial-gradient(circle at 50% 100%, rgba(255, 108, 47, 0.14), transparent 34%),
+    linear-gradient(180deg, #090706 0%, #030303 46%, #000 100%);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: 0;
+  opacity: 0.42;
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.048) 0 1px, transparent 1px 17px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.028) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 10% 30%, rgba(255,255,255,0.07) 0 1px, transparent 1px 10px),
+    radial-gradient(circle at 72% 62%, rgba(255,255,255,0.055) 0 1px, transparent 1px 12px);
+  mix-blend-mode: screen;
+}
+
+body::after {
+  z-index: 0;
+  opacity: 0.8;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.95) 0%, transparent 18%, transparent 82%, rgba(0,0,0,0.95) 100%),
+    radial-gradient(circle at center, transparent 0 45%, rgba(0,0,0,0.72) 100%);
+}
+
+main,
+.site-header,
+.sticky-ticket-cta {
+  position: relative;
+  z-index: 1;
+}
+
+.noise {
+  z-index: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+    repeating-radial-gradient(circle at 30% 40%, rgba(255,255,255,0.045) 0 1px, transparent 1px 5px);
+  background-size: 30px 30px, 30px 30px, 8px 8px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 0 42%, rgba(255,108,47,0.12) 42% 43%, transparent 43% 100%),
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 36%);
+  opacity: 0.75;
+}
+
+.hero-grid {
+  padding: clamp(44px, 6vw, 78px) 0 clamp(38px, 5vw, 64px);
+}
+
+.hero-visual {
+  width: min(100%, 1040px);
+  min-height: clamp(420px, 46vw, 580px);
+  aspect-ratio: 16 / 10;
+  border-radius: clamp(22px, 3vw, 34px);
+}
+
+.hero-visual-copy {
+  bottom: clamp(18px, 3vw, 34px);
+}
+
+.overview-grid {
+  padding: 24px 0 62px;
+}
+
+.profile-grid {
+  padding: 62px 0;
+}
+
+.members {
+  padding-bottom: 64px;
+}
+
+.ticket-grid {
+  padding: 64px 0;
+}
+
+.ticket-card,
+.ticket-note,
+.card {
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  will-change: transform;
+}
+
+.sticky-ticket-cta {
+  display: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.72s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  filter: blur(8px);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.hero-visual.reveal {
+  transform: translateY(24px) scale(1.02);
+}
+
+.hero-visual.reveal.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 720px) {
+  body {
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    padding-bottom: calc(132px + env(safe-area-inset-bottom));
+  }
+
+  .container {
+    width: min(calc(100% - 24px), var(--container));
+  }
+
+  .hero-grid {
+    padding: 22px 0 24px;
+  }
+
+  .hero-visual {
+    min-height: clamp(320px, 70svh, 440px);
+    aspect-ratio: 4 / 4.7;
+    border-radius: 24px;
+  }
+
+  .hero-visual-copy {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .visual-label,
+  .brand-kicker,
+  .eyebrow,
+  .info-label,
+  .ticket-label,
+  .seat-box span {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .visual-date {
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+
+  .visual-place {
+    margin-top: 5px;
+    font-size: clamp(24px, 8.2vw, 34px);
+  }
+
+  .info-grid {
+    gap: 10px;
+    padding: 18px 0 4px;
+  }
+
+  .info-card {
+    padding: 14px;
+    border-radius: 18px;
+    gap: 4px;
+  }
+
+  .info-card strong {
+    font-size: clamp(18px, 5.4vw, 22px);
+    line-height: 1.08;
+  }
+
+  .info-card span:last-child {
+    font-size: 12px;
+  }
+
+  .section-head {
+    padding-top: 34px;
+  }
+
+  .section-head h2 {
+    margin-top: 10px;
+    font-size: clamp(27px, 8.8vw, 38px);
+    line-height: 1;
+  }
+
+  .section-head .section-text,
+  .hero-text,
+  .section-text,
+  .profile-copy p,
+  .overview-copy p,
+  .member-copy p,
+  .ticket-desc,
+  .ticket-note p,
+  .road-copy p {
+    font-size: 13.5px;
+    line-height: 1.72;
+  }
+
+  .overview-grid {
+    gap: 16px;
+    padding: 18px 0 44px;
+  }
+
+  .overview-image img {
+    min-height: 260px;
+    max-height: 360px;
+  }
+
+  .event-data {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .event-data div {
+    padding: 11px 0;
+  }
+
+  .event-data dt {
+    font-size: 12px;
+  }
+
+  .event-data dd {
+    font-size: 14px;
+  }
+
+  .profile-grid {
+    gap: 18px;
+    padding: 44px 0;
+  }
+
+  .profile-copy .lead {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .card-panel,
+  .ticket-card,
+  .member-copy,
+  .road-copy {
+    padding: 17px;
+  }
+
+  .tag-list {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .tag-list li {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .members {
+    padding-bottom: 46px;
+  }
+
+  .member-grid {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .member-card {
+    border-radius: 20px;
+  }
+
+  .member-card img {
+    aspect-ratio: 16 / 12;
+  }
+
+  .member-copy h3 {
+    font-size: 21px;
+  }
+
+  .member-copy h3 span {
+    font-size: 12px;
+  }
+
+  .ticket-grid {
+    gap: 18px;
+    padding: 46px 0 42px;
+  }
+
+  .ticket-cards {
+    gap: 12px;
+  }
+
+  .ticket-card {
+    gap: 8px;
+    border-radius: 22px;
+  }
+
+  .ticket-card h3,
+  .ticket-note h3,
+  .road-copy h3 {
+    font-size: 23px;
+  }
+
+  .ticket-time {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .ticket-card .btn {
+    display: none;
+  }
+
+  .ticket-note {
+    gap: 12px;
+  }
+
+  .seat-box {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .seat-box strong {
+    margin-top: 7px;
+    font-size: 21px;
+  }
+
+  .seat-box em {
+    margin-top: 4px;
+    font-size: 12.5px;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .sticky-ticket-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: grid;
+    gap: 9px;
+    padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.9) 16%),
+      rgba(0,0,0,0.72);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(18px);
+  }
+
+  .sticky-ticket-cta .btn {
+    width: 100%;
+    min-height: 52px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  .sticky-ticket-cta .btn-secondary {
+    background: rgba(0,0,0,0.26);
+    border-color: rgba(255,255,255,0.28);
+  }
+
+  .reveal {
+    transform: translateY(22px) scale(0.985);
+    transition-duration: 0.58s;
+    filter: blur(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible,
+  .hero-visual.reveal,
+  .hero-visual.reveal.is-visible,
+  .btn,
+  .btn:hover,
+  .btn:focus-visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
