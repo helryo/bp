@@ -1048,3 +1048,24 @@ main,
     transition: none;
   }
 }
+
+/* ===== Mobile ticket buttons: show buttons inside ticket cards like PC, hide fixed CTA ===== */
+@media (max-width: 720px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .ticket-card .btn {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .ticket-card {
+    min-height: auto;
+  }
+
+  .sticky-ticket-cta {
+    display: none;
+  }
+}
