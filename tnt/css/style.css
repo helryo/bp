@@ -1118,3 +1118,52 @@ main,
     border-radius: 22px;
   }
 }
+
+/* ===== SEAT TYPE spacing controls =====
+   Adjust only the values in this block to fine-tune the blank space.
+   - padding: inside spacing of the SEAT TYPE card
+   - min-height: card height
+   - justify-content: flex-start = upper / center = middle
+===== */
+.ticket-seat-box {
+  padding: 48px 44px;
+  min-height: 260px;
+  justify-content: flex-start;
+}
+
+.ticket-seat-box span {
+  margin-bottom: 18px;
+}
+
+.ticket-seat-box strong {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.ticket-seat-box em {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 720px) {
+  .ticket-seat-box {
+    padding: 28px 24px;
+    min-height: 180px;
+    justify-content: flex-start;
+  }
+
+  .ticket-seat-box span {
+    margin-bottom: 12px;
+  }
+
+  .ticket-seat-box strong {
+    margin-bottom: 6px;
+    font-size: 26px;
+  }
+
+  .ticket-seat-box em {
+    font-size: 14px;
+  }
+}
