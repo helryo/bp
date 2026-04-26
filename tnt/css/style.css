@@ -686,9 +686,10 @@ main,
 }
 
 .hero-visual {
-  width: min(100%, 1040px);
-  min-height: clamp(420px, 46vw, 580px);
-  aspect-ratio: 16 / 10;
+  /* PC: top visual uses a 2:3 portrait ratio and stays within the first view. */
+  width: min(100%, calc((100svh - 130px) * 2 / 3), 720px);
+  min-height: 0;
+  aspect-ratio: 2 / 3;
   border-radius: clamp(22px, 3vw, 34px);
 }
 
