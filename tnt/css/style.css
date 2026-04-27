@@ -1282,3 +1282,45 @@ main,
     font-size: 22px;
   }
 }
+
+/* ===== Gray out unreleased Official pre-sale ===== */
+.ticket-card-disabled {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(150,150,150,0.12), rgba(255,255,255,0.025));
+  filter: grayscale(1);
+}
+
+.ticket-card-disabled > * {
+  opacity: 0.46;
+}
+
+.ticket-card-disabled::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(120,120,120,0.34);
+}
+
+.ticket-card-disabled .btn,
+.btn.is-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.sticky-ticket-cta .btn.is-disabled {
+  filter: grayscale(1);
+  opacity: 0.42;
+  background: #222;
+  color: rgba(255,255,255,0.52);
+  border-color: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 720px) {
+  .sticky-ticket-cta .btn.btn-secondary.is-disabled {
+    display: inline-flex !important;
+  }
+}
