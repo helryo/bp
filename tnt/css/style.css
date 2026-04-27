@@ -1189,10 +1189,6 @@ main,
     backdrop-filter: none;
   }
 
-  a.btn.btn-secondary {
-    display: none;
-  }
-
   .sticky-ticket-cta .btn,
   .sticky-ticket-cta .btn-light,
   .sticky-ticket-cta .btn-secondary {
