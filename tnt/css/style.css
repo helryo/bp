@@ -1299,10 +1299,9 @@ main,
 .ticket-card-disabled::after {
   content: "";
   position: absolute;
-  inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: rgba(120,120,120,0.34);
+  background: rgba(150,120,120,0.50);
 }
 
 .ticket-card-disabled .btn,
