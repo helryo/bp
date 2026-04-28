@@ -1272,7 +1272,6 @@ main,
 @media (max-width: 720px) {
   .ticket-head .ticket-seat-box {
     width: 100%;
-    padding: 18px;
   }
 
   .ticket-head .ticket-seat-box span {
