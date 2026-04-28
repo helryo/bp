@@ -1238,7 +1238,8 @@ main,
   grid-column: auto;
   width: min(100%, 360px);
   margin-top: auto;
-  padding: 34px 32px;
+  margin-bottom: 10px;
+  padding: 24px 24px;
   min-height: 0;
   border-radius: 0;
   background: rgba(8, 8, 8, 0.9);
@@ -1248,7 +1249,6 @@ main,
 
 .ticket-head .ticket-seat-box span {
   display: block;
-  margin-bottom: 24px;
   font-size: 17px;
   letter-spacing: 0.34em;
 }
