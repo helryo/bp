@@ -217,6 +217,9 @@ header {
   display: block;
   margin: auto;
 }
+.linecta-visual{
+  padding:1rem;
+}
 /* youtube */
 .youtube-wrap {
   position: relative;
