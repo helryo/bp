@@ -88,24 +88,6 @@ ul {
   background: #fff;
 }
 
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 6px 10px;
-  }
-
-  .header-logo {
-    flex-direction: row;
-  }
-
-  .header-logo > img {
-    max-width: 200px;
-  }
-
-  .header-logo a img {
-    max-width: 2100px;
-  }
-}
-
 /* top visual */
 .main-visual img{
   width: 960px;
