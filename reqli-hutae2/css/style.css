@@ -546,20 +546,15 @@ footer {
   z-index: 99;
   background: rgba(247,245,242,0.96);
   border-top: 1px solid rgba(0,0,0,0.06);
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
 }
 
 .floating-cta-inner {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  gap: 8px;
 }
 
 .floating-cta .btn-primary,
 .floating-cta .btn-instagram {
-  flex: 1;
-  padding: 10px 16px;
-  font-size: 13px;
-  white-space: nowrap;
+  padding: 0.5rem;
 }
