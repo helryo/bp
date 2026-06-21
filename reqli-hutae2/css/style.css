@@ -88,47 +88,6 @@ ul {
   background: #fff;
 }
 
-/* header */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-}
-
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 8px 16px;
-}
-
-.header-logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-height: 45px;
-  width: 680px;
-}
-
-.header-logo img {
-  display: block;
-  height: auto;
-}
-
-.header-logo > img {
-  width: 100%;
-}
-
-.header-logo a {
-  flex-shrink: 0;
-}
-
-.header-logo a img {
-  width: 10%;
-}
-
 @media (max-width: 768px) {
   .header-inner {
     padding: 6px 10px;
