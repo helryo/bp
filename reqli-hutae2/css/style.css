@@ -132,7 +132,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 0px; */
+  max-height: 45px;
 }
 
 .header-logo img {
@@ -142,7 +142,6 @@ header {
 
 .header-logo > img {
   width: 100%;
-  /* max-width: 400px; */
 }
 
 .header-logo a {
@@ -151,7 +150,6 @@ header {
 
 .header-logo a img {
   width: 100%;
-  /* max-width: 200px; */
 }
 
 @media (max-width: 768px) {
@@ -161,7 +159,6 @@ header {
 
   .header-logo {
     flex-direction: row;
-    /* gap: 8px; */
   }
 
   .header-logo > img {
