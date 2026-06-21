@@ -88,6 +88,24 @@ ul {
   background: #fff;
 }
 
+/* Header固定 */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+/* 内側 */
+.header-inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
 /* top visual */
 .main-visual img{
   width: 960px;
