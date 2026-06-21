@@ -196,17 +196,15 @@ header {
 }
 /* youtube */
 .youtube-wrap {
-  position: relative;
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 56.25%;
-  overflow: hidden;
 }
 
 .youtube-wrap iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   display: block;
+  border: 0;
 }
 
 /* FV */
