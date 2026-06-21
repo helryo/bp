@@ -122,67 +122,31 @@ header {
   backdrop-filter: blur(16px);
 }
 
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 18px;
-  letter-spacing: 0.16em;
-  margin: auto;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.header-logo span {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #999;
+.header-logo img {
+  display: block;
+  height: auto;
 }
 
-.header-tel {
-  font-size: 13px;
-  text-align: right;
-  line-height: 1.4;
+.header-logo > img {
+  max-width: 400px; /* ロゴ */
 }
 
-.header-tel strong {
-  font-size: 15px;
+.header-logo a img {
+  max-width: 200px; /* LINEボタン */
 }
 
-.header-tel-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid #111;
-  background: #ffffff;
-  text-decoration: none;
-}
-
-.header-tel-btn span {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-}
-
-.header-tel-btn strong {
-  font-size: 15px;
-}
-
-.header-tel-btn:hover {
-  background: #111;
-  color: #fff;
-  transition: background 0.15s ease, color 0.15s ease;
+@media (max-width: 768px) {
+  .header-logo {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* top visual */
