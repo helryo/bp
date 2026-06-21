@@ -191,9 +191,10 @@ header {
   display: block;
   margin: auto;
 }
-.linecta-visual{
+.linecta-visual .yt-visual{
   padding:1rem;
 }
+
 /* youtube */
 .youtube-wrap {
   max-width: 960px;
