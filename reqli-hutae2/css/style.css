@@ -539,10 +539,18 @@ footer {
 .floating-cta-inner {
   margin: 0 auto;
   display: flex;
-  max-width: 430px;
+  max-width: 960px;
 }
 
 .floating-cta .btn-primary,
 .floating-cta .btn-instagram {
   padding: 0.5rem;
+}
+
+@media (max-width: 480px){
+  .floating-cta-inner {
+    margin: 0 auto;
+    display: flex;
+    max-width: 960px;
+  }
 }
