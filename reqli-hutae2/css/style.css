@@ -100,38 +100,11 @@ ul {
   justify-content: flex-start;
 }
 
-.btn-primary,
-.btn-instagram {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  border: 1px solid #111;
-  background: #111;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
-}
-
 .btn-primary:hover,
 .btn-instagram:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0.95;
-}
-
-.btn-primary {
-  background: #e07a34;
-  border-color: #e07a34;
-}
-
-.btn-instagram {
-  background: #111;
-  border-color: #111;
 }
 
 .btn-small {
@@ -165,6 +138,7 @@ header {
   gap: 8px;
   font-size: 18px;
   letter-spacing: 0.16em;
+  margin: auto;
 }
 
 .header-logo span {
