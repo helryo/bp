@@ -197,33 +197,6 @@ header {
   border: 0;
 }
 
-/* top visual */
-.main-visual img{
-  width: 960px;
-  display: block;
-  margin: auto;
-}
-.linecta-visual{
-  padding:1rem;
-}
-
-.yt-visual{
-  padding:1rem;
-}
-/* youtube */
-.youtube-wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  padding:1rem;
-}
-
-.youtube-wrap iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  border: 0;
-}
-
 /* FV */
 .fv {
   background: #f1ece6;
