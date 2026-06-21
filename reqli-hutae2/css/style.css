@@ -133,6 +133,7 @@ header {
   align-items: center;
   justify-content: space-between;
   max-height: 45px;
+  width: 680px;
 }
 
 .header-logo img {
@@ -162,11 +163,11 @@ header {
   }
 
   .header-logo > img {
-    max-width: 240px;
+    max-width: 200px;
   }
 
   .header-logo a img {
-    max-width: 150px;
+    max-width: 2000px;
   }
 }
 
