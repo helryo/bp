@@ -1,3 +1,6 @@
+/* =========================
+  Base
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,17 +8,17 @@
 }
 
 body {
+  padding-bottom: 90px;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", "游ゴシック体", "YuGothic", "メイリオ", sans-serif;
   line-height: 1.8;
   color: #222;
   background: #fff;
-  padding-bottom: 90px;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -23,7 +26,10 @@ a {
   text-decoration: none;
 }
 
-/* Header固定 */
+
+/* =========================
+  Header
+========================= */
 header {
   position: sticky;
   top: 0;
@@ -41,17 +47,16 @@ header {
 
 .header-copy {
   width: 36%;
-  max-width: 100%;
-  height: auto;
-  display: block;
   margin: auto;
 }
 
-/* メイン画像 */
+
+/* =========================
+  Main Visual
+========================= */
 .main-visual img {
   width: 960px;
   max-width: 100%;
-  display: block;
   margin: auto;
 }
 
@@ -59,83 +64,22 @@ header {
   padding: 1rem;
 }
 
-/* 通常CTA */
+
+/* =========================
+  CTA
+========================= */
 .btn-primary {
+  display: block;
   width: 50%;
   max-width: 100%;
-  height: auto;
-  display: block;
   margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
   opacity: 0.95;
-}
-
-/* クリニック情報・ドクター情報 */
-.visual-section {
-  position: relative;
-  overflow: hidden;
-  width: min(100%, 941px);
-  margin: 0 auto;
-  background: #fff;
-}
-
-.visual-section > a {
-  display: block;
-}
-
-/* Google Map埋め込み */
-.clinic-map-mask {
-  position: absolute;
-  left: 5%;
-  top: 21.5%;
-  width: 90%;
-  height: 36%;
-  border-radius: 22px;
-  box-shadow: 0 6px 28px rgba(197, 89, 116, 0.08);
-}
-
-.clinic-map-embed {
-  position: absolute;
-  left: 8.1%;
-  top: 25%;
-  width: 84%;
-  height: 30%;
-  overflow: hidden;
-  border: 1px solid rgba(197, 89, 116, 0.18);
-  border-radius: 10px;
-  background: #fff;
-}
-
-.clinic-map-embed iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* 追従CTA */
-.floating-cta {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99;
-  background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.floating-cta-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-}
-
-.floating-cta .btn-primary {
-  padding: 0.5rem;
 }
 
 /* CTAボタンをふわっと揺らす */
@@ -150,15 +94,110 @@ header {
   0% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-6px) scale(1.02);
   }
+
   100% {
     transform: translateY(0) scale(1);
   }
 }
 
-/* スマホ調整 */
+
+/* =========================
+  Visual Section
+========================= */
+.visual-section {
+  position: relative;
+  width: min(100%, 941px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.visual-section > a {
+  display: block;
+}
+
+
+/* =========================
+  Google Map
+========================= */
+.clinic-map-mask {
+  position: absolute;
+  top: 21.5%;
+  left: 5%;
+  width: 90%;
+  height: 36%;
+  border-radius: 22px;
+  box-shadow: 0 6px 28px rgba(197, 89, 116, 0.08);
+}
+
+.clinic-map-embed {
+  position: absolute;
+  top: 25%;
+  left: 8.1%;
+  width: 84%;
+  height: 30%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(197, 89, 116, 0.18);
+  border-radius: 10px;
+}
+
+.clinic-map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* =========================
+  Floating CTA
+========================= */
+.floating-cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.floating-cta-inner {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.floating-cta .btn-primary {
+  padding: 0.5rem;
+}
+
+
+/* =========================
+  Footer
+========================= */
+footer {
+  padding: 24px 0 36px;
+  font-size: 11px;
+  color: #ccc;
+  background: #111;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+/* =========================
+  Responsive
+========================= */
 @media screen and (max-width: 768px) {
   .header-copy {
     width: 60%;
