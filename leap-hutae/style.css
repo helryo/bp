@@ -502,3 +502,45 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0.95;
 }
+
+.visual-section {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 941px);
+  margin: 0 auto;
+  background: #fff;
+}
+
+.visual-section > a {
+  display: block;
+}
+
+.clinic-map-mask {
+  position: absolute;
+  left: 5%;
+  top: 21.5%;
+  width: 90%;
+  height: 36%;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 6px 28px rgba(197, 89, 116, 0.08);
+}
+
+.clinic-map-embed {
+  position: absolute;
+  left: 8.1%;
+  top: 25%;
+  width: 84%;
+  height: 30%;
+  overflow: hidden;
+  border: 1px solid rgba(197, 89, 116, 0.18);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.clinic-map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
