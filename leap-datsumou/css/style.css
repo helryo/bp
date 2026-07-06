@@ -4,7 +4,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", "游ゴシック体", "YuGothic", "メイリオ", sans-serif;
   line-height: 1.8;
   color: #222;
-  background: #f7f5f2;
+  background: #fff;
   padding-bottom: 90px; /* 追従CTAぶんの余白 */
 }
 .header-copy {
