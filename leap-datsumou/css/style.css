@@ -7,6 +7,27 @@ body {
   background: #f7f5f2;
   padding-bottom: 90px; /* 追従CTAぶんの余白 */
 }
+.header-copy {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.btn-primary {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-primary{
+    width: 100%;
+  }
+}
 
 img {
   max-width: 100%;
