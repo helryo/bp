@@ -481,7 +481,7 @@ footer {
 }
 
 .floating-cta .btn-primary,
-.floating-cta .btn-instagram {
+.floating-cta .btn-line {
   padding: 0.5rem;
 }
 
@@ -494,7 +494,7 @@ footer {
 }
 
 .btn-primary:hover,
-.btn-instagram:hover {
+.btn-line:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0.95;
