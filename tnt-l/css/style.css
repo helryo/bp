@@ -48,7 +48,9 @@ header {
 }
 
 .header-logo {
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  
 }
 
 .header-copy {
@@ -161,6 +163,8 @@ header {
 
 .floating-cta .btn-primary {
   padding: 0.5rem;
+  margin: auto;
+  width: 70%
 }
 
 .btn-primary {
